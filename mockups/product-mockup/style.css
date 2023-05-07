@@ -1,0 +1,54 @@
+.navbar-toggler-icon {
+  background-image: url("img/ham-menu-icon.svg");
+  filter: invert();
+}
+
+.navbar-toggler {
+  border-width: 0px;
+}
+
+.product-img-section {
+  top: 101px;
+  left: 32px;
+  width: 703px;
+  height: 585px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+.product-img-preview {
+  top: 0px;
+  left: 0px;
+  width: 102px;
+  height: 542px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+
+.product-img {
+  top: 0px;
+  left: 0px;
+  width: 102px;
+  height: 102px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
+.product-focused-img {
+  top: 0px;
+  left: 118px;
+  width: 585px;
+  height: 585px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
