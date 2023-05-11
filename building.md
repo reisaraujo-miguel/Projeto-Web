@@ -1,5 +1,8 @@
 ## Inside the `frontend` folder, you can run several commands:
 
+### npm install
+- installs all development dependencies
+
 ### npm start
 - Starts the development server.
 
@@ -10,5 +13,6 @@
 - Starts the test runner.
 
 ## We suggest that you begin by typing:
-- `cd frontend`
-- `npm start`
+- `cd frontend` to enter the app folder
+- `npm install` to download the dependencies
+- `npm start` to start the app
