@@ -1,5 +1,7 @@
 # Projeto-Web
 
+Read [building.md](https://github.com/reisaraujo-miguel/Projeto-Web/blob/main/building.md) to learn how to run the frontend app.
+
 # Project Report
 
 ## Members:
