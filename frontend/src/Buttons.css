@@ -16,9 +16,16 @@
     border: 0px;
 }
 
-.btn-purple:hover {
+.purple-bg:hover {
     background-color: #6200ee;
-    filter: brightness(0.8);
+    filter: brightness(0.6);
+    color: white;
+    border: 0px;
+}
+
+.no-bg:hover {
+    background: none;
+    filter: brightness(0.6);
     color: white;
     border: 0px;
 }
