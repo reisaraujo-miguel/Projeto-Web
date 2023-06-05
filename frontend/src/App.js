@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './Navbar.js';
-import ImagePlusTextButton from './Buttons.js';
+import CustomButton from './Buttons.js';
 
 function App() {
     return (
@@ -9,7 +9,10 @@ function App() {
             <NavBar />
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-                <ImagePlusTextButton icon_size='small-icon' image='./img/Buttons/plus-icon.svg' alt='plus icon' text='ADD TO CART' />
+                <CustomButton button_size='small-button' alt='plus icon' image='./img/Buttons/plus-icon.svg' text='ICON + TEXT' />
+                <CustomButton text='ONLY TEXT' />
+                <CustomButton image='./img/Buttons/plus-icon.svg' alt="plus icon" />
+                <CustomButton image='./img/Buttons/plus-icon.svg' bg='no-bg' />
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>

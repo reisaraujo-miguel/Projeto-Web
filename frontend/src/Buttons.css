@@ -1,18 +1,24 @@
-.small-icon {
-  width: 20px;
-  height: 20px;
-  margin: 4px 4px 4px 4px;
+.small-button {
+    width: 20px;
+    height: 20px;
+    margin: 4px 4px 4px 4px;
 }
 
-.btn-purple {
-  background-color: #6200ee;
-  color: white;
-  border: 0px;
+.purple-bg {
+    background-color: #6200ee;
+    color: white;
+    border: 0px;
+}
+
+.no-bg {
+    background: none;
+    color: white;
+    border: 0px;
 }
 
 .btn-purple:hover {
-  background-color: #6200ee;
-  filter: brightness(0.8);
-  color: white;
-  border: 0px;
+    background-color: #6200ee;
+    filter: brightness(0.8);
+    color: white;
+    border: 0px;
 }
