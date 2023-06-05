@@ -1,0 +1,8 @@
+.navbar-toggler-icon {
+  background-image: url("../img/Navbar/ham-menu-icon.svg");
+  filter: invert();
+}
+
+.navbar-toggler {
+  border-width: 0px;
+}
