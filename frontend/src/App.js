@@ -4,6 +4,7 @@ import NavBar from './Navbar.js';
 import CustomButton from './Buttons.js';
 import ExpirationDateField from './ExpirationDateField.js';
 import RatingWidget from './RatingWidget';
+import AdminDropdown from './DropdownMenu';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <CustomButton image='./img/Buttons/plus-icon.svg' bg='no-bg' />
                 <ExpirationDateField/>
                 <RatingWidget/>
+                <AdminDropdown/>
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
