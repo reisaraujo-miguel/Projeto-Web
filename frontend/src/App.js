@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './Navbar.js';
 import CustomButton from './Buttons.js';
 import ExpirationDateField from './ExpirationDateField.js';
+import RatingWidget from './RatingWidget';
 
 function App() {
     return (
@@ -15,7 +16,7 @@ function App() {
                 <CustomButton image='./img/Buttons/plus-icon.svg' alt="plus icon" />
                 <CustomButton image='./img/Buttons/plus-icon.svg' bg='no-bg' />
                 <ExpirationDateField/>
-                
+                <RatingWidget/>
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>

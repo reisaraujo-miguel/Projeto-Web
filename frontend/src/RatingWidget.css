@@ -1,0 +1,16 @@
+.star {
+    cursor: pointer;
+    color: gray;
+  }
+  
+.star.filled {
+    color: gold;
+  }
+  
+.star.hovered {
+    color: #fae978;
+}
+
+.rating-number {
+    font-size: medium;
+}
