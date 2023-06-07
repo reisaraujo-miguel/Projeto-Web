@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './Navbar.js';
 import CustomButton from './Buttons.js';
+import ExpirationDateField from './ExpirationDateField.js';
 
 function App() {
     return (
@@ -13,6 +14,8 @@ function App() {
                 <CustomButton text='ONLY TEXT' />
                 <CustomButton image='./img/Buttons/plus-icon.svg' alt="plus icon" />
                 <CustomButton image='./img/Buttons/plus-icon.svg' bg='no-bg' />
+                <ExpirationDateField/>
+                
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
