@@ -1,0 +1,12 @@
+.input-field {
+    display: flex;
+    text-align: center;
+    width: 70px;
+    font-size: medium;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 5px;
+    font-size: medium;
+  }
