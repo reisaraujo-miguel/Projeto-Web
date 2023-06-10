@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './Navbar.js';
 import CustomButton from './Buttons.js';
+import ImgPreviewStack from './ImageSelection';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <CustomButton text='ONLY TEXT' />
                 <CustomButton image='./img/Buttons/plus-icon.svg' alt="plus icon" />
                 <CustomButton image='./img/Buttons/plus-icon.svg' bg='no-bg' />
+                <ImgPreviewStack dir="http://172.26.157.246:8080" />
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
