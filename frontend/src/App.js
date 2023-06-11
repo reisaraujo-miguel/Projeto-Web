@@ -6,6 +6,8 @@ import ImgPreviewStack from './ImageSelection';
 import ExpirationDateField from './ExpirationDateField.js';
 import RatingWidget from './RatingWidget';
 import SearchBarAdmin from './SearchBarAdmin';
+import ProgressSteps from './ProgressSteps';
+
 
 function App() {
     return (
@@ -21,6 +23,7 @@ function App() {
                 <RatingWidget/>
                 <SearchBarAdmin/>
                 {/*<ImgPreviewStack dir="http://172.26.157.246:8080" />*/}
+                <ProgressSteps/>
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
