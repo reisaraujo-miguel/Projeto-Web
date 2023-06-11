@@ -9,19 +9,19 @@ import AdminDropdown from './DropdownMenu';
 
 function App() {
     return (
-        <div className="vstack gap-3 App">
+        <div className="vstack App">
             <NavBar />
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+                {/* <img src={logo} className="App-logo" alt="logo" />
                 <CustomButton button_size='small-button' alt='plus icon' image='./img/Buttons/plus-icon.svg' text='ICON + TEXT' />
                 <CustomButton text='ONLY TEXT' />
                 <CustomButton image='./img/Buttons/plus-icon.svg' alt="plus icon" />
                 <CustomButton image='./img/Buttons/plus-icon.svg' bg='no-bg' />
                 <ExpirationDateField />
                 <RatingWidget />
-                <AdminDropdown />
+                <AdminDropdown /> */}
                 <ImgPreviewStack dir="http://172.26.157.246:8080" />
-                <p>
+                {/* <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
                 <a
@@ -31,7 +31,7 @@ function App() {
                     rel="noopener noreferrer"
                 >
                     Learn React
-                </a>
+                </a> */}
             </header>
         </div>
     );

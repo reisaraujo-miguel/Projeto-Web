@@ -1,9 +1,16 @@
 import React, { useEffect, useRef, useState, } from 'react';
+import { Carousel } from 'react-bootstrap';
 import "./ImageSelection.css";
 
 const ImgPreviewStack = ({ dir }) => {
     const imageStackContainerRef = useRef(null);
     const [images, setImages] = useState([]);
+    const [selectedImage, setSelectedImage] = useState('');
+    const [index, setIndex] = useState(0);
+
+    const handleCarouselSelect = (selectedIndex) => {
+        setIndex(selectedIndex);
+    };
 
     useEffect(() => {
         const fetchImages = async () => {
@@ -37,8 +44,6 @@ const ImgPreviewStack = ({ dir }) => {
         fetchImages();
     }, [dir]);
 
-    console.log(images);
-
     useEffect(() => {
         const imageStackContainer = imageStackContainerRef.current;
 
@@ -55,8 +60,6 @@ const ImgPreviewStack = ({ dir }) => {
             }
         };
 
-        //const imageStackContainer = imageStackContainerRef.current;
-
         imageStackContainer.addEventListener('wheel', scrollImages);
 
         return () => {
@@ -64,10 +67,13 @@ const ImgPreviewStack = ({ dir }) => {
         };
     }, []);
 
+    const handleImageSelect = (url) => {
+        setSelectedImage(url);
+    };
 
     const createImageStack = () => {
         return images.map((url, index) => (
-            <div key={index} className="image-square" style={{ backgroundImage: `url(${url})` }}></div>
+            <div key={index} className="image-square" style={{ backgroundImage: `url(${url})` }} onClick={() => handleImageSelect(url)}></div>
         ));
     };
 
@@ -75,11 +81,28 @@ const ImgPreviewStack = ({ dir }) => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-md-3 offset-md-1">
+                <div className="col-md-3 d-none d-md-block" style={{ "marginRight": "-18%" }}>
                     <div className="image-stack-container" ref={imageStackContainerRef}>
                         <div className="image-stack">
                             {createImageStack()}
                         </div>
+                    </div>
+                </div>
+                <div className='col-md-7'>
+                    <div className='big-image-container d-none d-md-block'>
+                        {selectedImage && <div className="big-image" style={{ backgroundImage: `url(${selectedImage})` }}></div>}
+                        {!selectedImage && images.length > 0 && <div className="big-image" style={{ backgroundImage: `url(${images[0]})` }}></div>}
+                    </div>
+                    <div className='d-md-none'>
+                        <Carousel activeIndex={index} onSelect={handleCarouselSelect}>
+                            {images.map((url, index) => (
+                                <Carousel.Item key={index}>
+                                    <div className='carousel-image-container'>
+                                        <img className="carousel-image" src={url} alt={"Product images"} />
+                                    </div>
+                                </Carousel.Item>
+                            ))}
+                        </Carousel>
                     </div>
                 </div>
             </div>
@@ -87,16 +110,16 @@ const ImgPreviewStack = ({ dir }) => {
     );
 };
 
-function constructImageUrl(href, dir) {
+const constructImageUrl = (href, dir) => {
     const normalizedHref = href.startsWith('./') ? href.substring(2) : href;
     const imageUrl = new URL(normalizedHref, dir).href;
     return imageUrl;
-}
+};
 
-function isImageFile(fileName) {
+const isImageFile = (fileName) => {
     const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
     const extension = fileName.split('.').pop().toLowerCase();
     return imageExtensions.includes(`.${extension}`);
-}
+};
 
 export default ImgPreviewStack;
