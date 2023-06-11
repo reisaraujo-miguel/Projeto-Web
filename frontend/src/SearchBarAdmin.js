@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './SearchBarAdmin.css';
 
 const SearchBarAdmin = () => {
-  const admins = ['Ted Kaczynski', 'Angela Merkel', 'Joaquin Phoenix', 'Bob Ross', 'Michael Scott', 'Dilvan Abreu', 'Michael Jackson'];
+  const admins = ['Sacha Baron Cohen', 'Angela Merkel', 'Joaquin Phoenix', 'Bob Ross', 'Michael Scott', 'Dilvan Abreu', 'Michael Jackson'];
   const [searchText, setSearchText] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [selectedResult, setSelectedResult] = useState('');
