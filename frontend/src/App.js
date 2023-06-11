@@ -5,7 +5,9 @@ import CustomButton from './Buttons.js';
 import ImgPreviewStack from './ImageSelection';
 import ExpirationDateField from './ExpirationDateField.js';
 import RatingWidget from './RatingWidget';
-import AdminDropdown from './DropdownMenu';
+import SearchBarAdmin from './SearchBarAdmin';
+import ProgressSteps from './ProgressSteps';
+
 
 function App() {
     return (
@@ -17,10 +19,11 @@ function App() {
                 <CustomButton text='ONLY TEXT' />
                 <CustomButton image='./img/Buttons/plus-icon.svg' alt="plus icon" />
                 <CustomButton image='./img/Buttons/plus-icon.svg' bg='no-bg' />
-                <ExpirationDateField />
-                <RatingWidget />
-                <AdminDropdown />
+                <ExpirationDateField/>
+                <RatingWidget/>
+                <SearchBarAdmin/>
                 <ImgPreviewStack test={true} />
+                <ProgressSteps/>
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
