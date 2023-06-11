@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState, } from 'react';
 import { Carousel } from 'react-bootstrap';
 import "./ImageSelection.css";
 
-const ImgPreviewStack = ({ dir }) => {
+const ImgPreviewStack = ({ dir = '', test = false }) => {
     const imageStackContainerRef = useRef(null);
     const [images, setImages] = useState([]);
     const [selectedImage, setSelectedImage] = useState('');
@@ -15,34 +15,45 @@ const ImgPreviewStack = ({ dir }) => {
     useEffect(() => {
         const fetchImages = async () => {
             try {
-                const response = await fetch(dir);
-                const html = await response.text();
+                if (test === false) {
+                    const response = await fetch(dir);
+                    const html = await response.text();
 
-                // Create a temporary div element to parse the HTML response
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = html;
+                    // Create a temporary div element to parse the HTML response
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = html;
 
-                // Get all the 'a' elements from the response
-                const linkElements = tempDiv.querySelectorAll('a');
+                    // Get all the 'a' elements from the response
+                    const linkElements = tempDiv.querySelectorAll('a');
 
-                const imageUrls = [];
+                    const imageUrls = [];
 
-                linkElements.forEach((linkElement) => {
-                    const href = linkElement.getAttribute('href');
-                    const imageUrl = constructImageUrl(href, dir);
-                    if (imageUrl && isImageFile(imageUrl)) {
-                        imageUrls.push(imageUrl);
+                    linkElements.forEach((linkElement) => {
+                        const href = linkElement.getAttribute('href');
+                        const imageUrl = constructImageUrl(href, dir);
+                        if (imageUrl && isImageFile(imageUrl)) {
+                            imageUrls.push(imageUrl);
+                        }
+                    });
+
+                    setImages(imageUrls);
+                } else {
+                    const imageUrls = [];
+
+                    for (let i = 1; i < 8; i++) {
+                        const img = await import(`./img/test/laptop-${i}.jpg`);
+                        imageUrls.push(img.default);
                     }
-                });
 
-                setImages(imageUrls);
+                    setImages(imageUrls);
+                }
             } catch (error) {
                 console.error('Error fetching images:', error);
             }
         };
 
         fetchImages();
-    }, [dir]);
+    }, [dir, test]);
 
     useEffect(() => {
         const imageStackContainer = imageStackContainerRef.current;
