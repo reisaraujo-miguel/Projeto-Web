@@ -8,6 +8,7 @@ const MainContainer = styled.div`
   padding: 50px 50px;
   background-color: #ffffff;
   margin-top: 20px;
+  border-radius: 10px;
 `
 
 const StepContainer = styled.div`

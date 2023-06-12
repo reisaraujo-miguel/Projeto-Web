@@ -1,40 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
-import NavBar from './Navbar.js';
-import CustomButton from './Buttons.js';
-import ImgPreviewStack from './ImageSelection';
-import ExpirationDateField from './ExpirationDateField.js';
-import RatingWidget from './RatingWidget';
-import SearchBarAdmin from './SearchBarAdmin';
-import ProgressSteps from './ProgressSteps';
-
+import NavBar from './Navbar';
+import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/ProductPage';
+import Checkout from './pages/Checkout';
 
 function App() {
+
+
     return (
         <div className="vstack App">
             <NavBar />
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <CustomButton button_size='small-button' alt='plus icon' image='./img/Buttons/plus-icon.svg' text='ICON + TEXT' />
-                <CustomButton text='ONLY TEXT' />
-                <CustomButton image='./img/Buttons/plus-icon.svg' alt="plus icon" />
-                <CustomButton image='./img/Buttons/plus-icon.svg' bg='no-bg' />
-                <ExpirationDateField/>
-                <RatingWidget/>
-                <SearchBarAdmin/>
-                <ImgPreviewStack test={true} />
-                <ProgressSteps/>
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
+                <BrowserRouter>
+                    <div className="container mt-2" style={{ marginTop: 40 }}>
+                        <Routes>
+                            <Route path='/' element={<Home />} />
+                            <Route path='/product' element={<About />} />
+                            <Route path='/checkout' element={<Checkout />} />
+
+                        </Routes>
+                    </div>
+                </BrowserRouter>
             </header>
         </div>
     );

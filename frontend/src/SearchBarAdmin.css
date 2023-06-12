@@ -17,6 +17,7 @@
     list-style: none;
     z-index: 1;
     color: black;
+    border-radius: 5px;
   }
   
   .result-item {
