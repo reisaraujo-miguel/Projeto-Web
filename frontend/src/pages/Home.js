@@ -1,14 +1,11 @@
 import logo from '../logo.svg';
 import './Home.css';
-import NavBar from '../Navbar.js';
 import CustomButton from '../Buttons.js';
 import ImgPreviewStack from '../ImageSelection';
 import ExpirationDateField from '../ExpirationDateField.js';
 import RatingWidget from '../RatingWidget';
 import SearchBarAdmin from '../SearchBarAdmin';
-import { Link } from "react-router-dom";
-import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 const Home = () => (
   <div>
