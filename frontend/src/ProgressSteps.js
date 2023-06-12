@@ -133,7 +133,7 @@ const steps = [
   },
 ]
 
-const ProgressSteps = () => {
+const ProgressSteps = ( { content = <></> } ) => {
   const [activeStep, setActiveStep] = useState(1)
 
   const nextStep = () => {
@@ -154,7 +154,7 @@ const ProgressSteps = () => {
       <h1 id='checkout-title'>{'Checkout'}</h1>
 
 
-      <StepContainer width={width}>
+      <StepContainer className='mb-5' width={width}>
         {steps.map(({ step, label }) => (
           <StepWrapper key={step}>
             <StepStyle step={activeStep >= step ? 'completed' : 'incomplete'}>
@@ -170,6 +170,7 @@ const ProgressSteps = () => {
           </StepWrapper>
         ))}
       </StepContainer>
+      {content}
       <ButtonsContainer>
         <ButtonStyle onClick={prevStep} disabled={activeStep === 1}>
           Previous

@@ -9,8 +9,6 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 
 function App() {
-
-
     return (
         <div className="vstack App">
             <NavBar />
@@ -27,7 +25,7 @@ function App() {
                         </Routes>
                     </div>
                 </BrowserRouter>
-            </header>
+           </header>
         </div>
     );
 }
