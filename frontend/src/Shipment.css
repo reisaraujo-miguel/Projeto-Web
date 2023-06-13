@@ -1,0 +1,36 @@
+.input {
+    border-radius: 10px;
+    border: 1px solid #757575;
+    color: #252525;
+    font-size: 18px;
+    padding: 6px;
+}
+
+.selector {
+    width: 260px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    color: #252525;
+    font-size: 18px;
+    padding: 6px;
+    width: 25%;
+}
+
+.submit {
+    border-radius: 10px;
+    border: none;
+    background-color: #FFFFFF;
+    font-size: 18px;
+    padding: 6px;
+    margin-bottom: 20px;
+}
+
+.submit:hover {
+    background-color: #EEEEEE;
+}
+
+.submit:active {
+    background-color: #DDDDDD;
+}
+
