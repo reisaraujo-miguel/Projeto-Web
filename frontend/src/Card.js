@@ -4,7 +4,7 @@ import './Card.css'
 
 const Card = ({ key = 0, name, img, userRating, productPrice, onClick }) => {
 
-  const priceWithCurrency = "$ " + productPrice
+  const priceWithCurrency = "$" + productPrice
 
   return (
     <div className="card-container" onClick={onClick}>
@@ -17,7 +17,7 @@ const Card = ({ key = 0, name, img, userRating, productPrice, onClick }) => {
         isStatic={true}
         userRating={userRating}/>
         <div>
-          <h2>{priceWithCurrency} </h2>
+          <h2 className='price'>{priceWithCurrency} </h2>
         </div>
       </div>
     </div>
