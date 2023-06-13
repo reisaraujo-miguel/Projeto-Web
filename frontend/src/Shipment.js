@@ -128,7 +128,7 @@ const ShipmentForm = () => {
                         required
                     >
                         <option value="" disabled hidden>
-                            Select a country
+                            Select a country*
                         </option>
                         {countryOptions.map((Country) => (
                             <option key={Country} value={Country}>

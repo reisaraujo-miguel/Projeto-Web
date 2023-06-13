@@ -51,23 +51,21 @@ const ExpirationDateField = ({ setData }) => {
 
     return (
         <div>
-            <label>
-                Expiration Date:
-                <div>
-                    <input
-                        type="text"
-                        value={expirationDate}
-                        onChange={handleExpirationDateChange}
-                        onBlur={handleBlur}
-                        placeholder="MM/YY"
-                        maxLength="5"
-                        className={`input-field ${isValid ? '' : 'invalid'}`}
-                    />
-                </div>
-                {!isValid && (
-                    <div className="error-message">Invalid or expired date!</div>
-                )}
-            </label>
+            <label htmlFor='input' style={{ fontSize: "16px" }}>Expiration Date*</label>
+            <div id="input">
+                <input
+                    type="text"
+                    value={expirationDate}
+                    onChange={handleExpirationDateChange}
+                    onBlur={handleBlur}
+                    placeholder="MM/YY"
+                    maxLength="5"
+                    className={`input-field ${isValid ? '' : 'invalid'}`}
+                />
+            </div>
+            {!isValid && (
+                <div className="error-message">Invalid or expired date!</div>
+            )}
         </div>
     );
 };
