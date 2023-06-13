@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import CheckoutCart from './CheckoutCart'
+import PaymentMethod from './PaymentMethod'
+import ShipmentForm from './Shipment'
 
 const MainContainer = styled.div`
   width: 100%;
@@ -50,9 +53,9 @@ const StepStyle = styled.div`
   border-radius: 50%;
   background-color: #ffffff;
   background-color: ${({ step }) =>
-    step === 'completed' ? '#6200EE' : '#F3E7F3'};
+        step === 'completed' ? '#6200EE' : '#F3E7F3'};
   border: 3px solid ${({ step }) =>
-    step === 'completed' ? '#6200EE' : '#F3E7F3'};
+        step === 'completed' ? '#6200EE' : '#F3E7F3'};
   transition: 0.4s ease;
   display: flex;
   justify-content: center;
@@ -118,72 +121,71 @@ const CheckMark = styled.div`
 `
 
 const steps = [
-  {
-    label: 'Items',
-    step: 1,
-  },
-  {
-    label: 'Payment',
-    step: 2,
-  },
-  {
-    label: 'Shipment',
-    step: 3,
-  },
-  {
-    label: 'Confirmation',
-    step: 4,
-  },
+    {
+        label: 'Items',
+        step: 1,
+    },
+    {
+        label: 'Payment',
+        step: 2,
+    },
+    {
+        label: 'Shipment',
+        step: 3,
+    },
+    {
+        label: 'Confirmation',
+        step: 4,
+    },
 ]
 
-const ProgressSteps = ({ content = <></> }) => {
-  const [activeStep, setActiveStep] = useState(1)
+const ProgressSteps = () => {
+    const [activeStep, setActiveStep] = useState(1)
 
-  const nextStep = () => {
-    setActiveStep(activeStep + 1)
-  }
+    const nextStep = () => {
+        setActiveStep(activeStep + 1)
+    }
 
-  const prevStep = () => {
-    setActiveStep(activeStep - 1)
-  }
+    const prevStep = () => {
+        setActiveStep(activeStep - 1)
+    }
 
-  const totalSteps = steps.length
+    const totalSteps = steps.length
 
-  const width = `${(100 / (totalSteps - 1)) * (activeStep - 1)}%`
+    const width = `${(100 / (totalSteps - 1)) * (activeStep - 1)}%`
 
-  return (
-    <MainContainer>
-
-      <h1 id='checkout-title'>{'Checkout'}</h1>
-
-
-      <StepContainer className='mb-5' width={width}>
-        {steps.map(({ step, label }) => (
-          <StepWrapper key={step}>
-            <StepStyle step={activeStep >= step ? 'completed' : 'incomplete'}>
-              {activeStep > step ? (
-                <CheckMark>L</CheckMark>
-              ) : (
-                <StepCount>{step}</StepCount>
-              )}
-            </StepStyle>
-            <StepsLabelContainer>
-              <StepLabel key={step}>{label}</StepLabel>
-            </StepsLabelContainer>
-          </StepWrapper>
-        ))}
-      </StepContainer>
-      {content}
-      <ButtonsContainer>
-        <ButtonStyle onClick={prevStep} disabled={activeStep === 1} style={{marginLeft:'20px'}}>
-          PREVIOUS STEP
-        </ButtonStyle>
-        <ButtonStyle onClick={nextStep} disabled={activeStep === totalSteps} style={{marginRight:'20px'}}>
-          NEXT STEP
-        </ButtonStyle>
-      </ButtonsContainer>
-    </MainContainer>
-  )
+    return (
+        <MainContainer>
+            <h1 id='checkout-title'>{'Checkout'}</h1>
+            <StepContainer className='mb-5' width={width}>
+                {steps.map(({ step, label }) => (
+                    <StepWrapper key={step}>
+                        <StepStyle step={activeStep >= step ? 'completed' : 'incomplete'}>
+                            {activeStep > step ? (
+                                <CheckMark>L</CheckMark>
+                            ) : (
+                                <StepCount>{step}</StepCount>
+                            )}
+                        </StepStyle>
+                        <StepsLabelContainer>
+                            <StepLabel key={step}>{label}</StepLabel>
+                        </StepsLabelContainer>
+                    </StepWrapper>
+                ))}
+            </StepContainer>
+            {activeStep === 1 && <CheckoutCart />}
+            {activeStep === 2 && <PaymentMethod />}
+            {activeStep === 3 && <ShipmentForm />}
+            <ButtonsContainer>
+                <ButtonStyle onClick={prevStep} disabled={activeStep === 1}>
+                    Previous
+                </ButtonStyle>
+                <ButtonStyle onClick={nextStep} disabled={activeStep === totalSteps}>
+                    Next
+                </ButtonStyle>
+            </ButtonsContainer>
+        </MainContainer>
+    )
 }
 
 export default ProgressSteps

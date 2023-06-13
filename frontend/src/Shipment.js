@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Form = () => {
+const ShipmentForm = () => {
     const [formData, setFormData] = useState({
         StreetName: '',
         Number: '',
@@ -51,86 +51,89 @@ const Form = () => {
     ];
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <input
-                    type="text"
-                    name="StreetName"
-                    value={formData.StreetName}
-                    onChange={handleChange}
-                    placeholder="Street Name*"
-                    required
-                    style={{ marginTop: '20px', marginBottom: '20px', marginRight: '20px' }}
-                />
-                <input
-                    type="text"
-                    name="Number"
-                    value={formData.Number}
-                    onChange={handleChange}
-                    placeholder="Number*"
-                    required
-                    style={{ marginRight: '20px', width: '100px' }}
-                />
-                <input
-                    type="text"
-                    name="Apartment"
-                    value={formData.Apartment}
-                    onChange={handleChange}
-                    placeholder="Unit/Apt."
-                    style={{ width: '100px' }}
+        <div style={{ "textAlign": "left" }}>
+            <label className='mt-5 mb-4' htmlFor='form'><b>Delivery Addres</b></label>
+            <form id="form" onSubmit={handleSubmit}>
+                <div>
+                    <input
+                        type="text"
+                        name="StreetName"
+                        value={formData.StreetName}
+                        onChange={handleChange}
+                        placeholder="Street Name*"
+                        required
+                        style={{ marginTop: '20px', marginBottom: '20px', marginRight: '20px' }}
+                    />
+                    <input
+                        type="text"
+                        name="Number"
+                        value={formData.Number}
+                        onChange={handleChange}
+                        placeholder="Number*"
+                        required
+                        style={{ marginRight: '20px', width: '100px' }}
+                    />
+                    <input
+                        type="text"
+                        name="Apartment"
+                        value={formData.Apartment}
+                        onChange={handleChange}
+                        placeholder="Unit/Apt."
+                        style={{ width: '100px' }}
 
-                />
-            </div>
-            <div>
-                <input
-                    type="text"
-                    name="ZipCode"
-                    value={formData.ZipCode}
-                    onChange={handleChange}
-                    placeholder="Zip Code*"
-                    required
-                    style={{ marginBottom: '20px', width: '255px', marginLeft: '20px', marginRight: '20px' }}
-                />
-                <input
-                    type="text"
-                    name="City"
-                    value={formData.City}
-                    onChange={handleChange}
-                    placeholder="City*"
-                    required
-                    style={{ marginBottom: '20px', width: '260px', marginRight: '20px' }}
-                />
-            </div>
-            <div>
-                <input
-                    type="text"
-                    name="State"
-                    value={formData.State}
-                    onChange={handleChange}
-                    placeholder="State*"
-                    required
-                    style={{ marginBottom: '20px', width: '255px', marginRight: '20px' }}
-                />
-                <select
-                    name="Country"
-                    value={formData.Country}
-                    onChange={handleChange}
-                    required
-                    style={{ width: '260px', marginBottom: '10px' }}
-                >
-                    <option value="" disabled hidden>
-                        Select a country
-                    </option>
-                    {countryOptions.map((Country) => (
-                        <option key={Country} value={Country}>
-                            {Country}
+                    />
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        name="ZipCode"
+                        value={formData.ZipCode}
+                        onChange={handleChange}
+                        placeholder="Zip Code*"
+                        required
+                        style={{ marginBottom: '20px', width: '255px', marginRight: '20px' }}
+                    />
+                    <input
+                        type="text"
+                        name="City"
+                        value={formData.City}
+                        onChange={handleChange}
+                        placeholder="City*"
+                        required
+                        style={{ marginBottom: '20px', width: '260px', marginRight: '20px' }}
+                    />
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        name="State"
+                        value={formData.State}
+                        onChange={handleChange}
+                        placeholder="State*"
+                        required
+                        style={{ marginBottom: '20px', width: '255px', marginRight: '20px' }}
+                    />
+                    <select
+                        name="Country"
+                        value={formData.Country}
+                        onChange={handleChange}
+                        required
+                        style={{ width: '260px', marginBottom: '10px' }}
+                    >
+                        <option value="" disabled hidden>
+                            Select a country
                         </option>
-                    ))}
-                </select>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
+                        {countryOptions.map((Country) => (
+                            <option key={Country} value={Country}>
+                                {Country}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     );
 };
 
-export default Form;
+export default ShipmentForm;
