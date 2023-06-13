@@ -1,5 +1,4 @@
 .star {
-    cursor: pointer;
     color: gray;
   }
   
@@ -9,6 +8,7 @@
   
 .star.hovered {
     color: #fae978;
+    cursor: pointer;
 }
 
 .rating-number {

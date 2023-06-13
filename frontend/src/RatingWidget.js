@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './RatingWidget.css';
 
-const RatingWidget = () => {
+const RatingWidget = ({isStatic = false, userRating = 0}) => {
+
   const [rating, setRating] = useState(0);
   const [hoveredRating, setHoveredRating] = useState(0);
 
@@ -16,6 +17,21 @@ const RatingWidget = () => {
   const handleMouseLeave = () => {
     setHoveredRating(0);
   };
+
+  if(isStatic){
+    return (
+      <div>
+        {[1, 2, 3, 4, 5].map((value) => (
+          <Star
+            key={value}
+            value={value}
+            filled={value <= userRating}
+          />
+        ))}
+      </div>
+    );
+  }
+
 
   return (
     <div>
@@ -32,11 +48,12 @@ const RatingWidget = () => {
           />
         ))}
       </div>
+      <p className='rating-number'>Selected rating: {rating}</p>
     </div>
   );
 };
 
-const Star = ({ value, filled, hovered, onClick, onMouseEnter, onMouseLeave }) => {
+const Star = ({ value, filled, hovered, onClick = () => {}, onMouseEnter = () => {}, onMouseLeave = () => {} }) => {
     const handleClick = () => {
       onClick(value);
     };

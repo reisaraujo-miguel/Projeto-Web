@@ -1,0 +1,46 @@
+.carousel-wrapper{
+width : 75%; 
+display: flex;
+justify-content: center;
+}
+
+.carousel-wrapper .card-container {
+margin-left: 5px;
+margin-right: 5px;
+}
+
+.right-button{
+background-color: #FFFFFF;
+width: 30px;
+height: 30px;
+border: 1px solid #000;
+border-radius: 50%;
+}
+
+.right-button:hover{
+  opacity: 0.7;
+}
+
+.right-button-wrapper{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.left-button{
+background-color: #FFFFFF;
+width: 30px;
+height: 30px;
+border: 1px solid #000;
+border-radius: 50%;
+}
+
+.left-button:hover{
+  opacity: 0.7;
+}
+
+.left-button-wrapper{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
