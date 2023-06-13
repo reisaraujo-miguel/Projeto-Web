@@ -52,7 +52,7 @@ const CheckoutCart = ({ data = null }) => {
     const createList = () => {
         return cart.map((index) => (
             <ListGroup.Item key={index.uid}>
-                <div key={index} className="image-square me-3" style={{ "backgroundImage": `url(${index.image})`, "float": "left" }}></div>
+                <div key={index} className="item-image me-3" style={{ "backgroundImage": `url(${index.image})`, "float": "left" }}></div>
                 <div style={{ "float": "left" }}><b>{index.name}</b></div>
                 <div style={{ "float": "right" }}>R$ {index.price}</div>
                 <input className="me-4" type="number" defaultValue={index.quantity} size="3" min="1" style={{ "float": "right" }}></input>
