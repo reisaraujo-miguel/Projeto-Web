@@ -84,8 +84,7 @@ const Carousel = () => {
     return (
         <div className="carousel-wrapper">
             <div className="left-button-wrapper">
-                <button
-                    className="left-button" onClick={goToPrevious}>
+                <button className="left-button" onClick={goToPrevious}>
                     &lt;
                 </button>
             </div>
