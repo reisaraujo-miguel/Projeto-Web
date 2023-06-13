@@ -2,20 +2,13 @@
 
 import React from "react";
 import ProgressSteps from '../ProgressSteps';
+import CheckoutCart from "../CheckoutCart";
 
 
 const Checkout = () => (
-  <div>
-    <h1 className="title is-1">Esta é a página de Checkout</h1>
-    <p>
-      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-      inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus
-      et ultrices posuere cubilia curae; Duis consequat nulla ac ex consequat,
-      in efficitur arcu congue. Nam fermentum commodo egestas.
-    </p>
-    <ProgressSteps/>
-    
-  </div>
+    <div className="mt-5 mb-4">
+        <ProgressSteps content={<CheckoutCart data="http://localhost:8080/sla.json" />} />
+    </div>
 );
 
 export default Checkout;

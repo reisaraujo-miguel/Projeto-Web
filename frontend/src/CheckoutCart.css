@@ -1,0 +1,10 @@
+.image-square {
+    width: 12%;
+    padding-top: 12%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10%;
+    background-color: #777777;
+    background-size: cover;
+    background-position: center;
+}
