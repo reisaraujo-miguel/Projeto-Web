@@ -89,7 +89,7 @@ const Form = () => {
                     onChange={handleChange}
                     placeholder="Zip Code*"
                     required
-                    style={{ marginBottom: '20px', width: '255px', marginLeft:'20px', marginRight: '20px' }}
+                    style={{ marginBottom: '20px', width: '255px', marginLeft: '20px', marginRight: '20px' }}
                 />
                 <input
                     type="text"

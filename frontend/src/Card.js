@@ -2,26 +2,26 @@ import React from 'react';
 import RatingWidget from './RatingWidget.js'
 import './Card.css'
 
-const Card = ({ key = 0, name, img, userRating, productPrice, onClick }) => {
+const Card = ({ name, img, userRating, productPrice, onClick }) => {
 
-  const priceWithCurrency = "$" + productPrice
+    const priceWithCurrency = "$" + productPrice
 
-  return (
-    <div className="card-container" onClick={onClick}>
-      <img src={img} alt={name} />
-      <div>
-      <h2>{name}</h2>
-      </div>
-      <div className="product-info">
-        <RatingWidget 
-        isStatic={true}
-        userRating={userRating}/>
-        <div>
-          <h2 className='price'>{priceWithCurrency} </h2>
+    return (
+        <div className="card-container" onClick={onClick}>
+            <img src={img} alt={name} />
+            <div>
+                <h2>{name}</h2>
+            </div>
+            <div className="product-info">
+                <RatingWidget
+                    isStatic={true}
+                    userRating={userRating} />
+                <div>
+                    <h2 className='price'>{priceWithCurrency} </h2>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Card;
