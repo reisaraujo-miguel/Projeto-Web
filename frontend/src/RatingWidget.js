@@ -32,7 +32,6 @@ const RatingWidget = () => {
           />
         ))}
       </div>
-      <p className='rating-number'>Selected rating: {rating}</p>
     </div>
   );
 };
