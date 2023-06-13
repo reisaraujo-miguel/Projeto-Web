@@ -11,7 +11,7 @@ import Signup from './pages/Signup';
 function App() {
     return (
         <div className="vstack App">
-            <div style={{paddingBottom: "2%"}}>
+            <div>
             <NavBar />
             </div>
             <header className="App-header">

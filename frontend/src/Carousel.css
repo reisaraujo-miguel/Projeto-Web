@@ -11,10 +11,10 @@
 
 .right-button{
     line-height: 0;
-    background-color: #FFFFFF;
+    background-color: #EEEEEE;
     width: 30px;
     height: 30px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #EEEEEE;
     border-radius: 50%;
 }
 
@@ -31,10 +31,10 @@
 
 .left-button{
     line-height: 0;
-    background-color: #FFFFFF;
+    background-color: #EEEEEE;
     width: 30px;
     height: 30px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #EEEEEE;
     border-radius: 50%;
 }
 
