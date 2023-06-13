@@ -29,7 +29,7 @@ const StepContainer = styled.div`
   :after {
     content: '';
     position: absolute;
-    background: #4a154b;
+    background: #6200EE;
     height: 4px;
     width: ${({ width }) => width};
     top: 50%;
@@ -49,8 +49,10 @@ const StepStyle = styled.div`
   height: 40px;
   border-radius: 50%;
   background-color: #ffffff;
+  background-color: ${({ step }) =>
+    step === 'completed' ? '#6200EE' : '#F3E7F3'};
   border: 3px solid ${({ step }) =>
-      step === 'completed' ? '#4A154B' : '#F3E7F3'};
+    step === 'completed' ? '#6200EE' : '#F3E7F3'};
   transition: 0.4s ease;
   display: flex;
   justify-content: center;
@@ -59,7 +61,7 @@ const StepStyle = styled.div`
 
 const StepCount = styled.span`
   font-size: 19px;
-  color: #f3e7f3;
+  color: #FFFFFF;
   @media (max-width: 600px) {
     font-size: 16px;
   }
@@ -90,11 +92,12 @@ const ButtonsContainer = styled.div`
 const ButtonStyle = styled.button`
   border-radius: 4px;
   border: 0;
-  background: #4a154b;
+  background: #6200EE;
   color: #ffffff;
+  font-size: medium;
   cursor: pointer;
   padding: 8px;
-  width: 120px;
+  width: 180px;
   :active {
     transform: scale(0.98);
   }
@@ -108,7 +111,7 @@ const ButtonStyle = styled.button`
 const CheckMark = styled.div`
   font-size: 26px;
   font-weight: 600;
-  color: #4a154b;
+  color: #FFFFFF;
   -ms-transform: scaleX(-1) rotate(-46deg); /* IE 9 */
   -webkit-transform: scaleX(-1) rotate(-46deg); /* Chrome, Safari, Opera */
   transform: scaleX(-1) rotate(-46deg);
@@ -133,7 +136,7 @@ const steps = [
   },
 ]
 
-const ProgressSteps = ( { content = <></> } ) => {
+const ProgressSteps = ({ content = <></> }) => {
   const [activeStep, setActiveStep] = useState(1)
 
   const nextStep = () => {
@@ -150,7 +153,7 @@ const ProgressSteps = ( { content = <></> } ) => {
 
   return (
     <MainContainer>
-      
+
       <h1 id='checkout-title'>{'Checkout'}</h1>
 
 
@@ -172,11 +175,11 @@ const ProgressSteps = ( { content = <></> } ) => {
       </StepContainer>
       {content}
       <ButtonsContainer>
-        <ButtonStyle onClick={prevStep} disabled={activeStep === 1}>
-          Previous
+        <ButtonStyle onClick={prevStep} disabled={activeStep === 1} style={{marginLeft:'20px'}}>
+          PREVIOUS STEP
         </ButtonStyle>
-        <ButtonStyle onClick={nextStep} disabled={activeStep === totalSteps}>
-          Next
+        <ButtonStyle onClick={nextStep} disabled={activeStep === totalSteps} style={{marginRight:'20px'}}>
+          NEXT STEP
         </ButtonStyle>
       </ButtonsContainer>
     </MainContainer>
