@@ -42,9 +42,10 @@ const ProductPage = () => (
                 </div>
             </div>
         </div>
-        <h5 style={{ marginBottom: '20px', marginLeft:'40px' }}>Recommended:</h5>
-        <Carousel />
-
+        <label htmlFor="recommendations"><h5 style={{ marginBottom: '20px', marginLeft: '40px' }}><b>Recommended:</b></h5></label>
+        <div className="mb-4" id="recommendations">
+            <Carousel />
+        </div>
     </div>
 );
 
