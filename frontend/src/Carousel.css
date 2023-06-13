@@ -1,5 +1,5 @@
 .carousel-wrapper{
-width : 75%; 
+width : 100%; 
 display: flex;
 justify-content: center;
 }
@@ -13,7 +13,7 @@ margin-right: 5px;
 background-color: #FFFFFF;
 width: 30px;
 height: 30px;
-border: 1px solid #000;
+border: 1px solid #FFFFFF;
 border-radius: 50%;
 }
 
@@ -31,7 +31,7 @@ border-radius: 50%;
 background-color: #FFFFFF;
 width: 30px;
 height: 30px;
-border: 1px solid #000;
+border: 1px solid #FFFFFF;
 border-radius: 50%;
 }
 

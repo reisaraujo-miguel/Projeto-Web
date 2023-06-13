@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import Card from './Card.js'
 import './Carousel.css'
-import laptop1 from './img/laptop-1.jpg'
-import laptop2 from './img/laptop-2.jpg'
-import laptop3 from './img/laptop-3.jpg'
-import laptop4 from './img/laptop-4.jpg'
-import laptop5 from './img/laptop-5.jpg'
-import laptop6 from './img/laptop-6.jpg'
-import laptop7 from './img/laptop-7.jpg'
+import laptop1 from './img/test/laptop-1.jpg'
+import laptop2 from './img/test/laptop-2.jpg'
+import laptop3 from './img/test/laptop-3.jpg'
+import laptop4 from './img/test/laptop-4.jpg'
+import laptop5 from './img/test/laptop-5.jpg'
+import laptop6 from './img/test/laptop-6.jpg'
+import laptop7 from './img/test/laptop-7.jpg'
 
 const Carousel = ({}) => {
 
@@ -47,7 +47,7 @@ const Carousel = ({}) => {
         name="Laptop Ideapad Lenovo 14 Ryzen"
         img={laptop}
         userRating={4}
-        productPrice={9966.66}
+        productPrice={996.66}
         onClick={foo}
         />
       ))}

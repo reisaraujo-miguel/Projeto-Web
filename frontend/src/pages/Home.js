@@ -7,6 +7,7 @@ import RatingWidget from '../RatingWidget';
 import SearchBarAdmin from '../SearchBarAdmin';
 import InputBox from '../InputBox';
 import Shipment from '../Shipment';
+import Carousel from '../Carousel';
 
 
 const Home = () => (
@@ -29,6 +30,7 @@ const Home = () => (
                 <ImgPreviewStack test={true} />
                 <InputBox/>
                 <Shipment/>
+                <Carousel/>
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
