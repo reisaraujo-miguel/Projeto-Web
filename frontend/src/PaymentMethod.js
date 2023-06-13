@@ -25,7 +25,7 @@ const PaymentMethod = ({ setJson = (e) => { console.log(e); } }) => {
             <div className="container">
                 <div className="row mb-5">
                     <div className="col" style={{ "paddingTop": "3.5%" }}>
-                        <InputBox setData={setName} placeholder={"Card Holder"} />
+                        <InputBox padding={"6px"} setData={setName} placeholder={"Card Holder"} />
                     </div>
                     <div className="col">
                         <ExpirationDateField setData={setDate} />
@@ -33,10 +33,10 @@ const PaymentMethod = ({ setJson = (e) => { console.log(e); } }) => {
                 </div>
                 <div className="row">
                     <div className="col">
-                        <InputBox setData={setCard} placeholder={"Card Number"} />
+                        <InputBox padding={"6px"} setData={setCard} placeholder={"Card Number"} />
                     </div>
                     <div className="col">
-                        <InputBox setData={setCode} placeholder={"Security Code"} />
+                        <InputBox padding={"6px"} setData={setCode} placeholder={"Security Code"} />
                     </div>
                 </div>
             </div>

@@ -7,9 +7,9 @@
 }
 
 .selector {
-    width: 260px;
     margin-bottom: 10px;
     border-radius: 10px;
+    border: 1px solid #757575;
     background-color: #FFFFFF;
     color: #252525;
     font-size: 18px;

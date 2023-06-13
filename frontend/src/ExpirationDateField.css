@@ -1,11 +1,11 @@
 .input-field {
     display: flex;
     text-align: center;
-    width: 70px;
-    font-size: medium;
+    width: 74px;
+    font-size: 18px;
     border-radius: 10px;
     border: 1px solid #454545;
-
+    padding: 6px;
   }
   
   .error-message {
