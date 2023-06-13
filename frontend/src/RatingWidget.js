@@ -48,7 +48,6 @@ const RatingWidget = ({isStatic = false, userRating = 0}) => {
           />
         ))}
       </div>
-      <p className='rating-number'>Selected rating: {rating}</p>
     </div>
   );
 };

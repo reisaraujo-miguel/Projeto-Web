@@ -1,11 +1,10 @@
-/*
 @media (min-width: 48em) {
-  .column1 {
+  .col1 {
     width: 50%;
     float: left;
   }
 
-  .column2 {
+  .col2 {
     width: 50%;
     float: left;
   }
@@ -16,4 +15,4 @@
     clear: both;
   }
 }
-*/
+
