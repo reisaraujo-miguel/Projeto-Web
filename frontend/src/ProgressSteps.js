@@ -177,11 +177,11 @@ const ProgressSteps = () => {
             {activeStep === 2 && <PaymentMethod />}
             {activeStep === 3 && <ShipmentForm />}
             <ButtonsContainer>
-                <ButtonStyle onClick={prevStep} disabled={activeStep === 1}>
-                    Previous
+                <ButtonStyle onClick={prevStep} disabled={activeStep === 1} style={{marginLeft:'20px'}}>
+                    PREVIOUS STEP
                 </ButtonStyle>
-                <ButtonStyle onClick={nextStep} disabled={activeStep === totalSteps}>
-                    Next
+                <ButtonStyle onClick={nextStep} disabled={activeStep === totalSteps} style={{marginRight:'20px'}}>
+                    NEXT STEP
                 </ButtonStyle>
             </ButtonsContainer>
         </MainContainer>
