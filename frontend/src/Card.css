@@ -1,6 +1,6 @@
 .card-container {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   max-width: 100%;
   max-height: 100%;
   padding: 16px;
@@ -13,18 +13,18 @@
 
 .card-container img {
   max-width: 100%;
-  max-height: 50%;
+  height: 70%;
   border-radius: 16px;
 }
 
 .card-container h2 {
   color: #000000;
-  font-size: 16px;
+  font-size: 17px;
   margin-top: 8px;
 }
 
 .price {
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .card-container div{
