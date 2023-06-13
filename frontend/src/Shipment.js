@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Shipment.css';
 
-const Form = () => {
+const ShipmentForm = () => {
     const [formData, setFormData] = useState({
         StreetName: '',
         Number: '',
@@ -140,4 +140,4 @@ const Form = () => {
     );
 };
 
-export default Form;
+export default ShipmentForm;

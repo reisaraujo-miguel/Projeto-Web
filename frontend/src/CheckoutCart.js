@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ListGroup } from "react-bootstrap";
 import "./CheckoutCart.css";
+import Cart from "./test-json/cart.json";
 
 /*
     * CheckoutCart expects a json file containing the list of products in the cart.
@@ -26,6 +27,7 @@ import "./CheckoutCart.css";
 */
 
 const CheckoutCart = ({ data = null }) => {
+    const test = true;
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
@@ -33,19 +35,22 @@ const CheckoutCart = ({ data = null }) => {
             const fetchCart = async () => {
                 const response = await fetch(data);
                 const arr = await response.json();
-
+                /*
                 const temp = [];
 
                 arr.cart.forEach((index) => {
                     temp.push(index);
                 });
+                */
 
-                setCart(temp);
+                setCart(arr.cart);
             };
 
             fetchCart();
+        } else if (test) {
+            setCart(Cart.cart);
         }
-    }, [data]);
+    }, [data, test]);
 
     const createList = () => {
         return cart.map((index) => (
@@ -63,8 +68,8 @@ const CheckoutCart = ({ data = null }) => {
         <div style={{ "textAlign": "left" }}>
             <label className="mt-5 mb-4" htmlFor="list"><b>My Cart</b></label>
             <ListGroup id="list" variant="flush">
-                {data && createList()}
-                {!data && <p>Empty</p>}
+                {(data || test) && createList()}
+                {(!data && !test) && <p>Empty</p>}
             </ListGroup>
         </div>
     );
