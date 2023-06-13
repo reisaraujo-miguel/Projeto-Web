@@ -2,12 +2,13 @@
 
 import React from "react";
 import ProgressSteps from '../ProgressSteps';
-import CheckoutCart from "../CheckoutCart";
+//import CheckoutCart from "../CheckoutCart";
+import PaymentMethod from "../PaymentMethod";
 
 
 const Checkout = () => (
     <div className="mt-5 mb-4">
-        <ProgressSteps content={<CheckoutCart data="http://localhost:8080/sla.json" />} />
+        <ProgressSteps content={<PaymentMethod />} />
     </div>
 );
 

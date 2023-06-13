@@ -47,8 +47,6 @@ const CheckoutCart = ({ data = null }) => {
         }
     }, [data]);
 
-    console.log(cart);
-
     const createList = () => {
         return cart.map((index) => (
             <ListGroup.Item key={index.uid}>
