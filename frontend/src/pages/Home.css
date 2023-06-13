@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #e3e3e3;
+  background-color: #FFFFFF;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,6 +28,19 @@
   color: #61dafb;
 }
 
+.stub{
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+}
+
+.innerDiv{
+
+  border: 1px solid #000;
+  border-radius: 16px;
+  padding: 2%;
+  background-color: #e3e3e3;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
