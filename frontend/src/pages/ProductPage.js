@@ -10,7 +10,7 @@ import Carousel from '../Carousel';
 
 const ProductPage = () => (
     <div className="mt-3" style={{ "textAlign": "left" }}>
-        <div className="row" style={{ marginTop: "50px" }}>
+        <div className="productDiv">
             <div className="col1">
                 <ImgPreviewStack test={true} />
             </div>
@@ -42,10 +42,13 @@ const ProductPage = () => (
                 </div>
             </div>
         </div>
-        <label htmlFor="recommendations"><h5 style={{ marginBottom: '20px', marginLeft: '40px' }}><b>Recommended:</b></h5></label>
-        <div className="mb-4" id="recommendations">
-            <Carousel />
+        <div style={{marginTop:'8%'}}>
+            <label htmlFor="recommendations"><h5 style={{ marginBottom: '20px', marginLeft: '40px' }}><b>Recommended:</b></h5></label>
+            <div className="mb-4" id="recommendations">
+                <Carousel />
+            </div>
         </div>
+
     </div>
 );
 
