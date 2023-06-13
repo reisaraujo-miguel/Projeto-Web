@@ -9,7 +9,7 @@ import laptop5 from './img/test/laptop-5.jpg'
 import laptop6 from './img/test/laptop-6.jpg'
 import laptop7 from './img/test/laptop-7.jpg'
 
-const Carousel = ({}) => {
+const Carousel = () => {
 
   let laptops = [laptop1, laptop2, laptop3, laptop4, laptop5, laptop6, laptop7]
 
