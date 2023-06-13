@@ -21,7 +21,7 @@ const PaymentMethod = ({ setJson = (e) => { console.log(e); } }) => {
 
     return (
         <div style={{ "textAlign": "left" }}>
-            <label className="mt-5 mb-4" htmlFor="list"><b>Payment Method</b></label>
+            <label className="mt-5 mb-4" htmlFor="list"><b>Credit Card:</b></label>
             <div className="container">
                 <div className="row mb-5">
                     <div className="col" style={{ "paddingTop": "3.5%" }}>

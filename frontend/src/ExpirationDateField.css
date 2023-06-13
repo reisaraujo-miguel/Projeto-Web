@@ -3,6 +3,9 @@
     text-align: center;
     width: 70px;
     font-size: medium;
+    border-radius: 10px;
+    border: 1px solid #454545;
+
   }
   
   .error-message {
