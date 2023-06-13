@@ -5,34 +5,34 @@
 }
 
 .image-stack-container {
-    max-height: 68%;
-    width: 25%;
+    max-height: 70%;
+    width: 80%;
     overflow-y: auto;
 }
 
 .image-stack {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
 }
 
 .image-square {
-    width: 80%;
-    padding-top: 80%;
+    width: 78%;
+    padding-top: 78%;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 10%;
     background-color: #777777;
     background-size: cover;
     background-position: center;
 }
 
 .big-image-container {
-    width: 55%; /* Adjust the width as needed */
-    height: 68%; /* Adjust the height as needed */
+    width: 130%; /* Adjust the width as needed */
+    height: 70%; /* Adjust the height as needed */
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 10%;
     display: flex;
     align-items: center;
     justify-content: center;

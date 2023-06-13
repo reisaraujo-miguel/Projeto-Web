@@ -92,7 +92,7 @@ const ImgPreviewStack = ({ dir = '', test = false }) => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-md-3 d-none d-md-block" style={{ "marginRight": "-18%" }}>
+                <div className="col-md-3 d-none d-md-block" style={{ "marginRight": "-5%" }}>
                     <div className="image-stack-container" ref={imageStackContainerRef}>
                         <div className="image-stack">
                             {createImageStack()}
