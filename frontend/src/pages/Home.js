@@ -5,6 +5,8 @@ import ImgPreviewStack from '../ImageSelection';
 import ExpirationDateField from '../ExpirationDateField.js';
 import RatingWidget from '../RatingWidget';
 import SearchBarAdmin from '../SearchBarAdmin';
+import InputBox from '../InputBox';
+import Shipment from '../Shipment';
 
 
 const Home = () => (
@@ -25,6 +27,8 @@ const Home = () => (
                 <RatingWidget />
                 <SearchBarAdmin />
                 <ImgPreviewStack test={true} />
+                <InputBox/>
+                <Shipment/>
                 <p>
                     Edit <code>src/App.js</code> and save to reload.
                 </p>
