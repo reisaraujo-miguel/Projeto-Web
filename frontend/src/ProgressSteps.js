@@ -94,9 +94,10 @@ const ButtonStyle = styled.button`
   border: 0;
   background: #6200EE;
   color: #ffffff;
+  font-size: medium;
   cursor: pointer;
   padding: 8px;
-  width: 120px;
+  width: 180px;
   :active {
     transform: scale(0.98);
   }
@@ -174,11 +175,11 @@ const ProgressSteps = ({ content = <></> }) => {
       </StepContainer>
       {content}
       <ButtonsContainer>
-        <ButtonStyle onClick={prevStep} disabled={activeStep === 1}>
-          Previous
+        <ButtonStyle onClick={prevStep} disabled={activeStep === 1} style={{marginLeft:'20px'}}>
+          PREVIOUS STEP
         </ButtonStyle>
-        <ButtonStyle onClick={nextStep} disabled={activeStep === totalSteps}>
-          Next
+        <ButtonStyle onClick={nextStep} disabled={activeStep === totalSteps} style={{marginRight:'20px'}}>
+          NEXT STEP
         </ButtonStyle>
       </ButtonsContainer>
     </MainContainer>
