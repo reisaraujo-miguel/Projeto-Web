@@ -2,10 +2,10 @@
 
 import React from "react";
 import './ProductPage.css';
-import ImgPreviewStack from '../ImageSelection';
-import RatingWidget from "../RatingWidget";
-import CustomButton from '../Buttons.js';
-import Carousel from '../Carousel';
+import ImgPreviewStack from '../components/ImageSelection';
+import RatingWidget from "../components/RatingWidget";
+import CustomButton from '../components/Buttons.js';
+import Carousel from '../components/Carousel';
 
 
 const ProductPage = () => (

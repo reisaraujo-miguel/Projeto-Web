@@ -1,7 +1,7 @@
 // pages/Checkout.js
 
 import React from "react";
-import ProgressSteps from '../ProgressSteps';
+import ProgressSteps from '../components/ProgressSteps';
 
 
 const Checkout = () => (
