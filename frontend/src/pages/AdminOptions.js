@@ -2,7 +2,10 @@ import React from "react";
 import CustomButton from '../components/Buttons.js';
 import InputBox from '../components/InputBox.js';
 import './AdminOptions.css';
-import SearchBarAdmin from '../SearchBarAdmin.js';
+import SearchBarAdmin from '../components/SearchBarAdmin.js';
+import addButton from '../img/Buttons/Addbutton.png';
+import excludeMark from '../img/Buttons/excludeMark.png';
+import okayMark from '../img/Buttons/okayMark.png';
 
 const AdminOptions = ({ type = 0 }) => {
 
@@ -27,7 +30,7 @@ const AdminOptions = ({ type = 0 }) => {
         </div>
         <div className="add-button-wrapper">
           <CustomButton
-            image={'../img/Buttons/Addbutton.png'}/>
+            image={addButton}/>
         </div>
 
       </div>
@@ -54,10 +57,10 @@ const AdminOptions = ({ type = 0 }) => {
       </div>
         <div className="add-button-wrapper">
           <CustomButton
-            image={'../img/Buttons/excludeMark.png'}
+            image={excludeMark}
             text="Remove"/>
            <CustomButton
-            image={'../img/Buttons/okayMark.png'}
+            image={okayMark}
             text="Apply"/>           
         </div>
     </div>

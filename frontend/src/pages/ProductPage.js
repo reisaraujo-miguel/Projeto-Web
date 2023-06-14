@@ -6,6 +6,7 @@ import ImgPreviewStack from '../components/ImageSelection';
 import RatingWidget from "../components/RatingWidget";
 import CustomButton from '../components/Buttons.js';
 import Carousel from '../components/Carousel';
+import plusIcon from '../img/Buttons/plus-icon.svg';
 
 
 const ProductPage = () => (
@@ -25,7 +26,7 @@ const ProductPage = () => (
                     <p style={{ fontSize: 'small', marginTop: 0 }}>List price: <s>$6666.66</s></p>
                 </div>
                 <div className="col2" style={{ width: "60%", height: "100px" }}>
-                    <CustomButton button_size='small-button' alt='plus icon' image='./img/Buttons/plus-icon.svg' text='ADD TO CART' />
+                    <CustomButton button_size='small-button' alt='plus icon' image={plusIcon} text='ADD TO CART' />
                     <CustomButton text='BUY NOW' />
                 </div>
                 <div className="mt-5">

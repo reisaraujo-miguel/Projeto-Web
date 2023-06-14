@@ -41,7 +41,7 @@ const ImgPreviewStack = ({ dir = '', test = false }) => {
                     const imageUrls = [];
 
                     for (let i = 1; i < 8; i++) {
-                        const img = await import(`./img/test/laptop-${i}.jpg`);
+                        const img = await import(`../img/test/laptop-${i}.jpg`);
                         imageUrls.push(img.default);
                     }
 
@@ -122,7 +122,7 @@ const ImgPreviewStack = ({ dir = '', test = false }) => {
 };
 
 const constructImageUrl = (href, dir) => {
-    const normalizedHref = href.startsWith('./') ? href.substring(2) : href;
+    const normalizedHref = href.startsWith('../') ? href.substring(2) : href;
     const imageUrl = new URL(normalizedHref, dir).href;
     return imageUrl;
 };
