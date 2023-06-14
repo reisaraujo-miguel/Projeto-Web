@@ -4,7 +4,7 @@ import CheckoutCart from './CheckoutCart'
 import PaymentMethod from './PaymentMethod'
 import ShipmentForm from './Shipment'
 import Confirmation from './Confirmation'
-import testCart from './test-json/cart.json';
+import testCart from '../test-json/cart.json';
 
 const MainContainer = styled.div`
   width: 100%;

@@ -2,10 +2,10 @@
 
 import React from "react";
 import './Login.css';
-import InputBox from "../InputBox";
+import InputBox from "../components/InputBox";
 import UserImage from '../img/icons/user.png';
 import Password from '../img/icons/password.png';
-import CustomButton from '../Buttons';
+import CustomButton from '../components/Buttons';
 
 const Login = () => (
   

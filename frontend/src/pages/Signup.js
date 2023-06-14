@@ -2,14 +2,14 @@
 
 import React from "react";
 import './Signup.css';
-import InputBox from "../InputBox";
+import InputBox from "../components/InputBox";
 import UserImage from '../img/icons/user.png';
 import Password from '../img/icons/password.png';
 import Mail from '../img/icons/mail.png';
 import Phone from '../img/icons/phone.png';
 import ZipCode from '../img/icons/zipcode.png';
 import Identity from '../img/icons/identity.png';
-import CustomButton from '../Buttons';
+import CustomButton from '../components/Buttons';
 
 const Signup = () => (
   <div className="SignUpDiv">

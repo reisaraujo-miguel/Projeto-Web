@@ -1,7 +1,7 @@
 import React from "react";
 import { ListGroup } from "react-bootstrap";
 import "./CheckoutCart.css";
-import testCart from "./test-json/cart.json";
+import testCart from "../test-json/cart.json";
 
 
 const CheckoutCart = ({ cart = null, updateCart = (e) => { console.log(e) } }) => {

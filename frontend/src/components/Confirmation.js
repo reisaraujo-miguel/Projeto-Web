@@ -1,8 +1,8 @@
 import React from 'react';
 import { ListGroup } from 'react-bootstrap';
-import testCart from './test-json/cart.json';
-import testPayment from './test-json/payment.json';
-import testAddress from './test-json/address.json';
+import testCart from '../test-json/cart.json';
+import testPayment from '../test-json/payment.json';
+import testAddress from '../test-json/address.json';
 
 
 const Confirmation = ({ cart = null, address = null, payment = null }) => {

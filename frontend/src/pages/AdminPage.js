@@ -1,7 +1,7 @@
 import React from "react";
-import './AdminPage.css'
-import CustomButton from '../Buttons.js'
-import AdminOptions from './AdminOptions.js'
+import './AdminPage.css';
+import CustomButton from '../components/Buttons.js';
+import AdminOptions from './AdminOptions.js';
 
 const AdminPage = () => (
   <div className="outDiv">
