@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import InputBox from "./InputBox";
 import ExpirationDateField from "./ExpirationDateField";
 
-const PaymentMethod = ({ setJson = (e) => { console.log(e); } }) => {
+const PaymentMethod = ({ updatePayment = (e) => { console.log(e); } }) => {
     const [name, setName] = useState(null);
     const [date, setDate] = useState(null);
     const [card, setCard] = useState(null);
@@ -16,8 +16,8 @@ const PaymentMethod = ({ setJson = (e) => { console.log(e); } }) => {
             code,
         };
 
-        setJson(updatedData);
-    }, [name, date, card, code, setJson]);
+        updatePayment(updatedData);
+    }, [name, date, card, code, updatePayment]);
 
     return (
         <div style={{ "textAlign": "left" }}>

@@ -4,6 +4,7 @@ import CheckoutCart from './CheckoutCart'
 import PaymentMethod from './PaymentMethod'
 import ShipmentForm from './Shipment'
 import Confirmation from './Confirmation'
+import testCart from './test-json/cart.json';
 
 const MainContainer = styled.div`
   width: 100%;
@@ -142,6 +143,9 @@ const steps = [
 
 const ProgressSteps = () => {
     const [activeStep, setActiveStep] = useState(1)
+    const [cart, setCart] = useState(testCart.cart);
+    const [payment, setPayment] = useState(null);
+    const [address, setAddress] = useState(null);
 
     const nextStep = () => {
         setActiveStep(activeStep + 1)
@@ -174,15 +178,15 @@ const ProgressSteps = () => {
                     </StepWrapper>
                 ))}
             </StepContainer>
-            {activeStep === 1 && <CheckoutCart />}
-            {activeStep === 2 && <PaymentMethod />}
-            {activeStep === 3 && <ShipmentForm />}
-            {activeStep === 4 && <Confirmation />}
+            {activeStep === 1 && <CheckoutCart cart={cart} updateCart={setCart} />}
+            {activeStep === 2 && <PaymentMethod updatePayment={setPayment} />}
+            {activeStep === 3 && <ShipmentForm updateAddress={setAddress}/>}
+            {activeStep === 4 && <Confirmation cart={cart} payment={payment} address={address} />}
             <ButtonsContainer>
-                <ButtonStyle onClick={prevStep} disabled={activeStep === 1} style={{marginLeft:'20px'}}>
+                <ButtonStyle onClick={prevStep} disabled={activeStep === 1} style={{ marginLeft: '20px' }}>
                     PREVIOUS STEP
                 </ButtonStyle>
-                <ButtonStyle onClick={nextStep} disabled={activeStep === totalSteps} style={{marginRight:'20px'}}>
+                <ButtonStyle onClick={nextStep} disabled={activeStep === totalSteps} style={{ marginRight: '20px' }}>
                     NEXT STEP
                 </ButtonStyle>
             </ButtonsContainer>

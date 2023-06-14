@@ -6,10 +6,9 @@ import testAddress from './test-json/address.json';
 
 
 const Confirmation = ({ cart = null, address = null, payment = null }) => {
-    const test = true;
+    const test = false;
     let fullPrice = 0;
     const shipment = Math.floor(Math.random() * (100 - 10 + 1)) + 10;
-    ;
 
     if (test) {
         cart = testCart.cart;
