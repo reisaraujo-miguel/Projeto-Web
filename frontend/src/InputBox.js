@@ -21,7 +21,7 @@ const InputBox = ({ image, inputType, backgroundColor, foregroundColor, placehol
         inputStyle.backgroundRepeat = "no-repeat"
         inputStyle.backgroundPosition = "left"
         inputStyle.paddingLeft = "25px"
-        inputStyle.backgroundSize = "20px"
+        inputStyle.backgroundSize = "18px"
     }
     else {
         inputStyle.paddingRight = "25px"
