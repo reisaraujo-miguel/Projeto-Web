@@ -47,7 +47,23 @@ Text describing the tests that will be performed. If an automatic test tool/fram
 Text describing the test results. If an automatic test tool/framework is used, its output can be used.
 
 ## Build Procedures:
-A step-by-step guide to run your code. You should start telling how to install whatever software you need, then how to download/build your program, and finally how to set up the environment to run it. Imagine that someone installing will just follow these commands (nothing more).
+First clone the repository: 
+```bash
+git clone https://github.com/reisaraujo-miguel/Projeto-Web.git
+```
+
+Then install all the dependencies with npm:
+
+```bash
+cd Projeto-Web/
+cd frontend/
+npm install
+```
+
+Then build it and serve it locally:
+```bash
+npm start
+```
 
 ## Problems:
 List any major problems you had.
