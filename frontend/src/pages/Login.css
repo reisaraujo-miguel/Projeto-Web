@@ -6,3 +6,23 @@
     width: 40%;
     border-radius: 30px;
 }
+
+.loginOptions {
+    text-align: left;
+    margin-left: 68px;
+    margin-top: 15px;
+}
+
+.rememberMe {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.forgotPassword {
+    font-size: 12px;
+    margin-left: 60px;
+}
+
+.createAccount {
+    font-size: 12px;
+}
