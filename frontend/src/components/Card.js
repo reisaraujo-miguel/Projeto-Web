@@ -1,5 +1,5 @@
 import React from 'react';
-import RatingWidget from './RatingWidget.js'
+import RatingWidget from '../RatingWidget.js'
 import './Card.css'
 
 const Card = ({ name, img, userRating, productPrice, onClick }) => {

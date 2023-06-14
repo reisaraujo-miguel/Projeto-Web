@@ -1,5 +1,5 @@
 import './Home.css';
-import Carousel from '../Carousel';
+import Carousel from '../components/Carousel';
 
 
 const Home = () => (

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
+import Card from './Card.js';
+import './Carousel.css';
 import { useNavigate } from 'react-router-dom';
-import Card from './Card.js'
-import './Carousel.css'
-import laptop1 from './img/test/laptop-1.jpg'
-import laptop2 from './img/test/laptop-2.jpg'
-import laptop3 from './img/test/laptop-3.jpg'
-import laptop4 from './img/test/laptop-4.jpg'
-import laptop5 from './img/test/laptop-5.jpg'
-import laptop6 from './img/test/laptop-6.jpg'
-import laptop7 from './img/test/laptop-7.jpg'
+import laptop1 from '../img/test/laptop-1.jpg';
+import laptop2 from '../img/test/laptop-2.jpg';
+import laptop3 from '../img/test/laptop-3.jpg';
+import laptop4 from '../img/test/laptop-4.jpg';
+import laptop5 from '../img/test/laptop-5.jpg';
+import laptop6 from '../img/test/laptop-6.jpg';
+import laptop7 from '../img/test/laptop-7.jpg';
 
 const Carousel = () => {
 
