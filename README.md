@@ -5,36 +5,40 @@ Read [building.md](https://github.com/reisaraujo-miguel/Projeto-Web/blob/main/bu
 # Project Report
 
 ## Members:
+
 - Miguel Reis de Araújo (12752457)
 - Fernando César Lopes Barbosa Filho (10260559)
 - Christian Bernard Simas Correa Gioia Ribeiro (11795572)
 
 ## Requirements:
-The requirements are given in the assignment, but you have to add any new requirements needed by your particular store implementation.
-- The system must allow products have videos along with the product images
+
+The main requirements are given by the assignment's description. Our chosen additional functionality is: 
+- A search bar that enables the user to find any given product.
 
 ## Project Description:
+
 Silicon Road is an eletronics shop that sells cellphones, laptops, monitors and a lot of cool things.
 
 Its functionality includes:
 
-Users can easily set up an account and password with their email, CPF and phone number. They can add multiple items to the cart,
-specify the quantity of each product they want, and then finish the order with their credit card.
+- Users can easily set up an account by giving some basic info. They can add multiple items to the cart,
+specify the quantity of each product, select a shipping address and credit card, and then finish the order.
 
-On their specific page, Admins can Add/Consult/Modify/Delete products, users, and other admins. They also have access to a dashboard 
-showing overall product sales on that month.
+- In a particular page, admins can add/consult/modify/delete products and other admins.
 
-Each Product has an id, name, price, photo, video, description, quantity in stock and quantity sold. On each product page,
-besides the basic informations about the product, users can see the its rating and recommendations to similar products.
+- Each product has an ID, name, price, collection of photos, description, quantity in stock. On each product page,
+besides the basic information about the product, users can see its rating and a recommendation for similar products.
 
-Users can search for products on the search bar 
+- Users can search for products on the search bar.
 
+Project links:
 - [Navigation Diagram](https://www.figma.com/file/Ej3MasBHEqIFoIAPgwUoGm/Flow-Chart?type=whiteboard&node-id=0%3A1&t=dFfiR6KRf2D6Pcug-1)
 - [Mockup 1 (6 major pages)](https://www.figma.com/file/JCoe27IjofqH4vA0QHXtYh/Mockup-Milestone-%231?type=design&node-id=4%3A0&t=vZ38sfATpHUTt7j1-1)
 - [HTML+CSS Mockups](https://github.com/reisaraujo-miguel/Projeto-Web/tree/main/mockups)
 
 ## Comments About the Code:
-Any comment you may want to add to help understand your code. This is good programming practice.
+
+React was our choice to build the web application. In the `src/` folder, we divided the project in different subfolders, and each element/widget created has its own JS and CSS files --- this modularization is essential not only to better understand the code and its interdependencies but also to facilitate the building process as a whole. 
 
 ## Test Plan:
 Text describing the tests that will be performed. If an automatic test tool/framework is used (ex: Selenium, JUnit, Spock), the code for the tests can be used.
