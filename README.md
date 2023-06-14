@@ -41,28 +41,33 @@ Project links:
 React was our choice to build the web application. In the `src/` folder, we divided the project in different subfolders, and each element/widget created has its own JS and CSS files --- this modularization is essential not only to better understand the code and its interdependencies but also to facilitate the building process as a whole. 
 
 ## Test Plan:
-Text describing the tests that will be performed. If an automatic test tool/framework is used (ex: Selenium, JUnit, Spock), the code for the tests can be used.
+Throughout the project we defined a lot of mock objects for testing the functionality of core components, like Carousel on the Product and Main Pages.
+
+Our methodology of testing consisted of checking if the pages we're reasonably under the specification we determined on Milestone 1, and testing if 
+buttons or components that have some effect on the state of the page (like routes, changing a component item) are working as expected.
+
 
 ## Test Results:
-Text describing the test results. If an automatic test tool/framework is used, its output can be used.
+All pages are reasonably under the specification we defined on Milestone1, with some minor modifications in some cases.
+
 
 ## Build Procedures:
 First clone the repository: 
 ```bash
-git clone https://github.com/reisaraujo-miguel/Projeto-Web.git
+$ git clone https://github.com/reisaraujo-miguel/Projeto-Web.git
 ```
 
 Then install all the dependencies with npm:
 
 ```bash
-cd Projeto-Web/
-cd frontend/
-npm install
+$ cd Projeto-Web/
+$ cd frontend/
+$ npm install
 ```
 
 Then build it and serve it locally:
 ```bash
-npm start
+$ npm start
 ```
 
 ## Problems:
