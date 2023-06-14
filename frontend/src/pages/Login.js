@@ -1,16 +1,20 @@
 // pages/Login.js
 
 import React from "react";
+import './Login.css';
+import InputBox from "../InputBox";
+import UserImage from '../img/icons/user.png';
+import Password from '../img/icons/password.png';
+import CustomButton from '../Buttons';
 
 const Login = () => (
-  <div>
-    <h1 className="title is-1">Esta é a página de login</h1>
-    <p>
-      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-      inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus
-      et ultrices posuere cubilia curae; Duis consequat nulla ac ex consequat,
-      in efficitur arcu congue. Nam fermentum commodo egestas.
-    </p>
+  <div className="loginDiv">
+    <h1 style={{marginBottom:"50px"}}>Login</h1>
+    <InputBox image={UserImage} inputType={"text"} placeholder={"Username"} />
+    <br style={{ marginBottom: '30px' }}></br>
+    <InputBox image={Password} inputType={"password"} placeholder={"Password"} />
+    <br style={{ marginBottom: '30px' }}></br>
+    <CustomButton text={"Log in"}/>
   </div>
 );
 

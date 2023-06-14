@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import './InputBox.css'
 
-const InputBox = ({ image, inputType, backgroundColor, foregroundColor, placeholder, padding, setData }) => {
+const InputBox = ({ image, inputType, backgroundColor, foregroundColor, placeholder, padding, setData=()=>{} }) => {
 
     const inputRef = useRef(null)
 
