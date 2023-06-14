@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Card from './Card.js'
 import './Carousel.css'
 import laptop1 from './img/test/laptop-1.jpg'
@@ -77,8 +78,9 @@ const Carousel = () => {
         setLaptopsState(updatedLaptops);
     };
 
-    const foo = () => {
-        console.log("redirect")
+    const navigate = useNavigate();
+    const redirectOnClick = () => {
+        navigate('/product')
     }
 
     return (
@@ -95,7 +97,7 @@ const Carousel = () => {
                     userRating={laptop.rating}
                     productPrice={laptop.price}
                     key={laptop.uid}
-                    onClick={foo}
+                    onClick={redirectOnClick}
                 />
             ))}
             <div className="right-button-wrapper">
