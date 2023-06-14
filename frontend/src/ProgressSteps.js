@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import CheckoutCart from './CheckoutCart'
 import PaymentMethod from './PaymentMethod'
 import ShipmentForm from './Shipment'
+import Confirmation from './Confirmation'
 
 const MainContainer = styled.div`
   width: 100%;
@@ -176,6 +177,7 @@ const ProgressSteps = () => {
             {activeStep === 1 && <CheckoutCart />}
             {activeStep === 2 && <PaymentMethod />}
             {activeStep === 3 && <ShipmentForm />}
+            {activeStep === 4 && <Confirmation />}
             <ButtonsContainer>
                 <ButtonStyle onClick={prevStep} disabled={activeStep === 1} style={{marginLeft:'20px'}}>
                     PREVIOUS STEP
