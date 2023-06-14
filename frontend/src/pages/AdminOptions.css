@@ -1,0 +1,23 @@
+.admin-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-box-wrapper{
+  margin-bottom: 10px;
+}
+
+.add-label{
+  margin-bottom: 20px;
+}
+
+.add-button-wrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.search-bar-wrapper{
+  margin-bottom: 20px;
+}

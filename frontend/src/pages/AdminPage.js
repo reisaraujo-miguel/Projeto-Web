@@ -1,16 +1,23 @@
-// pages/AdminPage.js
-
 import React from "react";
+import './AdminPage.css'
+import CustomButton from '../Buttons.js'
+import AdminOptions from './AdminOptions.js'
 
 const AdminPage = () => (
-  <div>
-    <h1 className="title is-1">Esta é a página do admin</h1>
-    <p>
-      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-      inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus
-      et ultrices posuere cubilia curae; Duis consequat nulla ac ex consequat,
-      in efficitur arcu congue. Nam fermentum commodo egestas.
-    </p>
+  <div className="outDiv">
+    <div className="optionDiv">
+      <CustomButton text="Admins"/> 
+      <CustomButton text="Products"/> 
+    </div>
+    <div className="crudDiv">
+      <div className="modifyDiv"> 
+        <AdminOptions/>
+      </div>
+      <div className="modifyDiv"> 
+        <AdminOptions
+          type={1}/>
+      </div>
+    </div>
   </div>
 );
 
