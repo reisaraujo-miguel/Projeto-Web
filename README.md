@@ -66,7 +66,8 @@ npm start
 ```
 
 ## Problems:
-List any major problems you had.
+No major problems.
 
 ## Comments:
-Any comments you wish to add.
+
+No comments.
