@@ -5,7 +5,7 @@ import ProgressSteps from '../components/ProgressSteps';
 
 
 const Checkout = () => (
-    <div className="mt-5 mb-4">
+    <div>
         <ProgressSteps />
     </div>
 );

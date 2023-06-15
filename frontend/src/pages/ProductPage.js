@@ -10,7 +10,7 @@ import plusIcon from '../img/Buttons/plus-icon.svg';
 
 
 const ProductPage = () => (
-    <div className="mt-3" style={{ "textAlign": "left" }}>
+    <div>
         <div className="productDiv">
             <div className="col1">
                 <ImgPreviewStack test={true} />
@@ -49,7 +49,6 @@ const ProductPage = () => (
                 <Carousel />
             </div>
         </div>
-
     </div>
 );
 

@@ -5,12 +5,12 @@
 }
 
 .innerDiv{
-  margin-top: 50px;
-  border-radius: 16px;
+  border-radius: 1.5em;
   padding: 2.5%;
   background-color: #FFFFFF;
 }
+
 .labelTitle{
-  margin-bottom: 20px;
-  font-size: 27px;
+  margin-bottom: 3%;
+  font-size: 1.6em;
 }

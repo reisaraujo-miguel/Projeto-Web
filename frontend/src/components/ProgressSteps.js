@@ -8,24 +8,22 @@ import testCart from '../test-json/cart.json';
 
 const MainContainer = styled.div`
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px 50px;
+  max-width: 100%;
+  padding: 8% 8%;
   background-color: #ffffff;
-  margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 2%;
 `
 
 const StepContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 70px;
+  margin-top: 8%;
   position: relative;
   :before {
     content: '';
     position: absolute;
     background: #f3e7f3;
-    height: 4px;
+    height: 8%;
     width: 100%;
     top: 50%;
     transform: translateY(-50%);
@@ -35,7 +33,7 @@ const StepContainer = styled.div`
     content: '';
     position: absolute;
     background: #6200EE;
-    height: 4px;
+    height: 8%;
     width: ${({ width }) => width};
     top: 50%;
     transition: 0.4s ease;
@@ -50,8 +48,8 @@ const StepWrapper = styled.div`
 `
 
 const StepStyle = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 3em;
+  height: 3em;
   border-radius: 50%;
   background-color: #ffffff;
   background-color: ${({ step }) =>
@@ -65,44 +63,38 @@ const StepStyle = styled.div`
 `
 
 const StepCount = styled.span`
-  font-size: 19px;
+  font-size: 1.4em;
   color: #FFFFFF;
-  @media (max-width: 600px) {
-    font-size: 16px;
-  }
 `
 
 const StepsLabelContainer = styled.div`
   position: absolute;
-  top: 66px;
+  top: 150%;
   left: 50%;
   transform: translate(-50%, -50%);
 `
 
 const StepLabel = styled.span`
-  font-size: 17px;
+  font-size: 1em;
   color: #000000;
-  @media (max-width: 600px) {
-    font-size: 16px;
-  }
 `
 
 const ButtonsContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 0 -15px;
-  margin-top: 100px;
+  margin: 0 -4%;
+  margin-top: 8%;
 `
 
 const ButtonStyle = styled.button`
-  border-radius: 4px;
+  border-radius: 0.5em;
   border: 0;
   background: #6200EE;
   color: #ffffff;
   font-size: medium;
   cursor: pointer;
-  padding: 8px;
-  width: 180px;
+  padding: 1%;
+  width: 15%;
   :active {
     transform: scale(0.98);
   }
@@ -114,7 +106,7 @@ const ButtonStyle = styled.button`
 `
 
 const CheckMark = styled.div`
-  font-size: 26px;
+  font-size: 2em;
   font-weight: 600;
   color: #FFFFFF;
   -ms-transform: scaleX(-1) rotate(-46deg); /* IE 9 */
@@ -180,13 +172,13 @@ const ProgressSteps = () => {
             </StepContainer>
             {activeStep === 1 && <CheckoutCart cart={cart} updateCart={setCart} />}
             {activeStep === 2 && <PaymentMethod updatePayment={setPayment} />}
-            {activeStep === 3 && <ShipmentForm updateAddress={setAddress}/>}
+            {activeStep === 3 && <ShipmentForm updateAddress={setAddress} />}
             {activeStep === 4 && <Confirmation cart={cart} payment={payment} address={address} />}
             <ButtonsContainer>
-                <ButtonStyle onClick={prevStep} disabled={activeStep === 1} style={{ marginLeft: '20px' }}>
+                <ButtonStyle onClick={prevStep} disabled={activeStep === 1} style={{ marginLeft: '2%' }}>
                     PREVIOUS STEP
                 </ButtonStyle>
-                <ButtonStyle onClick={nextStep} disabled={activeStep === totalSteps} style={{ marginRight: '20px' }}>
+                <ButtonStyle onClick={nextStep} disabled={activeStep === totalSteps} style={{ marginRight: '2%' }}>
                     NEXT STEP
                 </ButtonStyle>
             </ButtonsContainer>

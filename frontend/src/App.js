@@ -10,13 +10,13 @@ import Signup from './pages/Signup';
 
 function App() {
     return (
-        <div className="vstack App">
-            <div>
-            <NavBar />
-            </div>
-            <header className="App-header">
+        <>
+            <header className="App-header" role='banner'>
+                <NavBar />
+            </header>
+            <main className='App'>
                 <BrowserRouter>
-                    <div className="container mt-2" style={{ marginTop: 40 }}>
+                    <div className="container">
                         <Routes>
                             <Route path='/' element={<Home />} />
                             <Route path='/product' element={<About />} />
@@ -27,8 +27,8 @@ function App() {
                         </Routes>
                     </div>
                 </BrowserRouter>
-           </header>
-        </div>
+            </main>
+        </>
     );
 }
 

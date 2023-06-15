@@ -1,35 +1,26 @@
-.outDiv{
-  display:flex;
-  justify-content: center;
-  margin-top: 100px;
-  height: 100vh;
-}
-
 .optionDiv{
-  border-radius: 16px;
+  border-radius: 1em;
+  align-content: center;
   padding: 2.5%;
   background-color: #FFFFFF;
-  width: 200px;
-  height: 150px;
+  width: 15em;
+  height: 10em;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .crudDiv{
-  display: flex;
+  text-align: center;
   flex-direction: column;
   width: 80%;
 }
 
 .modifyDiv{
-  border-radius: 16px;
+  border-radius: 1em;
   padding: 2.5%;
   background-color: #FFFFFF;
-  width: 65%;
-  height: 500px;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  width: 100%;
   text-align: center;
 }
 
