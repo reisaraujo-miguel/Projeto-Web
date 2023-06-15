@@ -10,7 +10,7 @@ import plusIcon from '../img/Buttons/plus-icon.svg';
 
 
 const ProductPage = () => (
-    <div>
+    <div className="outer-div-product">
         <div className="productDiv">
             <div className="col1">
                 <ImgPreviewStack test={true} />

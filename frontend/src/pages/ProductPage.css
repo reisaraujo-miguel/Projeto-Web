@@ -22,3 +22,10 @@
   padding: 40px;
   border-radius: 20px;
 }
+
+.outer-div-product{
+  display:flex;
+  flex-direction: column;
+  text-align: left;
+}
+
