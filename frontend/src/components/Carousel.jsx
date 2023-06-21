@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Card from './Card.js';
+import Card from './Card';
 import './Carousel.css';
 import { useNavigate } from 'react-router-dom';
 import laptop1 from '../img/test/laptop-1.jpg';

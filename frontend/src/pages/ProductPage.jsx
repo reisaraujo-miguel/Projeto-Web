@@ -4,7 +4,7 @@ import React from "react";
 import './ProductPage.css';
 import ImgPreviewStack from '../components/ImageSelection';
 import RatingWidget from "../components/RatingWidget";
-import CustomButton from '../components/Buttons.js';
+import CustomButton from '../components/Buttons';
 import Carousel from '../components/Carousel';
 import plusIcon from '../img/Buttons/plus-icon.svg';
 

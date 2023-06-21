@@ -1,7 +1,7 @@
 import React from "react";
 import './AdminPage.css';
-import CustomButton from '../components/Buttons.js';
-import AdminOptions from './AdminOptions.js';
+import CustomButton from '../components/Buttons';
+import AdminOptions from './AdminOptions';
 
 const AdminPage = () => (
     <div className="row">

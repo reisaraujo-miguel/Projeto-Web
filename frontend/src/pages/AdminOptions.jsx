@@ -1,8 +1,8 @@
 import React from "react";
-import CustomButton from '../components/Buttons.js';
-import InputBox from '../components/InputBox.js';
+import CustomButton from '../components/Buttons';
+import InputBox from '../components/InputBox';
 import './AdminOptions.css';
-import SearchBarAdmin from '../components/SearchBarAdmin.js';
+import SearchBarAdmin from '../components/SearchBarAdmin';
 import addButton from '../img/Buttons/Addbutton.png';
 import excludeMark from '../img/Buttons/excludeMark.png';
 import okayMark from '../img/Buttons/okayMark.png';
