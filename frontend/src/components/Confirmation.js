@@ -18,7 +18,7 @@ const Confirmation = ({ cart = null, address = null, payment = null }) => {
 
     const createList = () => {
         cart.forEach((index) => {
-            fullPrice += index.price;
+            fullPrice += (index.price * index.quantity);
         });
 
         return cart.map((index) => (
