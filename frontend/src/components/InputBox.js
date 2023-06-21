@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import './InputBox.css'
 
-const InputBox = ({ image, inputType, backgroundColor, foregroundColor, placeholder, padding, setData=()=>{} }) => {
+const InputBox = ({ image, inputType, backgroundColor, foregroundColor, placeholder, padding, setData = () => { }, isRequired = false }) => {
 
     const inputRef = useRef(null)
 
@@ -25,6 +25,20 @@ const InputBox = ({ image, inputType, backgroundColor, foregroundColor, placehol
     }
     else {
         inputStyle.paddingRight = "25px"
+    }
+
+    if (isRequired) {
+        return (
+            <input
+                type={inputType}
+                className="basicText"
+                style={inputStyle}
+                placeholder={placeholder}
+                onChange={handleChange}
+                required
+                ref={inputRef}>
+            </input>
+        );
     }
 
     return (

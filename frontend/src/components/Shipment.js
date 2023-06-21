@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Shipment.css';
 
-const ShipmentForm = ( { updateAddress = (e) => {console.log(e)} } ) => {
+const ShipmentForm = ({ updateAddress = (e) => { console.log(e) }, submitRef, setContinue }) => {
     const [formData, setFormData] = useState({
         StreetName: '',
         Number: '',
@@ -24,6 +24,7 @@ const ShipmentForm = ( { updateAddress = (e) => {console.log(e)} } ) => {
         e.preventDefault();
         // Handle form submission here
         //console.log(formData);
+        setContinue(true);
         updateAddress(formData);
     };
 
@@ -55,7 +56,7 @@ const ShipmentForm = ( { updateAddress = (e) => {console.log(e)} } ) => {
     return (
         <div style={{ "textAlign": "left" }}>
             <label className='mt-5 mb-4' htmlFor='form'><b>Delivery Address</b></label>
-            <form onSubmit={handleSubmit}>
+            <form ref={submitRef} onSubmit={handleSubmit}>
                 <div>
                     <input
                         className='input'
@@ -138,7 +139,6 @@ const ShipmentForm = ( { updateAddress = (e) => {console.log(e)} } ) => {
                         ))}
                     </select>
                 </div>
-                <button className="submit" type="submit" style={{ borderRadius: '10px' }}>Submit</button>
             </form>
         </div>
     );

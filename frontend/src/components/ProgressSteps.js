@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import styled from 'styled-components'
 import CheckoutCart from './CheckoutCart'
 import PaymentMethod from './PaymentMethod'
@@ -134,20 +134,31 @@ const steps = [
 ]
 
 const ProgressSteps = () => {
-    const [activeStep, setActiveStep] = useState(1)
+    const [activeStep, setActiveStep] = useState(1);
     const [cart, setCart] = useState(testCart.cart);
     const [payment, setPayment] = useState(null);
     const [address, setAddress] = useState(null);
+    const [canContinue, setContinue] = useState(false);
+
+    const submitRef = useRef();
 
     const nextStep = () => {
-        setActiveStep(activeStep + 1)
-    }
+        if ((activeStep === 3) || (activeStep === 2)) {
+            submitRef.current.requestSubmit();
+            if (canContinue) {
+                setActiveStep(activeStep + 1);
+                setContinue(false);
+            }
+        } else {
+            setActiveStep(activeStep + 1);
+        }
+    };
 
     const prevStep = () => {
-        setActiveStep(activeStep - 1)
-    }
+        setActiveStep(activeStep - 1);
+    };
 
-    const totalSteps = steps.length
+    const totalSteps = steps.length;
 
     const width = `${(100 / (totalSteps - 1)) * (activeStep - 1)}%`
 
@@ -171,8 +182,8 @@ const ProgressSteps = () => {
                 ))}
             </StepContainer>
             {activeStep === 1 && <CheckoutCart cart={cart} updateCart={setCart} />}
-            {activeStep === 2 && <PaymentMethod updatePayment={setPayment} />}
-            {activeStep === 3 && <ShipmentForm updateAddress={setAddress} />}
+            {activeStep === 2 && <PaymentMethod updatePayment={setPayment} setContinue={setContinue} submitRef={submitRef} />}
+            {activeStep === 3 && <ShipmentForm updateAddress={setAddress} setContinue={setContinue} submitRef={submitRef} />}
             {activeStep === 4 && <Confirmation cart={cart} payment={payment} address={address} />}
             <ButtonsContainer>
                 <ButtonStyle onClick={prevStep} disabled={activeStep === 1} style={{ marginLeft: '2%' }}>

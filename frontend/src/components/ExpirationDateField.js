@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ExpirationDateField.css';
 
-const ExpirationDateField = ({ setData }) => {
+const ExpirationDateField = ({ setData, isRequired = false }) => {
     const [expirationDate, setExpirationDate] = useState('');
     const [isValid, setIsValid] = useState(true);
 
@@ -32,6 +32,7 @@ const ExpirationDateField = ({ setData }) => {
             Number(month) > 12
         ) {
             setIsValid(false);
+            setExpirationDate('');
             return;
         }
 
@@ -40,6 +41,8 @@ const ExpirationDateField = ({ setData }) => {
 
         if (isValidDate) {
             setData(expiration);
+        } else {
+            setExpirationDate('');
         }
 
         setIsValid(isValidDate);
@@ -48,6 +51,29 @@ const ExpirationDateField = ({ setData }) => {
     const handleBlur = () => {
         verifyExpirationDate();
     };
+
+    if (isRequired) {
+        return (
+            <div>
+                <label htmlFor='input' style={{ fontSize: "16px" }}>Expiration Date*</label>
+                <div id="input">
+                    <input
+                        type="text"
+                        value={expirationDate}
+                        onChange={handleExpirationDateChange}
+                        onBlur={handleBlur}
+                        placeholder="MM/YY"
+                        maxLength="5"
+                        required
+                        className={`input-field ${isValid ? '' : 'invalid'}`}
+                    />
+                </div>
+                {!isValid && (
+                    <div className="error-message">Invalid or expired date!</div>
+                )}
+            </div>
+        );
+    }
 
     return (
         <div>
