@@ -17,7 +17,7 @@ const Home = () => (
             <Carousel />
         </div>
         <div className="innerDiv">
-            <label className='labelTitle'> GOLF BALLS </label>
+            <label className='labelTitle'> MONITORS </label>
             <Carousel />
         </div>
     </div>
