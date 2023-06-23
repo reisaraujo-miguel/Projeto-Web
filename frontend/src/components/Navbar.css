@@ -10,3 +10,9 @@
 .navbar {
     background-color: #6200EE;
 }
+
+.navbar-brand {
+     font-size: 180%; 
+     font-family: 'Montagu Slab';
+     text-align: left;
+}
