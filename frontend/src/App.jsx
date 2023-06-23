@@ -9,6 +9,8 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 
 function App() {
+    const user = null; // states: null (not logged),  user, admin
+
     return (
         <>
             <header className="App-header" role='banner'>
@@ -21,7 +23,7 @@ function App() {
                             <Route path='/' element={<Home />} />
                             <Route path='/product' element={<About />} />
                             <Route path='/checkout' element={<Checkout />} />
-                            <Route path='/admin' element={<AdminPage />} />
+                            {user === 'admin' && <Route path='/admin' element={<AdminPage />} />}
                             <Route path='/login' element={<Login />} />
                             <Route path='/signup' element={<Signup />} />
                         </Routes>
