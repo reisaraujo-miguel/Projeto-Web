@@ -9,7 +9,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 
 function App() {
-    const user = null; // states: null (not logged),  user, admin
+    const user = 'admin'; // states: null (not logged),  user, admin
 
     return (
         <>

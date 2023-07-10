@@ -15,7 +15,7 @@ const Signup = () => (
   <div className="SignUpDiv">
     <h1 style={{ marginBottom: "70px" }}>Create Account</h1>
 
-    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+    <div class="input-row">
       <div style={{ marginRight: '30px' }}>
         <InputBox image={UserImage} inputType={"text"} placeholder={"Full name"} />
       </div>
@@ -26,7 +26,7 @@ const Signup = () => (
 
     <br></br>
 
-    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+    <div class="input-row">
       <div style={{ marginRight: '30px' }}>
         <InputBox image={Phone} inputType={"text"} placeholder={"Phone number"} />
       </div>
@@ -36,10 +36,21 @@ const Signup = () => (
     </div>
 
     <br></br>
+
+    <div class="input-row">
+      <div style={{ marginRight: '30px' }}>
+        <InputBox image={ZipCode} inputType={"text"} placeholder={"Bairro"} />
+      </div>
+      <div>
+        <InputBox image={ZipCode} inputType={"text"} placeholder={"Número"} />
+      </div>
+    </div>
+
+    <br></br>
     <hr style={{ width: "90%", margin: "auto" }}></hr>
     <br></br>
 
-    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+    <div class="input-row">
       <div style={{ marginRight: '30px' }}>
         <InputBox image={UserImage} inputType={"text"} placeholder={"Username"} />
       </div>
@@ -50,7 +61,7 @@ const Signup = () => (
 
     <br></br>
 
-    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+    <div class="input-row">
       <div style={{ marginRight: '30px' }}>
         <InputBox image={Password} inputType={"password"} placeholder={"Password"} />
       </div>
