@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CustomButton from '../components/Buttons';
 import InputBox from '../components/InputBox';
 import './AdminOptions.css';
@@ -7,33 +7,7 @@ import addButton from '../img/Buttons/Addbutton.png';
 import excludeMark from '../img/Buttons/excludeMark.png';
 import okayMark from '../img/Buttons/okayMark.png';
 
-
-
 const AdminOptions = ({ type = 0 }) => {
-
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-    const [confirmationPass, setConfirmationPass] = useState('')
-
-    function foo() {
-        console.log(`${name} ${email} ${password}, ${confirmationPass}`)
-        let url = ""
-        let data = {
-            "name" : name,
-            "email" : email,
-            "password" : password,
-            "confirmationPass" : confirmationPass
-        }
-
-        fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        })
-    }
 
     if (type === 0) {
         return (
@@ -41,20 +15,20 @@ const AdminOptions = ({ type = 0 }) => {
                 <label> Add New Admin </label>
                 <div className="row gap-2">
                     <div>
-                        <InputBox inputType="text" placeholder="Name" setData={setName}/>
+                        <InputBox inputType="text" placeholder="Name" />
                     </div>
                     <div>
-                        <InputBox inputType="text" placeholder="Email" setData={setEmail}/>
+                        <InputBox inputType="text" placeholder="Email" />
                     </div>
                     <div>
-                        <InputBox inputType="password" placeholder="Password" setData={setPassword}/>
+                        <InputBox inputType="password" placeholder="Password" />
                     </div>
                     <div>
-                        <InputBox inputType="password" placeholder="Confirm Password" setData={setConfirmationPass}/>
+                        <InputBox inputType="password" placeholder="Confirm Password" />
                     </div>
                 </div>
                 <div>
-                    <CustomButton image={addButton} onClick={foo}/>
+                    <CustomButton image={addButton} />
                 </div>
             </div>
         );
