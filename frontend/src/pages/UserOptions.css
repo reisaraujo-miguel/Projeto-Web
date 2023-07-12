@@ -1,0 +1,25 @@
+.options-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.user-wrapper{
+    background-color: #FFFF;
+    padding: 2em;
+    border-radius: 6.25%;
+}
+.searchbar-user{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+.button-user{
+    display: flex;
+    justify-content: center;
+}
+.inputbox-wrapper{
+    margin: 1em;
+}
+.label-wrapper{
+    display: flex;
+    justify-content:center;
+}

@@ -8,6 +8,7 @@ import AdminPage from './pages/AdminPage';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import AdminOptions from './pages/AdminOptions';
+import UserOptions from './pages/UserOptions';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -41,6 +42,7 @@ function App() {
                             <Route path='/checkout' element={<Checkout />} />
                             {user === 'admin' && <Route path='/admin' element={<AdminPage />} />}
                             {user === 'admin' && <Route path='/admin/admins' element={<AdminOptions/>}/>}
+                            {user === 'admin' && <Route path='/admin/users' element={<UserOptions/>}/>}
                             <Route path='/login' element={<Login />} />
                             <Route path='/signup' element={<Signup />} />
                         </Routes>
