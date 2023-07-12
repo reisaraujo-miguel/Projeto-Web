@@ -5,11 +5,11 @@ import Carousel from '../components/Carousel';
 const Home = () => (
     <div className="stub gap-5">
         <div className="innerDiv">
-            <label className='labelTitle'> ON SALE </label>
+            <label className='labelTitle'> SPECIAL OFFERS </label>
             <Carousel />
         </div>
         <div className="innerDiv">
-            <label className='labelTitle'> SPECIAL OFFER </label>
+            <label className='labelTitle'> POPULAR </label>
             <Carousel />
         </div>
         <div className="innerDiv">
@@ -17,7 +17,7 @@ const Home = () => (
             <Carousel />
         </div>
         <div className="innerDiv">
-            <label className='labelTitle'> MONITORS </label>
+            <label className='labelTitle'> DESKTOPS </label>
             <Carousel />
         </div>
     </div>

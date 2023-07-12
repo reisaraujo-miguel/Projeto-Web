@@ -3,11 +3,6 @@ import CustomButton from '../components/Buttons';
 import InputBox from '../components/InputBox';
 import './AdminOptions.css';
 import SearchBarAdmin from '../components/SearchBarAdmin';
-import addButton from '../img/Buttons/Addbutton.png';
-import excludeMark from '../img/Buttons/excludeMark.png';
-import okayMark from '../img/Buttons/okayMark.png';
-
-
 
 const AdminOptions = ({ type = 0 }) => {
 
@@ -38,7 +33,7 @@ const AdminOptions = ({ type = 0 }) => {
         <div className="options-wrapper">
         <div className="admin-wrapper">
             <div className="label-wrapper"> 
-            <label> Modify Admin </label>
+            <label> Edit Admin </label>
             </div>
             <div className="searchbar-admin">
                 <SearchBarAdmin placeholder="Search Admins"/>
@@ -58,8 +53,8 @@ const AdminOptions = ({ type = 0 }) => {
                 </div>
             </div>
             <div className="button-admin">
-                <CustomButton image={excludeMark} text="Remove" />
-                <CustomButton image={okayMark} text="Apply" />
+                <CustomButton text="Delete"/>
+                <CustomButton text="Apply changes"/>
             </div>
         </div>
         </div>
