@@ -14,7 +14,7 @@ function App() {
     return (
         <>
             <header className="App-header" role='banner'>
-                <NavBar />
+                <NavBar logged={user}/>
             </header>
             <main className='App'>
                 <BrowserRouter>
