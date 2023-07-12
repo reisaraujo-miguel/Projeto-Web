@@ -14,11 +14,15 @@ const AdminPage = () => {
         navigate('/admin/users')
     }    
 
+    function showProductOptions(){
+        navigate('/admin/products')
+    }    
+
     return (
             <div className="centerOptions"> 
                 <div className="row optionDiv">
                     <CustomButton text="Users" onClick={showUserOptions}/>
-                    <CustomButton text="Products"/>
+                    <CustomButton text="Products" onClick={showProductOptions}/>
                     <CustomButton text="Admins" onClick={showAdminOptions}/>
                 </div>
             </div>

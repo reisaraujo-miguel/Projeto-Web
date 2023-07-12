@@ -1,18 +1,15 @@
 import React from "react";
 import CustomButton from '../components/Buttons';
 import InputBox from '../components/InputBox';
-import './AdminOptions.css';
-import SearchBarAdmin from '../components/SearchBarAdmin';
-import addButton from '../img/Buttons/Addbutton.png';
-import excludeMark from '../img/Buttons/excludeMark.png';
-import okayMark from '../img/Buttons/okayMark.png';
+import './ProductOptions.css';
+import plusIcon from '../img/Buttons/plus-icon.svg';
 
-const AdminOptions = ({ type = 0 }) => {
+const ProductOptions = ({ type = 0 }) => {
 
     if (type === 0) {
         return (
-            <div className="row gap-4 admin-wrapper">
-                <label> Add New Admin </label>
+            <div className="row gap-4 product-wrapper">
+                <label> Add new product </label>
                 <div className="row gap-2">
                     <div>
                         <InputBox inputType="text" placeholder="Name" />
@@ -28,17 +25,16 @@ const AdminOptions = ({ type = 0 }) => {
                     </div>
                 </div>
                 <div>
-                    <CustomButton image={addButton} />
+                    <CustomButton image={plusIcon} />
                 </div>
             </div>
         );
     }
 
     return (
-        <div className="row gap-4 admin-wrapper">
-            <label> Modify Admin </label>
+        <div className="row gap-4 product-wrapper">
+            <label> Edit existing product </label>
             <div>
-                <SearchBarAdmin />
             </div>
             <div className="row gap-2">
                 <div>
@@ -55,11 +51,11 @@ const AdminOptions = ({ type = 0 }) => {
                 </div>
             </div>
             <div>
-                <CustomButton image={excludeMark} text="Remove" />
-                <CustomButton image={okayMark} text="Apply" />
+                <CustomButton text="Delete" />
+                <CustomButton text="Apply changes" />
             </div>
         </div>
     );
 };
 
-export default AdminOptions;
+export default ProductOptions;
