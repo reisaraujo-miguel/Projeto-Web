@@ -62,7 +62,7 @@ const AdminOptions = ({ type = 0 }) => {
         <div className="options-wrapper">
         <div className="admin-wrapper">
             <div className="label-wrapper"> 
-            <label> Edit Admin </label>
+            <label className="text"> Edit Admin </label>
             </div>
             <div className="searchbar-admin">
                 <SearchBarAdmin placeholder="Search Admins" endpoint="users/admins" setData={setResult}/>

@@ -1,30 +1,32 @@
 .centerOptions{
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 .optionDiv{
   border-radius: 1em;
   align-content: center;
   padding: 2.5%;
   background-color: #FFFFFF;
-  width: 30em;
-  height: 13em;
+  width: 25em;
+  height: 16em;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 .crudDiv{
   text-align: center;
   flex-direction: column;
   width: 80%;
 }
-
 .modifyDiv{
   border-radius: 1em;
   padding: 2.5%;
   background-color: #FFFFFF;
   width: 100%;
   text-align: center;
+}
+.text{
+  font-size: 25px;
 }
 

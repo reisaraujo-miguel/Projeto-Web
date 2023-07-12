@@ -15,6 +15,7 @@
 .button-admin{
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 .inputbox-wrapper{
     margin: 1em;
@@ -22,4 +23,8 @@
 .label-wrapper{
     display: flex;
     justify-content:center;
+}
+.text{
+    font-size: 25px;
+    margin-bottom: 30px;
 }

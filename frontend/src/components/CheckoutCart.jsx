@@ -34,8 +34,8 @@ const CheckoutCart = ({ cart = null, updateCart = (e) => { console.log(e) } }) =
 
     return (
         <div style={{ "textAlign": "left" }}>
-            <label className="mt-5 mb-4" htmlFor="list"><b>My Cart</b></label>
-            <ListGroup id="list" variant="flush">
+            <label className="text" htmlFor="list"><b>My Cart</b></label>
+            <ListGroup className="cart" id="list" variant="flush">
                 {(cart) && createList()}
                 {(!cart && !test) && <p>Empty</p>}
             </ListGroup>

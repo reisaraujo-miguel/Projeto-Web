@@ -32,7 +32,7 @@ const UserOptions = ({ type = 0 }) => {
         <div className="options-wrapper">
         <div className="user-wrapper">
             <div className="label-wrapper"> 
-            <label> Edit user </label>
+            <label className="text"> Edit user </label>
             </div>
             <div className="searchbar-user">
             </div>
