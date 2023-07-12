@@ -1,59 +1,87 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomButton from '../components/Buttons';
 import InputBox from '../components/InputBox';
+import SearchBarAdmin from '../components/SearchBarAdmin'
 import './ProductOptions.css';
 import plusIcon from '../img/Buttons/plus-icon.svg';
+import okayMark from '../img/Buttons/okayMark.png'
+import excludeMark from '../img/Buttons/excludeMark.png'
 
 const ProductOptions = ({ type = 0 }) => {
 
+    const [result, setResult] = useState(null)
+
     return (
 
-        <div className="options-container">
-            <div className="row gap-4 product-wrapper">
-                <label className="text"> Add new product </label>
-                <div className="row gap-2">
-                    <div>
-                        <InputBox inputType="text" placeholder="Name" />
+        <div className="outer-wrapper">
+            <div className="options-wrapper">
+                <div className="product-wrapper">
+                    <div className="label-wrapper"> 
+                        <label className="text"> Add Product </label>
                     </div>
-                    <div>
-                        <InputBox inputType="text" placeholder="Email" />
+                    <div className="gap-2">
+                        <div className="inputbox-wrapper">
+                            <input type="file" accept="image/png, image/gif, image/jpeg, image/jpg"/>
+                        </div>
+                        <div className="inputbox-wrapper">
+                            <InputBox inputType="text" placeholder="Name"/>
+                        </div>
+                        <div className="inputbox-wrapper">
+                            <InputBox inputType="text" placeholder="Slug"/>
+                        </div>
+                        <div className="inputbox-wrapper">
+                            <InputBox inputType="text" placeholder="Description"/>
+                        </div>
+
+                        <div className="inputbox-wrapper">
+                            <InputBox inputType="text" placeholder="Price"/>
+                        </div>
+
+                        <div className="inputbox-wrapper">
+                            <InputBox inputType="text" placeholder="Quantity"/>
+                        </div>
                     </div>
-                    <div>
-                        <InputBox inputType="password" placeholder="Password" />
-                    </div>
-                    <div>
-                        <InputBox inputType="password" placeholder="Confirm Password" />
+                    <div className="button-product">
+                        <CustomButton image={plusIcon} text="Add"/>
                     </div>
                 </div>
-                <div>
-                    <CustomButton image={plusIcon} />
+            </div>
+            <div className="options-wrapper">
+                <div className="product-wrapper">
+                    <div className="label-wrapper"> 
+                        <label className="text"> Modify Product </label>
+                    </div>
+                    <div className="searchbar-product">
+                        <SearchBarAdmin placeholder="Search Products" endpoint="products/" setData={setResult} searchType={1}/>
+                    </div>
+                    <div className="gap-2">
+                        <div className="inputbox-wrapper">
+                            <InputBox inputType="text" placeholder="Name"/>
+                        </div>
+                        <div className="inputbox-wrapper">
+                            <InputBox inputType="text" placeholder="Slug"/>
+                        </div>
+                        <div className="inputbox-wrapper">
+                            <InputBox inputType="text" placeholder="Description"/>
+                        </div>
+
+                        <div className="inputbox-wrapper">
+                            <InputBox inputType="text" placeholder="Price"/>
+                        </div>
+
+                        <div className="inputbox-wrapper">
+                            <InputBox inputType="text" placeholder="Quantity"/>
+                        </div>
+                    </div>
+                    <div className="button-product">
+                        <CustomButton image={okayMark} text="Update"/>
+                        <CustomButton image={excludeMark} text="Delete"/>
+                    </div>
                 </div>
             </div>
 
-            <div className="row gap-4 product-wrapper">
-                <label className="text"> Edit existing product </label>
-                <div>
-                </div>
-                <div className="row gap-2">
-                    <div>
-                        <InputBox inputType="text" placeholder="Name" />
-                    </div>
-                    <div>
-                        <InputBox inputType="text" placeholder="Email" />
-                    </div>
-                    <div>
-                        <InputBox inputType="password" placeholder="Password" />
-                    </div>
-                    <div>
-                        <InputBox inputType="password" placeholder="Confirm Password" />
-                    </div>
-                </div>
-                <div>
-                    <CustomButton text="Delete" />
-                    <CustomButton text="Update" />
-                </div>
-            </div>
         </div>
+
     );
 };
 

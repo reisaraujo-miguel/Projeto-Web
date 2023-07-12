@@ -4,14 +4,13 @@
 }
 .user-wrapper{
     background-color: #FFFF;
-    width: 22em;
     border-radius: 1.5em;
     padding: 2em;
 }
 .searchbar-user{
     display: flex;
     justify-content: center;
-    margin: 1em;
+    margin: 2em;
 }
 .button-user{
     margin-top: 30px;
@@ -28,4 +27,5 @@
 .text{
     font-size: 25px;
     font-weight: normal;
+    margin-bottom:10px;
 }

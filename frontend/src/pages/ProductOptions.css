@@ -1,30 +1,37 @@
-.options-container{
-    text-align: center;
+.outer-wrapper{
     display: flex;
+    flex-direction: column;
 }
-
-.product-wrapper{
-    background-color: #FFFF;
-    padding: 2em;
-    border-radius: 1.5em;
-    margin: 2em;
-}
-
-.button-product{
+.options-wrapper{
     display: flex;
     justify-content: center;
 }
-
+.product-wrapper{
+    background-color: #FFFF;
+    border-radius: 1.5em;
+    padding: 2em;
+    margin-top: 2em;
+}
+.searchbar-product{
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+.button-product{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
 .inputbox-wrapper{
     margin: 1em;
 }
-
 .label-wrapper{
     display: flex;
     justify-content:center;
 }
-
 .text{
     font-size: 25px;
+    margin-bottom:10px;
     font-weight: normal;
 }
+
