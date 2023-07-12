@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import './SearchBarAdmin.css';
 
-const SearchBarAdmin = () => {
+async function getAdmins(){
+
+}
+
+const SearchBarAdmin = ({placeholder}) => {
   const admins = ['Sacha Baron Cohen', 'Angela Merkel', 'Joaquin Phoenix', 'Bob Ross', 'Michael Scott', 'Dilvan Abreu', 'Michael Jackson'];
   const [searchText, setSearchText] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -34,7 +38,7 @@ const SearchBarAdmin = () => {
         type="text"
         value={searchText}
         onChange={handleSearchChange}
-        placeholder="Search admins"
+        placeholder={placeholder}
       />
 
       {searchResults.length > 0 && (
@@ -50,12 +54,7 @@ const SearchBarAdmin = () => {
           ))}
         </div>
       )}
-
-      {selectedResult && (
-        <div className="selected-result">
-          Selected: {selectedResult}
-        </div>
-      )}
+      
     </div>
   );
 };

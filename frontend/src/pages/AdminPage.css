@@ -1,10 +1,14 @@
+.centerOptions{
+  display: flex;
+  justify-content: center;
+}
 .optionDiv{
   border-radius: 1em;
   align-content: center;
   padding: 2.5%;
   background-color: #FFFFFF;
-  width: 15em;
-  height: 10em;
+  width: 30em;
+  height: 13em;
   display: flex;
   flex-direction: column;
   justify-content: center;

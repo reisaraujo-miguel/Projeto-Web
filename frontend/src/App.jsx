@@ -7,6 +7,7 @@ import Checkout from './pages/Checkout';
 import AdminPage from './pages/AdminPage';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import AdminOptions from './pages/AdminOptions';
 
 function App() {
     const user = 'admin'; // states: null (not logged),  user, admin
@@ -24,6 +25,7 @@ function App() {
                             <Route path='/product' element={<About />} />
                             <Route path='/checkout' element={<Checkout />} />
                             {user === 'admin' && <Route path='/admin' element={<AdminPage />} />}
+                            {user === 'admin' && <Route path='/admin/admins' element={<AdminOptions/>}/>}
                             <Route path='/login' element={<Login />} />
                             <Route path='/signup' element={<Signup />} />
                         </Routes>

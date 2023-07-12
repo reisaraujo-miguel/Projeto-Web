@@ -1,27 +1,26 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import './AdminPage.css';
 import CustomButton from '../components/Buttons';
 import AdminOptions from './AdminOptions';
 
-const AdminPage = () => (
-    <div className="row">
-        <div className="col-md-3">
-            <div className="row optionDiv">
-                <CustomButton text="Admins" />
-                <CustomButton text="Products" />
-            </div>
-        </div>
-        <div className="col-md-7">
-            <div className="row gap-5">
-                <div className="modifyDiv">
-                    <AdminOptions />
+
+const AdminPage = () => {
+    const navigate = useNavigate();
+
+    function showAdminOptions(){
+        navigate('/admin/admins')
+    }    
+
+    return (
+            <div className="centerOptions"> 
+                <div className="row optionDiv">
+                    <CustomButton text="Users"/>
+                    <CustomButton text="Products"/>
+                    <CustomButton text="Admins" onClick={showAdminOptions}/>
                 </div>
-                <div className="modifyDiv">
-                    <AdminOptions type={1} />
-                </div>
             </div>
-        </div>
-    </div>
-);
+    );
+}
 
 export default AdminPage;

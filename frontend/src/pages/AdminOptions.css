@@ -1,4 +1,25 @@
-.admin-wrapper{
-    align-content: center;
+.options-wrapper{
+    display: flex;
     justify-content: center;
+}
+.admin-wrapper{
+    background-color: #FFFF;
+    padding: 2em;
+    border-radius: 6.25%;
+}
+.searchbar-admin{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+.button-admin{
+    display: flex;
+    justify-content: center;
+}
+.inputbox-wrapper{
+    margin: 1em;
+}
+.label-wrapper{
+    display: flex;
+    justify-content:center;
 }

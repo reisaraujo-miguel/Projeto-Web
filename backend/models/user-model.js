@@ -26,7 +26,6 @@ const schema = new Schema({
     },
     phone: {
         type: Number,
-        required: true
     },
     address: {
         cep: {

@@ -22,12 +22,11 @@ const AdminOptions = ({ type = 0 }) => {
         let data = {
             "name" : name,
             "email" : email,
-            "password" : password,
-            "confirmationPass" : confirmationPass
+            "password" : password
         }
 
         fetch(url, {
-            method: "POST",
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -35,55 +34,34 @@ const AdminOptions = ({ type = 0 }) => {
         })
     }
 
-    if (type === 0) {
-        return (
-            <div className="row gap-4 admin-wrapper">
-                <label> Add New Admin </label>
-                <div className="row gap-2">
-                    <div>
-                        <InputBox inputType="text" placeholder="Name" setData={setName}/>
-                    </div>
-                    <div>
-                        <InputBox inputType="text" placeholder="Email" setData={setEmail}/>
-                    </div>
-                    <div>
-                        <InputBox inputType="password" placeholder="Password" setData={setPassword}/>
-                    </div>
-                    <div>
-                        <InputBox inputType="password" placeholder="Confirm Password" setData={setConfirmationPass}/>
-                    </div>
-                </div>
-                <div>
-                    <CustomButton image={addButton} onClick={foo}/>
-                </div>
-            </div>
-        );
-    }
-
     return (
-        <div className="row gap-4 admin-wrapper">
+        <div className="options-wrapper">
+        <div className="admin-wrapper">
+            <div className="label-wrapper"> 
             <label> Modify Admin </label>
-            <div>
-                <SearchBarAdmin />
             </div>
-            <div className="row gap-2">
-                <div>
-                    <InputBox inputType="text" placeholder="Name" />
+            <div className="searchbar-admin">
+                <SearchBarAdmin placeholder="Search Admins"/>
+            </div>
+            <div className="gap-2">
+                <div className="inputbox-wrapper">
+                    <InputBox inputType="text" placeholder="Name" setData={setName}/>
                 </div>
-                <div>
-                    <InputBox inputType="text" placeholder="Email" />
+                <div className="inputbox-wrapper">
+                    <InputBox inputType="text" placeholder="Email" setData={setEmail}/>
                 </div>
-                <div>
-                    <InputBox inputType="password" placeholder="Password" />
+                <div className="inputbox-wrapper">
+                    <InputBox inputType="password" placeholder="Password" setData={setPassword}/>
                 </div>
-                <div>
-                    <InputBox inputType="password" placeholder="Confirm Password" />
+                <div className="inputbox-wrapper">
+                    <InputBox inputType="password" placeholder="Confirm Password" setData={setConfirmationPass}/>
                 </div>
             </div>
-            <div>
+            <div className="button-admin">
                 <CustomButton image={excludeMark} text="Remove" />
                 <CustomButton image={okayMark} text="Apply" />
             </div>
+        </div>
         </div>
     );
 };
