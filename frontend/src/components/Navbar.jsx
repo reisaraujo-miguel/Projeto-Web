@@ -6,6 +6,23 @@ import { BiSolidCart } from 'react-icons/bi';
 const NavBar = ({ logged = null }) => {
     const current = window.location.pathname;
 
+    const login = () => {
+        window.location.pathname = '/login';
+    }
+
+    const logout = () => {
+        localStorage.removeItem('token');
+        window.location.pathname = '/login';
+    }
+
+    const checkout = () => {
+        window.location.pathname = '/checkout';
+    }
+
+    const onLog = localStorage.getItem('token') === null ? login : logout;
+    const onCart = localStorage.getItem('token') === null ? login : checkout;
+
+
     return (
         <nav className='navbar navbar-dark fixed-top'>
             <div className='container-fluid'>
@@ -26,15 +43,20 @@ const NavBar = ({ logged = null }) => {
                 </form>
 
                 {/* Cart */}
-                <a className='d-none d-md-block' href={logged !== null ? "/checkout" : "/login"}>
-                    <BiSolidCart className='ms-4' size={'2.5em'} color="white" />
-
-                </a>
+                <button className='d-none d-md-block ms-4' style={{ background: 'none', border: 'none' }} onClick={onCart}>
+                    <BiSolidCart size={'2.5em'} color="white" />
+                    <b style={{ color: 'white' }}>
+                        Cart
+                    </b>
+                </button>
 
                 {/* User */}
-                <a className='d-none d-md-block' href="/login">
-                    <BiSolidUserCircle className='ms-4 me-2' size={'2.5em'} color="white" />
-                </a>
+                <button className='d-none d-md-block ms-4 me-2' style={{ background: 'none', border: 'none' }} onClick={onLog}>
+                    <BiSolidUserCircle size={'2.5em'} color="white" />
+                    <b style={{ color: 'white' }}>
+                        {localStorage.getItem('token') === null ? 'Login' : 'Logout'}
+                    </b>
+                </button>
 
                 {/* Off Canvas*/}
                 <div className='offcanvas offcanvas-start text-bg-dark' tabIndex='-1' id='offcanvasDarkNavbar'

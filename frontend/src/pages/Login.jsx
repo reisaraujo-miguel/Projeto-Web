@@ -41,16 +41,7 @@ const Login = () => {
 
             localStorage.setItem('token', token);
 
-            toast.success('Login Successfull', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
+            window.location.pathname = '/';
         } catch (error) {
             console.error(error.message);
             toast.error('Something Went Wrong :(', {
