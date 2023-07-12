@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import CustomButton from '../components/Buttons';
 import InputBox from '../components/InputBox';
+import excludeMark from '../img/Buttons/excludeMark.png';
+import okayMark from '../img/Buttons/okayMark.png';
 import './AdminOptions.css';
 import SearchBarAdmin from '../components/SearchBarAdmin';
 
-const AdminOptions = ({ type = 0 }) => {
+const AdminOptions = () => {
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -21,7 +23,7 @@ const AdminOptions = ({ type = 0 }) => {
         let data = {
             "name" : result.name,
             "email" : result.email,
-            "password" : (password === '' ? result.password : password),
+            "password" : result.password,
             "isAdmin" : false 
         }
 
@@ -42,8 +44,8 @@ const AdminOptions = ({ type = 0 }) => {
         }
         let url = "http://localhost:3001/users/" + result.username
         let data = {
-            "name" : name,
-            "email" : email,
+            "name" : (name === '' ? result.name : name),
+            "email" : (email === '' ? result.email : email),
             "password" : (password === '' ? result.password : password),
             "isAdmin" : true
         }
