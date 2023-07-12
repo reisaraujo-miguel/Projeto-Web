@@ -18,27 +18,39 @@ async function getData(endpoint){
   return [];
 }
 
-const SearchBarAdmin = ({placeholder, endpoint, setData}) => {
+const SearchBarAdmin = ({placeholder, endpoint, setData, searchType=0}) => {
   
   
   const [searchText, setSearchText] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [selectedResult, setSelectedResult] = useState('');
 
-  const performSearch = async (value) => {
+  const performSearchAdmin = async (value) => {
     // Filter the admins based on the search value
     let admins = await getData(endpoint);
     return admins.filter((admin) =>
       admin.username.toLowerCase().includes(value.toLowerCase())
     );
   };
-
+  const performSearchProduct = async (value) => {
+    // Filter the admins based on the search value
+    let products = await getData(endpoint);
+    return products.filter((product) =>
+      product.slug.toLowerCase().includes(value.toLowerCase())
+    );
+  };
   const handleSearchChange = async (e) => {
     const { value } = e.target;
     setSearchText(value);
 
+    let results = {}
     // Perform the search and update searchResults state
-    const results = await performSearch(value);
+    if(searchType == 0){
+      results= await performSearchAdmin(value);
+    }
+    else {
+      results = await performSearchProduct(value);
+    }
     setSearchResults(results);
   };
 
@@ -65,7 +77,8 @@ const SearchBarAdmin = ({placeholder, endpoint, setData}) => {
               key={index}
               onClick={() => handleResultClick(result)}
             >
-              {result.username}
+              {searchType === 0  && result.username}
+              {searchType === 1 && result.slug}
             </div>
           ))}
         </div>
