@@ -4,6 +4,7 @@ import InputBox from '../components/InputBox';
 import SearchBarAdmin from '../components/SearchBarAdmin';
 import excludeMark from '../img/Buttons/excludeMark.png';
 import okayMark from '../img/Buttons/okayMark.png';
+import { toast } from "react-toastify";
 import './UserOptions.css';
 
 const UserOptions = ({ type = 0 }) => {
@@ -19,13 +20,19 @@ const UserOptions = ({ type = 0 }) => {
 
     function removeUser(){
         if(result === null){
-            alert("Por favor use a barra de search")
+            toast.error('Please use the search bar! :(', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
             return
         }
-        if(confirmationPass !== password){
-            alert("Senhas diferem!")
-            return
-        }
+        
         let url = "http://localhost:3001/users/" + result.username
 
         fetch(url, {
@@ -37,13 +44,19 @@ const UserOptions = ({ type = 0 }) => {
 
     function promoteUser(){
         if(result === null){
-            alert("Por favor use a barra de search")
+            toast.error('Please use the search bar! :(', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
             return
         }
-        if(confirmationPass !== password){
-            alert("Senhas diferem!")
-            return
-        }
+        
         let url = "http://localhost:3001/users/" + result.username
         let data = {
             "name" : result.name,
@@ -64,11 +77,29 @@ const UserOptions = ({ type = 0 }) => {
 
     function updateUser() {
         if(result === null){
-            alert("Por favor use a barra de search")
+            toast.error('Please use the search bar!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
             return
         }
-        if(confirmationPass !== password){
-            alert("Senhas diferem!")
+       if(confirmationPass !== password){
+            toast.error('Passwords do not match!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
             return
         }
         let url = "http://localhost:3001/users/" + result.username

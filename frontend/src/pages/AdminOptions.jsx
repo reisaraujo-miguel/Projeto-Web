@@ -5,6 +5,7 @@ import excludeMark from '../img/Buttons/excludeMark.png';
 import okayMark from '../img/Buttons/okayMark.png';
 import './AdminOptions.css';
 import SearchBarAdmin from '../components/SearchBarAdmin';
+import { toast } from "react-toastify";
 
 const AdminOptions = () => {
 
@@ -16,7 +17,16 @@ const AdminOptions = () => {
 
     function demoteAdmin(){
         if(result === null){
-            alert("Por favor use a barra de search")
+            toast.error('Use the search bar! :(', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
             return
         }
         let url = "http://localhost:3001/users/" + result.username
@@ -39,7 +49,29 @@ const AdminOptions = () => {
 
     function modifyAdmin() {
         if(result === null){
-            alert("Por favor use a barra de search")
+            toast.error('Use the search bar! :(', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+            return
+        }
+        if(confirmationPass !== password){
+            toast.error('Passwords do not match!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
             return
         }
         let url = "http://localhost:3001/users/" + result.username
