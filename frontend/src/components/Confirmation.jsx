@@ -3,6 +3,7 @@ import { ListGroup } from 'react-bootstrap';
 import testCart from '../test-json/cart.json';
 import testPayment from '../test-json/payment.json';
 import testAddress from '../test-json/address.json';
+import './Confirmation.css';
 
 
 const Confirmation = ({ cart = null, address = null, payment = null }) => {
@@ -40,7 +41,7 @@ const Confirmation = ({ cart = null, address = null, payment = null }) => {
     return (
         <div>
             <div style={{ "textAlign": "left" }}>
-                <label className="mt-5 mb-5" htmlFor="list"><b>Confirmation</b></label>
+                <label className="text" htmlFor="list"><b>Confirmation</b></label>
                 <div className='row gap-4'>
                     <div className='col-7'>
                         <ListGroup id="list" variant="flush">

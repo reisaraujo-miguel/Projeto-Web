@@ -71,7 +71,7 @@ const Login = () => {
             <form ref={submitRef}>
                 <h1 style={{ marginBottom: "3rem" }}>Login</h1>
                 <InputBox image={UserImage} inputType={"text"} placeholder={"Username*"} setData={setUsername} isRequired={true} />
-                <br style={{ marginBottom: '2rem' }}></br>
+                <br style={{ marginBottom: '1rem' }}></br>
                 <InputBox image={Password} inputType={"password"} placeholder={"Password*"} setData={setPassword} isRequired={true} />
             </form>
 

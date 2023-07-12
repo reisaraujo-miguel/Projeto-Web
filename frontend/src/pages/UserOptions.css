@@ -4,8 +4,9 @@
 }
 .user-wrapper{
     background-color: #FFFF;
+    width: 22em;
+    border-radius: 1.5em;
     padding: 2em;
-    border-radius: 6.25%;
 }
 .searchbar-user{
     display: flex;

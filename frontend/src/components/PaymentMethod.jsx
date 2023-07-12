@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import InputBox from "./InputBox";
 import ExpirationDateField from "./ExpirationDateField";
+import "./PaymentMethod.css";
 
 const PaymentMethod = ({ updatePayment = (e) => { console.log(e); }, submitRef, setContinue }) => {
     const [name, setName] = useState(null);
@@ -28,7 +29,7 @@ const PaymentMethod = ({ updatePayment = (e) => { console.log(e); }, submitRef, 
 
     return (
         <div style={{ "textAlign": "left" }}>
-            <label className="mt-5 mb-4" htmlFor="list"><b>Credit Card:</b></label>
+            <label className="text" htmlFor="list"><b>Credit Card:</b></label>
             <form ref={submitRef} onSubmit={handleSubmit}>
                 <div className="container">
                     <div className="row mb-5">

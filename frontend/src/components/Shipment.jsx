@@ -55,7 +55,7 @@ const ShipmentForm = ({ updateAddress = (e) => { console.log(e) }, submitRef, se
 
     return (
         <div style={{ "textAlign": "left" }}>
-            <label className='mt-5 mb-4' htmlFor='form'><b>Delivery Address</b></label>
+            <label className='text' htmlFor='form'><b>Delivery Address</b></label>
             <form ref={submitRef} onSubmit={handleSubmit}>
                 <div>
                     <input

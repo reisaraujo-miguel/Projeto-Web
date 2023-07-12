@@ -5,12 +5,12 @@
 .admin-wrapper{
     background-color: #FFFF;
     padding: 2em;
-    border-radius: 6.25%;
+    border-radius: 1.5em;
 }
 .searchbar-admin{
     display: flex;
     justify-content: center;
-    margin: 1em;
+    margin: 2em;
 }
 .button-admin{
     display: flex;
@@ -26,6 +26,6 @@
 }
 .text{
     font-size: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-weight: normal;
 }
