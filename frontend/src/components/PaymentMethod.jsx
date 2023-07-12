@@ -20,8 +20,8 @@ const PaymentMethod = ({ updatePayment = (e) => { console.log(e); }, submitRef, 
         setData(updatedData);
     }, [name, date, card, code]);
 
-    const handleSubmit = (_e) => {
-        //e.preventDefault();
+    const handleSubmit = (e) => {
+        e.preventDefault();
         setContinue(true);
         updatePayment(data);
     }
