@@ -1,33 +1,49 @@
 import React, { useState } from 'react';
 import './SearchBarAdmin.css';
 
-async function getAdmins(){
-
+async function getData(endpoint){
+  const url = 'http://localhost:3001/' + endpoint
+  try{
+    const response = await fetch(url,{
+      method: 'GET',
+    });
+    const data = await response.json();
+    
+    console.log(data)
+    return data;
+  }
+  catch(e){
+    console.log(e)
+  }
+  return [];
 }
 
-const SearchBarAdmin = ({placeholder}) => {
-  const admins = ['Sacha Baron Cohen', 'Angela Merkel', 'Joaquin Phoenix', 'Bob Ross', 'Michael Scott', 'Dilvan Abreu', 'Michael Jackson'];
+const SearchBarAdmin = ({placeholder, endpoint, setData}) => {
+  
+  
   const [searchText, setSearchText] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [selectedResult, setSelectedResult] = useState('');
 
-  const performSearch = (value) => {
+  const performSearch = async (value) => {
     // Filter the admins based on the search value
-    return admins.filter((name) =>
-      name.toLowerCase().includes(value.toLowerCase())
+    let admins = await getData(endpoint);
+    return admins.filter((admin) =>
+      admin.username.toLowerCase().includes(value.toLowerCase())
     );
   };
 
-  const handleSearchChange = (e) => {
+  const handleSearchChange = async (e) => {
     const { value } = e.target;
     setSearchText(value);
 
     // Perform the search and update searchResults state
-    const results = performSearch(value);
+    const results = await performSearch(value);
     setSearchResults(results);
   };
 
   const handleResultClick = (result) => {
+    setData(result);
     setSelectedResult(result);
     setSearchResults([]);
   };
@@ -49,7 +65,7 @@ const SearchBarAdmin = ({placeholder}) => {
               key={index}
               onClick={() => handleResultClick(result)}
             >
-              {result}
+              {result.username}
             </div>
           ))}
         </div>

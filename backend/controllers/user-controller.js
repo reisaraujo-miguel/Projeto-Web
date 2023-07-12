@@ -16,9 +16,23 @@ userController.get = async (req, res) => {
         });
     }
 }
+
+userController.getByIsAdmin = async (req, res) => {
+    try{
+        const data = await User.find({isAdmin: true})
+        res.status(200).send(data)
+    } 
+    catch(e){
+        res.status(400).send({
+            message: "Falha na busca de admin",
+            data: e
+        });
+    }
+}
+
 userController.getByUsername = async (req, res) => {
     try{
-        const data = await User.find({username: req.params.id})
+        const data = await User.findOne({username: req.params.id})
         res.status(200).send(data)
     } 
     catch(e){
@@ -47,8 +61,8 @@ userController.put = async (req, res) => {
     try{
         await User.findOneAndUpdate({username: req.params.id}, {
             $set: {
+                name: req.body.name,
                 email: req.body.email,
-                phone: req.body.phone,
                 address: req.body.address,
                 password: req.body.password,
                 isAdmin: req.body.isAdmin
