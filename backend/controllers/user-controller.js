@@ -6,7 +6,7 @@ const userController = {};
 
 userController.get = async (req, res) => {
     try{
-        const data = await User.find({})
+        const data = await User.find({isAdmin: false})
         res.status(200).send(data)
     } 
     catch(e){
@@ -81,7 +81,7 @@ userController.put = async (req, res) => {
 }
 userController.delete = async (req, res) => {
     try{
-        await User.deleteOne({slug: req.params.id});
+        await User.deleteOne({username: req.params.id});
         res.status(201).send({
             message: "Usuario deletado"
         });

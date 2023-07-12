@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import './InputBox.css'
 
-const InputBox = ({ image, inputType, backgroundColor, foregroundColor, placeholder, padding, setData = () => { }, isRequired = false }) => {
+const InputBox = ({ image, inputType, backgroundColor, foregroundColor, placeholder, padding, setData = () => { }, isRequired = false, disabled = false }) => {
 
     const inputRef = useRef(null)
 
@@ -36,7 +36,8 @@ const InputBox = ({ image, inputType, backgroundColor, foregroundColor, placehol
                 placeholder={placeholder}
                 onChange={handleChange}
                 required
-                ref={inputRef}>
+                ref={inputRef}
+                disabled={disabled}>
             </input>
         );
     }
@@ -48,7 +49,8 @@ const InputBox = ({ image, inputType, backgroundColor, foregroundColor, placehol
             style={inputStyle}
             placeholder={placeholder}
             onChange={handleChange}
-            ref={inputRef}>
+            ref={inputRef}
+            disabled={disabled}>
         </input>
     );
 
