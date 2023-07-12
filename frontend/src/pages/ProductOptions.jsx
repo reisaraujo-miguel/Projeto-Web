@@ -6,8 +6,9 @@ import plusIcon from '../img/Buttons/plus-icon.svg';
 
 const ProductOptions = ({ type = 0 }) => {
 
-    if (type === 0) {
-        return (
+    return (
+
+        <div className="options-container">
             <div className="row gap-4 product-wrapper">
                 <label> Add new product </label>
                 <div className="row gap-2">
@@ -28,31 +29,29 @@ const ProductOptions = ({ type = 0 }) => {
                     <CustomButton image={plusIcon} />
                 </div>
             </div>
-        );
-    }
 
-    return (
-        <div className="row gap-4 product-wrapper">
-            <label> Edit existing product </label>
-            <div>
-            </div>
-            <div className="row gap-2">
+            <div className="row gap-4 product-wrapper">
+                <label> Edit existing product </label>
                 <div>
-                    <InputBox inputType="text" placeholder="Name" />
+                </div>
+                <div className="row gap-2">
+                    <div>
+                        <InputBox inputType="text" placeholder="Name" />
+                    </div>
+                    <div>
+                        <InputBox inputType="text" placeholder="Email" />
+                    </div>
+                    <div>
+                        <InputBox inputType="password" placeholder="Password" />
+                    </div>
+                    <div>
+                        <InputBox inputType="password" placeholder="Confirm Password" />
+                    </div>
                 </div>
                 <div>
-                    <InputBox inputType="text" placeholder="Email" />
+                    <CustomButton text="Delete" />
+                    <CustomButton text="Apply changes" />
                 </div>
-                <div>
-                    <InputBox inputType="password" placeholder="Password" />
-                </div>
-                <div>
-                    <InputBox inputType="password" placeholder="Confirm Password" />
-                </div>
-            </div>
-            <div>
-                <CustomButton text="Delete" />
-                <CustomButton text="Apply changes" />
             </div>
         </div>
     );

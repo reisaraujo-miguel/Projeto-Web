@@ -1,24 +1,24 @@
-.options-wrapper{
+.options-container{
+    text-align: center;
     display: flex;
-    justify-content: center;
 }
+
 .product-wrapper{
     background-color: #FFFF;
     padding: 2em;
     border-radius: 6.25%;
+    margin: 2em;
 }
-.searchbar-product{
-    display: flex;
-    justify-content: center;
-    margin: 1em;
-}
+
 .button-product{
     display: flex;
     justify-content: center;
 }
+
 .inputbox-wrapper{
     margin: 1em;
 }
+
 .label-wrapper{
     display: flex;
     justify-content:center;
