@@ -34,7 +34,7 @@ const Signup = () => {
 
     const signUser = async () => {
         if (confirmPass !== password) {
-            alert("senhas diferem!");
+            alert("Senhas diferem!");
 
             return;
         } else if (password === '') {
@@ -68,7 +68,7 @@ const Signup = () => {
             .then(res => {
                 console.log(res);
                 if (res.message === "Usuario cadastrado") {
-                    toast.success('User created Successfully', {
+                    toast.success('User Created Successfully', {
                         position: "top-center",
                         autoClose: 5000,
                         hideProgressBar: false,
@@ -79,7 +79,7 @@ const Signup = () => {
                         theme: "light",
                     });
                 } else {
-                    toast.error('Something went wrong :(', {
+                    toast.error('Something Went Wrong :(', {
                         position: "top-center",
                         autoClose: 5000,
                         hideProgressBar: false,
@@ -93,7 +93,7 @@ const Signup = () => {
             })
             .catch(e => {
                 console.log(e);
-                toast.error('Something went wrong :(', {
+                toast.error('Something Went Wrong :(', {
                     position: "top-center",
                     autoClose: 5000,
                     hideProgressBar: false,

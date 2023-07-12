@@ -45,7 +45,8 @@ const schema = new Schema({
     isAdmin: {
         type: Boolean,
         required: true
-    }
+    },
+    token: String
 });
 
 const User = mongoose.model('User', schema);
