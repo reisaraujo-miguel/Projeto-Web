@@ -50,7 +50,7 @@ const ProductOptions = ({ type = 0 }) => {
                 </div>
                 <div>
                     <CustomButton text="Delete" />
-                    <CustomButton text="Apply changes" />
+                    <CustomButton text="Update" />
                 </div>
             </div>
         </div>

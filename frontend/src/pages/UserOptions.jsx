@@ -52,7 +52,7 @@ const UserOptions = ({ type = 0 }) => {
             </div>
             <div className="button-user">
                 <CustomButton text="Delete"/>
-                <CustomButton text="Apply changes"/>
+                <CustomButton text="Update"/>
             </div>
         </div>
         </div>

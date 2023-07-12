@@ -82,8 +82,8 @@ const AdminOptions = ({ type = 0 }) => {
                 </div>
             </div>
             <div className="button-admin">
-                <CustomButton image={excludeMark} text="Demote" onClick={demoteAdmin} />
-                <CustomButton image={okayMark} text="Update" onClick={modifyAdmin}/>
+                <CustomButton text="Demote" onClick={demoteAdmin} />
+                <CustomButton text="Update" onClick={modifyAdmin}/>
             </div>
         </div>
         </div>
