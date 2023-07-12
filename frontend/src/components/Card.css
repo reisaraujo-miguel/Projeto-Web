@@ -33,6 +33,6 @@
 
 .product-info {
   display: flex;
-  align-items: left;
+  text-align: right;
 }
 

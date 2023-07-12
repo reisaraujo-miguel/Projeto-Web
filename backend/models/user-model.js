@@ -32,7 +32,7 @@ const schema = new Schema({
         cep: {
             type: Number,
         },
-        neighborhood: {
+        bairro: {
             type: String,
         },
         number: {

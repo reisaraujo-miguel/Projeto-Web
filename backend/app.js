@@ -1,6 +1,8 @@
 import express from 'express'
+import cors from 'cors'
 import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
+import dotenv from 'dotenv'
 import Product from './models/product-model.js'
 import User from './models/user-model.js'
 import products from './routes/product-route.js'
@@ -16,9 +18,12 @@ const __dirname = dirname(__filename);
 const app = express();
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(cors())
 
 
-mongoose.connect('')
+dotenv.config()
+const mongo_uri = process.env.MONGO_URI
+mongoose.connect(mongo_uri)
 
 app.use((req, res, next) => {
     const currDate = new Date();
@@ -35,6 +40,6 @@ app.get('/', (req, res) => {
 })
 
 app.listen(3001, () => {
-    console.log('Server is listening on port 3000');
+    console.log('Server is listening on port 3001');
 });
 
