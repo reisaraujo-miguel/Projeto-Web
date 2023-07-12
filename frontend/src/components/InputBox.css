@@ -1,7 +1,7 @@
 .basicText{
-    border-radius: 10px;
-    border: 1px solid #454545;
-    font-size: 18px;
-    padding-left: 10px;
-    padding-right: 10px;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #454545;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }

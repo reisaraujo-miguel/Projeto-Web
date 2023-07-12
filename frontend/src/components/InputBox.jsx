@@ -13,18 +13,18 @@ const InputBox = ({ image, inputType, backgroundColor, foregroundColor, placehol
         backgroundColor: backgroundColor,
         color: foregroundColor,
         padding: padding,
-
+        width: '100%',
     }
 
     if (image !== null && image !== undefined) {
         inputStyle.backgroundImage = `url("${image}")`
         inputStyle.backgroundRepeat = "no-repeat"
         inputStyle.backgroundPosition = "left"
-        inputStyle.paddingLeft = "25px"
-        inputStyle.backgroundSize = "18px"
+        inputStyle.paddingLeft = "1.5rem"
+        inputStyle.backgroundSize = "1.1rem"
     }
     else {
-        inputStyle.paddingRight = "25px"
+        inputStyle.paddingRight = "1.5rem"
     }
 
     if (isRequired) {

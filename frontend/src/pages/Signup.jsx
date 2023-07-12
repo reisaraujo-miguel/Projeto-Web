@@ -64,10 +64,10 @@ const Signup = () => {
 
   return (
     <div className="SignUpDiv">
-      <h1 style={{ marginBottom: "70px" }}>Create Account</h1>
+      <h1 style={{ marginBottom: "4rem" }}>Create Account</h1>
 
       <div class="input-row">
-        <div style={{ marginRight: '30px' }}>
+        <div style={{ marginRight: '2rem' }}>
           <InputBox image={UserImage} inputType={"text"} placeholder={"Full name"} setData={setName}/>
         </div>
         <div>
@@ -78,7 +78,7 @@ const Signup = () => {
       <br></br>
 
       <div class="input-row">
-        <div style={{ marginRight: '30px' }}>
+        <div style={{ marginRight: '2rem' }}>
           <InputBox image={Phone} inputType={"text"} placeholder={"Phone number"} setData={setPhone}/>
         </div>
         <div>
@@ -89,7 +89,7 @@ const Signup = () => {
       <br></br>
 
       <div class="input-row">
-        <div style={{ marginRight: '30px' }}>
+        <div style={{ marginRight: '2rem' }}>
           <InputBox image={ZipCode} inputType={"text"} placeholder={"Bairro"} setData={setBairro}/>
         </div>
         <div>
@@ -100,7 +100,7 @@ const Signup = () => {
       <br></br>
 
       <div class="input-row">
-        <div style={{ marginRight: '30px' }}>
+        <div style={{ marginRight: '2rem' }}>
           <InputBox image={UserImage} inputType={"text"} placeholder={"Username"} setData={setUsername} />
         </div>
         <div>
@@ -111,7 +111,7 @@ const Signup = () => {
       <br></br>
 
       <div class="input-row">
-        <div style={{ marginRight: '30px' }}>
+        <div style={{ marginRight: '2rem' }}>
           <InputBox image={Password} inputType={"password"} placeholder={"Password"} setData={setPassword} />
         </div>
         <div>
@@ -119,7 +119,7 @@ const Signup = () => {
         </div>
       </div>
 
-      <br style={{ marginBottom: '40px' }}></br>
+      <br style={{ marginBottom: '2rem' }}></br>
       <CustomButton text={"Sign up"} onClick={signUser} />
     </div>
   );
