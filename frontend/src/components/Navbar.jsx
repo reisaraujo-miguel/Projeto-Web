@@ -27,13 +27,13 @@ const NavBar = ({ logged = null }) => {
 
                 {/* Cart */}
                 <a className='d-none d-md-block' href={logged !== null ? "/checkout" : "/login"}>
-                    <BiSolidCart className='ms-4' size={'2.5rem'} color="white" />
+                    <BiSolidCart className='ms-4' size={'2.5em'} color="white" />
 
                 </a>
 
                 {/* User */}
                 <a className='d-none d-md-block' href="/login">
-                    <BiSolidUserCircle className='ms-4 me-2' size={'2.5rem'} color="white" />
+                    <BiSolidUserCircle className='ms-4 me-2' size={'2.5em'} color="white" />
                 </a>
 
                 {/* Off Canvas*/}

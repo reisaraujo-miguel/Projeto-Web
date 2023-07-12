@@ -1,28 +1,28 @@
 .loginDiv {
     background-color: #FFFFFF;
-    padding: 30px;
+    padding: 2rem;
     text-align: center;
     margin: auto;
     width: 40%;
-    border-radius: 30px;
+    border-radius: 2rem;
 }
 
 .loginOptions {
-    text-align: left;
-    margin-left: 68px;
-    margin-top: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 1rem;
 }
 
 .rememberMe {
-    font-size: 12px;
-    margin-left: 5px;
+    font-size: 0.7rem;
+    margin-left: 0.4rem;
 }
 
 .forgotPassword {
-    font-size: 12px;
-    margin-left: 60px;
+    font-size: 0.7rem;
+    margin-left: 20%;
 }
 
 .createAccount {
-    font-size: 12px;
+    font-size: 0.7rem;
 }
