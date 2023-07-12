@@ -13,9 +13,6 @@ const Card = ({ name, img, userRating, productPrice, onClick }) => {
                 <h2>{name}</h2>
             </div>
             <div className="product-info">
-                <RatingWidget
-                    isStatic={true}
-                    userRating={userRating} />
                 <div>
                     <h2 className='price'>{priceWithCurrency} </h2>
                 </div>

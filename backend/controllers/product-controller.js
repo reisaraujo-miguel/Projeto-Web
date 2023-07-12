@@ -5,15 +5,76 @@ const Product = mongoose.model('Product');
 const productController = {};
 
 productController.get = async (req, res) => {
-    const data = await Product.find({slug: req.params.id})
-    res.status(200).send(data)
+    try{
+        const data = await Product.find({})
+        res.status(200).send(data)
+    }
+    catch(e){
+        res.status(400).send({
+            message: "Falha na busca do produtos",
+            data: e
+        });
+    }
+}
+productController.getByUsername = async (req, res) => {
+    try{
+        const data = await Product.find({slug: req.params.id})
+        res.status(200).send(data)
+    }
+    catch(e){
+        res.status(400).send({
+            message: "Falha na busca do produto",
+            data: e
+        });
+    }
 }
 productController.post = async (req, res) => {
     const product = new Product(req.body);
-    await product.save();
-    res.status(201).send({
-        message: "Produto cadastrado"
-    });
+    try{
+        await product.save();
+        res.status(201).send({
+            message: "Produto cadastrado"
+        });
+    }
+    catch(e){
+        res.status(400).send({
+            message: "Falha no cadastro de produto",
+            data: e
+        });
+    }
+    }
+productController.put = async (req, res) => {
+    try{
+        await Product.findOneAndUpdate({slug: req.params.id}, {
+            $set: {
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                quantity: req.body.quantity,
+                quantitySold: req.body.quantitySold
+            }
+        });
+        res.status(201).send({
+            message: "Dados de produto atualizados"
+        });
+    }
+    catch(e){
+        res.status(400).send({
+            message: "Falha ao atualizar dados do produto"
+        });
+    }
 }
-
+productController.delete = async (req, res) => {
+    try{
+        await Product.deleteOne({slug: req.params.id});
+        res.status(201).send({
+            message: "Produto deletado"
+        });
+    }
+    catch(e){
+        res.status(400).send({
+            message: "Falha ao deletar produto"
+        });
+    }
+}
 export default productController;

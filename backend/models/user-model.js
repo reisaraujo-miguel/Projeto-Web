@@ -15,7 +15,7 @@ const schema = new Schema({
     },
     cpf: {
         type: Number,
-        required: true,
+        required: true
     },
     username: {
         type: String,
@@ -30,17 +30,21 @@ const schema = new Schema({
     },
     address: {
         cep: {
-            type: Number
+            type: Number,
         },
         neighborhood: {
-            type: String 
+            type: String,
         },
         number: {
-            type: Number
+            type: Number,
         }
     },
     password: {
         type: String,
+        required: true
+    },
+    isAdmin: {
+        type: Boolean,
         required: true
     }
 });
