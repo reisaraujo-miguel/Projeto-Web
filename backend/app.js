@@ -64,7 +64,9 @@ app.post('/api/login', async (req, res) => {
             user.token = token;
             await user.save();
 
-            res.status(200).json({ token });
+            const isAdmin = user.isAdmin;
+
+            res.status(200).json({ token, isAdmin });
         }
     } catch (error) {
         console.error(error);

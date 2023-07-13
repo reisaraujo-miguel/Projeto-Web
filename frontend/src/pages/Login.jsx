@@ -37,9 +37,11 @@ const Login = () => {
 
             const data = await response.json();
             const { token } = data;
+            const { isAdmin } = data;
             console.log(data);
 
             localStorage.setItem('token', token);
+            localStorage.setItem('isAdmin', isAdmin);
 
             window.location.pathname = '/';
         } catch (error) {

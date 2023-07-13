@@ -9,6 +9,7 @@ import Phone from '../img/icons/phone.png';
 import ZipCode from '../img/icons/zipcode.png';
 import Identity from '../img/icons/identity.png';
 import CustomButton from '../components/Buttons';
+import { wait } from "@testing-library/user-event/dist/utils";
 
 
 const Signup = () => {
@@ -29,16 +30,35 @@ const Signup = () => {
     const handleSubmit = async () => {
         if (submitRef.current.reportValidity()) {
             await signUser();
+            submitRef.current.reset();
         }
     }
 
     const signUser = async () => {
         if (confirmPass !== password) {
-            alert("Senhas diferem!");
-
+            toast.error('Passwords Are Not The Same', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
             return;
         } else if (password === '') {
-            alert("Insira uma senha");
+            toast.error('You Must Provide a Password', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+            return;
         }
 
         const url = 'http://localhost:3001/users'

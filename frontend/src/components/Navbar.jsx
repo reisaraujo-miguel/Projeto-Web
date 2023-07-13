@@ -3,7 +3,7 @@ import './Navbar.css';
 import { BiSolidUserCircle } from 'react-icons/bi';
 import { BiSolidCart } from 'react-icons/bi';
 
-const NavBar = ({ logged = null }) => {
+const NavBar = () => {
     const current = window.location.pathname;
 
     const login = () => {
@@ -12,6 +12,7 @@ const NavBar = ({ logged = null }) => {
 
     const logout = () => {
         localStorage.removeItem('token');
+        localStorage.removeItem('isAdmin');
         window.location.pathname = '/login';
     }
 
@@ -21,6 +22,9 @@ const NavBar = ({ logged = null }) => {
 
     const onLog = localStorage.getItem('token') === null ? login : logout;
     const onCart = localStorage.getItem('token') === null ? login : checkout;
+    const isAdmin = localStorage.getItem('isAdmin') === 'true' ? true : false;
+
+    console.log(localStorage.getItem('isAdmin'));
 
 
     return (
@@ -76,7 +80,7 @@ const NavBar = ({ logged = null }) => {
                             <li className='nav-item'>
                                 <a className={"nav-link " + (current === "/checkout" ? "active" : "")} href='/checkout'>Cart</a>
                             </li>
-                            {logged === 'admin' &&
+                            {isAdmin === true &&
                                 <li className='nav-item'>
                                     <a className={"nav-link " + (current === "/admin" ? "active" : "")} href='/admin'>Admin Page</a>
                                 </li>
