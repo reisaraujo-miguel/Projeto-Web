@@ -40,8 +40,10 @@ const Login = () => {
             const { isAdmin } = data;
             console.log(data);
 
-            localStorage.setItem('token', token);
-            localStorage.setItem('isAdmin', isAdmin);
+            const storage = document.getElementById('remember-me').checked ? localStorage : sessionStorage;
+
+            storage.setItem('token', token);
+            storage.setItem('isAdmin', isAdmin);
 
             window.location.pathname = '/';
         } catch (error) {

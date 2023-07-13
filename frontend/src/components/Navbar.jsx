@@ -12,7 +12,9 @@ const NavBar = () => {
 
     const logout = () => {
         localStorage.removeItem('token');
+        sessionStorage.removeItem('token');
         localStorage.removeItem('isAdmin');
+        sessionStorage.removeItem('isAdmin');
         window.location.pathname = '/login';
     }
 
@@ -20,9 +22,12 @@ const NavBar = () => {
         window.location.pathname = '/checkout';
     }
 
-    const onLog = localStorage.getItem('token') === null ? login : logout;
-    const onCart = localStorage.getItem('token') === null ? login : checkout;
-    const isAdmin = localStorage.getItem('isAdmin') === 'true' ? true : false;
+    const isLogged = (localStorage.getItem('token') !== null) || (sessionStorage.getItem('token') !== null);
+
+    const onLog = isLogged ? logout : login;
+    const onCart = isLogged ? checkout : login;
+
+    const isAdmin = (localStorage.getItem('isAdmin') === 'true') || (sessionStorage.getItem('isAdmin') === 'true');
 
     console.log(localStorage.getItem('isAdmin'));
 
@@ -58,7 +63,7 @@ const NavBar = () => {
                 <button className='d-none d-md-block ms-4 me-2' style={{ background: 'none', border: 'none' }} onClick={onLog}>
                     <BiSolidUserCircle size={'2.5em'} color="white" />
                     <b style={{ color: 'white' }}>
-                        {localStorage.getItem('token') === null ? 'Login' : 'Logout'}
+                        {isLogged ? 'Logout' : 'Login'}
                     </b>
                 </button>
 
