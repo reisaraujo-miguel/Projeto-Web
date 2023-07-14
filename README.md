@@ -65,7 +65,7 @@ First of all, clone the repository:
 $ git clone https://github.com/reisaraujo-miguel/Projeto-Web.git
 ```
 
-Then install all the dependencies with `npm` and run frontend and backend:
+Install all the dependencies with `npm` and run the frontend:
 
 ```bash
 $ cd Projeto-Web/frontend/
@@ -73,7 +73,7 @@ $ npm install
 $ npm start
 ```
 
-Then build it and serve it locally:
+Then install the dependencies and run the backend:
 ```bash
 $ cd Projeto-Web/backend/ 
 $ npm install
