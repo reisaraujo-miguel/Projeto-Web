@@ -15,6 +15,8 @@ const NavBar = () => {
         sessionStorage.removeItem('token');
         localStorage.removeItem('isAdmin');
         sessionStorage.removeItem('isAdmin');
+        localStorage.removeItem('name');
+        sessionStorage.removeItem('name');
         window.location.pathname = '/login';
     }
 
@@ -29,8 +31,7 @@ const NavBar = () => {
 
     const isAdmin = (localStorage.getItem('isAdmin') === 'true') || (sessionStorage.getItem('isAdmin') === 'true');
 
-    console.log(localStorage.getItem('isAdmin'));
-
+    const name = (localStorage.getItem('name')) || (sessionStorage.getItem('name'));
 
     return (
         <nav className='navbar navbar-dark fixed-top'>
@@ -72,7 +73,7 @@ const NavBar = () => {
                     aria-labelledby='offcanvasDarkNavbarLabel'>
                     {/* Name */}
                     <div className='offcanvas-header'>
-                        <h5 className='offcanvas-title' id='offcanvasDarkNavbarLabel'>Main Menu</h5>
+                        <h5 className='offcanvas-title' id='offcanvasDarkNavbarLabel'>{isLogged ? `Logged as ${name}` : 'Main Menu'}</h5>
                         <button type='button' className='btn-close btn-close-white' data-bs-dismiss='offcanvas'
                             aria-label='Close'></button>
                     </div>

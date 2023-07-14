@@ -38,12 +38,13 @@ const Login = () => {
             const data = await response.json();
             const { token } = data;
             const { isAdmin } = data;
-            console.log(data);
+            const { name } = data;
 
             const storage = document.getElementById('remember-me').checked ? localStorage : sessionStorage;
 
             storage.setItem('token', token);
             storage.setItem('isAdmin', isAdmin);
+            storage.setItem('name', name);
 
             window.location.pathname = '/';
         } catch (error) {

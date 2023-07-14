@@ -11,17 +11,12 @@ const ImgPreviewStack = () => {
             let response = await fetch("http://localhost:3001/products" + SLUG);
             const product = await response.json();
 
-            console.log(product);
-
             const imageName = product[0].imgPath;
 
             response = await fetch("http://localhost:3001/products/images/" + imageName);
             const imageBlob = await response.blob();
 
             const imageUrl = URL.createObjectURL(imageBlob);
-
-            console.log(imageUrl);
-
             setImage(imageUrl);
         }
 
