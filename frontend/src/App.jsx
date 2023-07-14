@@ -2,7 +2,7 @@ import './App.css';
 import NavBar from './components/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import About from './pages/ProductPage';
+import ProductPage from './pages/ProductPage';
 import Checkout from './pages/Checkout';
 import AdminPage from './pages/AdminPage';
 import Login from './pages/Login';
@@ -15,12 +15,12 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-    const user = 'admin'; // states: null (not logged),  user, admin
+    const isAdmin = (localStorage.getItem('isAdmin') === 'true') || (sessionStorage.getItem('isAdmin') === 'true');
 
     return (
         <>
             <header className="App-header" role='banner'>
-                <NavBar logged={user} />
+                <NavBar/>
             </header>
             <main className='App'>
                 <ToastContainer
@@ -40,12 +40,12 @@ function App() {
                     <div className="container">
                         <Routes>
                             <Route path='/' element={<Home />} />
-                            <Route path='/product' element={<About />} />
+                            <Route path='/*' element={<ProductPage />} />
                             <Route path='/checkout' element={<Checkout />} />
-                            {user === 'admin' && <Route path='/admin' element={<AdminPage />} />}
-                            {user === 'admin' && <Route path='/admin/admins' element={<AdminOptions/>}/>}
-                            {user === 'admin' && <Route path='/admin/users' element={<UserOptions/>}/>}
-                            {user === 'admin' && <Route path='/admin/products' element={<ProductOptions/>}/>}
+                            {isAdmin && <Route path='/admin' element={<AdminPage />} />}
+                            {isAdmin && <Route path='/admin/admins' element={<AdminOptions/>}/>}
+                            {isAdmin && <Route path='/admin/users' element={<UserOptions/>}/>}
+                            {isAdmin && <Route path='/admin/products' element={<ProductOptions/>}/>}
                             <Route path='/login' element={<Login />} />
                             <Route path='/signup' element={<Signup />} />
                         </Routes>
