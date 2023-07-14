@@ -17,10 +17,10 @@
 }
 
 .productDiv {
-  height: 460px;
+  height: 100%;
   background-color: #FFFFFF;
-  padding: 40px;
-  border-radius: 20px;
+  padding: 5%;
+  border-radius: 2rem;
 }
 
 .outer-div-product{
