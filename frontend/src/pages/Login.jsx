@@ -74,7 +74,6 @@ const Login = () => {
             <div className="loginOptions">
                 <input type="checkbox" id="remember-me" name="remember-me" defaultChecked={true}></input>
                 <label htmlFor="remember-me" className="rememberMe">Remember me</label>
-                <label className="forgotPassword"><a href="none">Forgot password?</a></label>
             </div>
 
             <br style={{ marginBottom: '1rem' }}></br>

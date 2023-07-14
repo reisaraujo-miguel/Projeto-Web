@@ -13,7 +13,7 @@ Read [building.md](https://github.com/reisaraujo-miguel/Projeto-Web/blob/main/bu
 ## Requirements:
 
 The main requirements are given by the assignment's description. Our chosen additional functionality is: 
-- A search bar that enables the user to find any given product.
+- A search bar that enables admins to find products/users/admins to perform CRUD operations.
 
 ## Project Description:
 
@@ -26,10 +26,12 @@ specify the quantity of each product, select a shipping address and credit card,
 
 - In a particular page, admins can add/consult/modify/delete products and other admins.
 
-- Each product has an ID, name, price, collection of photos, description, quantity in stock. On each product page,
-besides the basic information about the product, users can see its rating and a recommendation for similar products.
+- Each product has an ID, name, price, photo, description, quantity in stock. On each product page,
+besides the basic information about the product, users can see a recommendation for similar products.
 
-- Users can search for products on the search bar.
+-Admins can search for users/products/admins on the Admin Page and perform CRUD operations on them.
+
+
 
 Project links:
 - [Navigation Diagram](https://www.figma.com/file/Ej3MasBHEqIFoIAPgwUoGm/Flow-Chart?type=whiteboard&node-id=0%3A1&t=dFfiR6KRf2D6Pcug-1)
@@ -39,17 +41,23 @@ Project links:
 ## Comments About the Code:
 
 React was our choice to build the web application. In the `src/` folder, we divided the project in different subfolders, and each element/widget created has its own JS and CSS files --- this modularization is essential not only to better understand the code and its interdependencies but also to facilitate the building process as a whole. 
+We used Node.js with Express and Mongodb on the backend. We have a application file 'app.js' that the main program runs and folders for models, controllers and routes.
 
 ## Test Plan:
 
-Throughout the project we defined many mock objects for testing the functionality of core components, like the Carousel on the Product and Main Pages.
+1- Check if required inputs are giving feedback when not properly filled
 
-Our methodology of testing consisted of checking if the pages were reasonably under the specification we determined for Milestone 1, and by testing if buttons and components that have some effect on the state of the page (like routes, changing a component item) are working as expected.
+2- Check if user is being properly authenticated, showing an error if not
+
+3- Check if CRUD operations on admin Page is working as expected
+
+4- Check if product quantity is being properly decreased on order finish
+
+5- Check if images are being loaded properly on Homepage and Product page
 
 
 ## Test Results:
-All pages were reasonably under the specification we defined on Milestone 1, with some minor modifications in some cases.
-
+All tests working as expected
 
 ## Build Procedures:
 First of all, clone the repository: 
@@ -57,16 +65,19 @@ First of all, clone the repository:
 $ git clone https://github.com/reisaraujo-miguel/Projeto-Web.git
 ```
 
-Then install all the dependencies with `npm`:
+Then install all the dependencies with `npm` and run frontend and backend:
 
 ```bash
 $ cd Projeto-Web/frontend/
 $ npm install
+$ npm start
 ```
 
 Then build it and serve it locally:
 ```bash
-$ npm start
+$ cd Projeto-Web/backend/ 
+$ npm install
+$ node app.js
 ```
 
 ## Problems:
