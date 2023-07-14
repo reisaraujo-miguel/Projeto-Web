@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { ListGroup } from "react-bootstrap";
 import "./CheckoutCart.css";
+import { BiSolidTrash } from 'react-icons/bi';
 
 const CheckoutCart = ({ setHasCart }) => {
     const [cart, setCart] = useState(JSON.parse(sessionStorage.getItem('cart')));
 
     useEffect(() => {
-        if (cart !== null) {
+        if (cart) {
             setHasCart(true);
             const fetchProducts = async () => {
                 const newCart = await Promise.all(
@@ -38,6 +39,13 @@ const CheckoutCart = ({ setHasCart }) => {
         sessionStorage.setItem('cart', JSON.stringify(update));
     }
 
+    const removeItem = (name) => {
+        const newCart = cart.filter((item) => item.name !== name);
+        setCart(newCart);
+        sessionStorage.setItem('cart', JSON.stringify(newCart));
+        setHasCart(newCart.length > 0);
+    }
+
     const updateQt = (event, index) => {
         const newQt = parseInt(event.target.value);
         const update = cart.map((item) =>
@@ -53,7 +61,10 @@ const CheckoutCart = ({ setHasCart }) => {
             <ListGroup.Item key={index._id}>
                 <div className="item-image me-3" style={{ float: "left" }}><img src={index.imageUrl} alt="product in cart" /></div>
                 <div style={{ float: "left" }}><b>{index.name}</b></div>
-                <div style={{ float: "right" }}>R$ {index.price}</div>
+                <button style={{ float: 'right', background: 'none', border: 'none', marginLeft: '2em' }} onClick={() => removeItem(index.name)}>
+                    <BiSolidTrash size='2em' color="red" />
+                </button>
+                <div style={{ float: "right" }}>$ {index.price}</div>
                 <input id={index._id} className="me-4" type="number" defaultValue={index.quantity} size="3" min="1" max={index.stock} style={{ float: "right" }} onChange={(event) => updateQt(event, index)}></input>
             </ListGroup.Item>
         ));
@@ -63,8 +74,7 @@ const CheckoutCart = ({ setHasCart }) => {
         <div style={{ "textAlign": "left" }}>
             <label className="text" htmlFor="list"><b>My Cart</b></label>
             <ListGroup className="cart" id="list" variant="flush">
-                {(cart !== null) && createList()}
-                {(cart == null) && <p>Empty</p>}
+                {cart && cart.length > 0 ? createList() : <p>Empty</p>}
             </ListGroup>
         </div>
     );
