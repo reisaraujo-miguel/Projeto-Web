@@ -9,7 +9,6 @@ import Phone from '../img/icons/phone.png';
 import ZipCode from '../img/icons/zipcode.png';
 import Identity from '../img/icons/identity.png';
 import CustomButton from '../components/Buttons';
-import { wait } from "@testing-library/user-event/dist/utils";
 
 
 const Signup = () => {
@@ -30,7 +29,6 @@ const Signup = () => {
     const handleSubmit = async () => {
         if (submitRef.current.reportValidity()) {
             await signUser();
-            submitRef.current.reset();
         }
     }
 
@@ -98,6 +96,8 @@ const Signup = () => {
                         progress: undefined,
                         theme: "light",
                     });
+
+                    submitRef.current.reset();
                 } else {
                     toast.error('Something Went Wrong :(', {
                         position: "top-center",
