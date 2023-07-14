@@ -69,7 +69,7 @@ const Carousel = () => {
                     productPrice={laptop.price}
                     key={index}
                     onClick={() => {
-                        navigate('/product/' + laptop.slug)
+                        navigate(laptop.slug)
                     }}
                 />
             ))}

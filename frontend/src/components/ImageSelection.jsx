@@ -8,7 +8,7 @@ const ImgPreviewStack = () => {
 
     useEffect(() => {
         const fetchImage = async () => {
-            let response = await fetch("http://localhost:3001/products" + SLUG);
+            let response = await fetch("http://localhost:3001/products/" + SLUG);
             const product = await response.json();
 
             const imageName = product[0].imgPath;
