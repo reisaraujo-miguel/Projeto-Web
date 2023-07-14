@@ -1,21 +1,13 @@
 import React from 'react';
 import { ListGroup } from 'react-bootstrap';
-import testCart from '../test-json/cart.json';
-import testPayment from '../test-json/payment.json';
-import testAddress from '../test-json/address.json';
 import './Confirmation.css';
 
 
-const Confirmation = ({ cart = null, address = null, payment = null }) => {
-    const test = false;
+const Confirmation = ({address = null, payment = null }) => {
     let fullPrice = 0;
     const shipment = Math.floor(Math.random() * (100 - 10 + 1)) + 10;
 
-    if (test) {
-        cart = testCart.cart;
-        address = testAddress;
-        payment = testPayment;
-    }
+    const cart = JSON.parse(sessionStorage.getItem('cart'));
 
     const createList = () => {
         cart.forEach((index) => {
@@ -24,7 +16,7 @@ const Confirmation = ({ cart = null, address = null, payment = null }) => {
 
         return cart.map((index) => (
             <ListGroup.Item key={index.uid}>
-                <div className="item-image me-3" style={{ "backgroundImage": `url(${index.image})`, "float": "left" }}></div>
+                <div className="item-image me-3" style={{ float: "left" }}><img src={index.imageUrl} alt="product in cart" /></div>
                 <div className='row'>
                     <div className='col'>
                         <div style={{ "float": "left" }}><b>{index.name}</b></div>
