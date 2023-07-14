@@ -1,68 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import './Carousel.css';
 import { useNavigate } from 'react-router-dom';
-import laptop1 from '../img/test/laptop-1.jpg';
-import laptop2 from '../img/test/laptop-2.jpg';
-import laptop3 from '../img/test/laptop-3.jpg';
-import laptop4 from '../img/test/laptop-4.jpg';
-import laptop5 from '../img/test/laptop-5.jpg';
-import laptop6 from '../img/test/laptop-6.jpg';
-import laptop7 from '../img/test/laptop-7.jpg';
 
 const Carousel = () => {
 
-    let laptops = [{
-        "image": laptop1,
-        "name": "PC da Xuxa",
-        "price": 666,
-        "rating": 5,
-        "uid": "dksj"
-    },
-    {
-        "image": laptop2,
-        "name": "PC da Sasha",
-        "price": 333,
-        "rating": 4,
-        "uid": "jdss"
-    },
-    {
-        "image": laptop3,
-        "name": "PC da Sandy Jr.",
-        "price": 123,
-        "rating": 1,
-        "uid": "ijss"
-    },
-    {
-        "image": laptop4,
-        "name": "PC da Frozen",
-        "price": 321,
-        "rating": 3,
-        "uid": "91sd"
-    },
-    {
-        "image": laptop5,
-        "name": "PC do Shrek",
-        "price": 987,
-        "rating": 2,
-        "uid": "ksjd"
-    },
-    {
-        "image": laptop6,
-        "name": "PC do Miranha",
-        "price": 789,
-        "rating": 5,
-        "uid": "spider"
-    },
-    {
-        "image": laptop7,
-        "name": "PC do Naruto",
-        "price": 653,
-        "rating": 2,
-        "uid": "sk8d"
-    }]
-
-    const [laptopsState, setLaptopsState] = useState(laptops)
+    const [laptopsState, setLaptopsState] = useState([])
 
     const goToNext = () => {
         const updatedLaptops = [...laptopsState];
@@ -79,9 +22,37 @@ const Carousel = () => {
     };
 
     const navigate = useNavigate();
-    const redirectOnClick = () => {
-        navigate('/product')
-    }
+
+    useEffect(() => {
+
+        let getProducts = async () => {
+            const url = 'http://localhost:3001/products';
+
+            try {
+                const response = await fetch(url, {
+                    method: 'GET'
+                });
+                const data = await response.json();
+
+                let final = await Promise.all(data.map(async (product) => {
+                    let newUrl = 'http://localhost:3001/products/images/' + product.imgPath
+                    const res = await fetch(newUrl, {
+                        method: 'GET'
+                    });
+                    const imgRaw = await res.blob()
+                    const ImgUrl = URL.createObjectURL(imgRaw)
+                    product.image = ImgUrl
+
+                    return product
+                }));
+                setLaptopsState(final)
+            }
+            catch (e) {
+                console.log(e);
+            }
+        };
+        getProducts()
+        }, []);
 
     return (
         <div className="carousel-wrapper">
@@ -90,14 +61,16 @@ const Carousel = () => {
                     &lt;
                 </button>
             </div>
-            {laptopsState.filter((_, index) => index <= 3).map((laptop) => (
+            {laptopsState.filter((_, index) => index <= 3).map((laptop, index) => (
                 <Card
                     name={laptop.name}
                     img={laptop.image}
                     userRating={laptop.rating}
                     productPrice={laptop.price}
-                    key={laptop.uid}
-                    onClick={redirectOnClick}
+                    key={index}
+                    onClick={() => {
+                        navigate(laptop.slug)
+                    }}
                 />
             ))}
             <div className="right-button-wrapper">

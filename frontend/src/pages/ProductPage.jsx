@@ -17,7 +17,7 @@ const ProductPage = () => {
 
     useEffect(() => {
         const fetchProduct = async () => {
-            let response = await fetch("http://localhost:3001/products" + SLUG);
+            let response = await fetch("http://localhost:3001/products/" + SLUG);
             const data = await response.json();
 
             setProduct(data[0]);
