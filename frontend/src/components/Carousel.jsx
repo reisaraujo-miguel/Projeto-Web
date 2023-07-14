@@ -70,6 +70,7 @@ const Carousel = () => {
                     key={index}
                     onClick={() => {
                         navigate(laptop.slug)
+                        window.location.reload();
                     }}
                 />
             ))}
