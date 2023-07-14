@@ -2,28 +2,36 @@ import React, { useEffect, useState } from "react";
 import { ListGroup } from "react-bootstrap";
 import "./CheckoutCart.css";
 
-const CheckoutCart = () => {
+const CheckoutCart = ({ setHasCart }) => {
     const [cart, setCart] = useState(JSON.parse(sessionStorage.getItem('cart')));
 
     useEffect(() => {
-        const fetchProducts = async () => {
-            const newCart = await Promise.all(
-                cart.map(async (item) => {
-                    const imageName = item.imgPath;
-                    const response = await fetch("http://localhost:3001/products/images/" + imageName);
-                    const imageBlob = await response.blob();
+        if (cart !== null) {
+            setHasCart(true);
+            const fetchProducts = async () => {
+                const newCart = await Promise.all(
+                    cart.map(async (item) => {
+                        const imageName = item.imgPath;
+                        let response = await fetch("http://localhost:3001/products/images/" + imageName);
+                        const imageBlob = await response.blob();
 
-                    const imageUrl = URL.createObjectURL(imageBlob);
+                        const imageUrl = URL.createObjectURL(imageBlob);
 
-                    return { ...item, imageUrl };
-                })
-            )
+                        response = await fetch("http://localhost:3001/products/" + item.slug);
+                        const data = await response.json();
 
-            setCart(newCart);
-            sessionStorage.setItem('cart', JSON.stringify(newCart));
+                        const stock = data[0].quantity;
+
+                        return { ...item, imageUrl, stock };
+                    })
+                )
+
+                setCart(newCart);
+                sessionStorage.setItem('cart', JSON.stringify(newCart));
+            }
+
+            fetchProducts();
         }
-
-        fetchProducts();
     }, []);
 
     const updateCart = (update) => {
@@ -46,7 +54,7 @@ const CheckoutCart = () => {
                 <div className="item-image me-3" style={{ float: "left" }}><img src={index.imageUrl} alt="product in cart" /></div>
                 <div style={{ float: "left" }}><b>{index.name}</b></div>
                 <div style={{ float: "right" }}>R$ {index.price}</div>
-                <input id={index._id} className="me-4" type="number" defaultValue={index.quantity} size="3" min="1" style={{ float: "right" }} onChange={(event) => updateQt(event, index)}></input>
+                <input id={index._id} className="me-4" type="number" defaultValue={index.quantity} size="3" min="1" max={index.stock} style={{ float: "right" }} onChange={(event) => updateQt(event, index)}></input>
             </ListGroup.Item>
         ));
     };
@@ -55,8 +63,8 @@ const CheckoutCart = () => {
         <div style={{ "textAlign": "left" }}>
             <label className="text" htmlFor="list"><b>My Cart</b></label>
             <ListGroup className="cart" id="list" variant="flush">
-                {(cart) && createList()}
-                {(!cart && !test) && <p>Empty</p>}
+                {(cart !== null) && createList()}
+                {(cart == null) && <p>Empty</p>}
             </ListGroup>
         </div>
     );

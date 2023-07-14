@@ -4,7 +4,6 @@ import CheckoutCart from './CheckoutCart'
 import PaymentMethod from './PaymentMethod'
 import ShipmentForm from './Shipment'
 import Confirmation from './Confirmation'
-import testCart from '../test-json/cart.json';
 
 const MainContainer = styled.div`
   width: 100%;
@@ -135,7 +134,7 @@ const steps = [
 
 const ProgressSteps = () => {
     const [activeStep, setActiveStep] = useState(1);
-    const [cart, setCart] = useState(testCart.cart);
+    const [hasCart, setHasCart] = useState(false);
     const [payment, setPayment] = useState(null);
     const [address, setAddress] = useState(null);
     const [canContinue, setContinue] = useState(false);
@@ -157,6 +156,30 @@ const ProgressSteps = () => {
     const prevStep = () => {
         setActiveStep(activeStep - 1);
     };
+
+    const finish = () => {
+        const cart = JSON.parse(sessionStorage.getItem('cart'));
+
+        cart.forEach(item => {
+            const url = "http://localhost:3001/products/" + item.slug;
+
+            const data = {
+                "quantity": item.stock - item.quantity,
+            };
+
+            fetch(url, {
+                method: "PUT",
+                headers: {
+                    'Content-Type': "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+        });
+
+        sessionStorage.removeItem('cart');
+
+        window.location.pathname = '/finished';
+    }
 
     const totalSteps = steps.length;
 
@@ -181,17 +204,24 @@ const ProgressSteps = () => {
                     </StepWrapper>
                 ))}
             </StepContainer>
-            {activeStep === 1 && <CheckoutCart cart={cart} updateCart={setCart} />}
+            {activeStep === 1 && <CheckoutCart setHasCart={setHasCart} />}
             {activeStep === 2 && <PaymentMethod updatePayment={setPayment} setContinue={setContinue} submitRef={submitRef} />}
             {activeStep === 3 && <ShipmentForm updateAddress={setAddress} setContinue={setContinue} submitRef={submitRef} />}
-            {activeStep === 4 && <Confirmation cart={cart} payment={payment} address={address} />}
+            {activeStep === 4 && <Confirmation payment={payment} address={address} />}
             <ButtonsContainer>
                 <ButtonStyle onClick={prevStep} disabled={activeStep === 1} style={{ marginLeft: '2%' }}>
                     PREVIOUS STEP
                 </ButtonStyle>
-                <ButtonStyle onClick={nextStep} disabled={activeStep === totalSteps} style={{ marginRight: '2%' }}>
-                    NEXT STEP
-                </ButtonStyle>
+                {activeStep < 4 &&
+                    <ButtonStyle onClick={nextStep} disabled={!hasCart} style={{ marginRight: '2%' }}>
+                        NEXT STEP
+                    </ButtonStyle>
+                }
+                {activeStep === 4 &&
+                    <ButtonStyle onClick={finish} style={{ marginRight: '2%' }}>
+                        FINISH
+                    </ButtonStyle>
+                }
             </ButtonsContainer>
         </MainContainer>
     )

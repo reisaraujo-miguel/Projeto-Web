@@ -17,6 +17,7 @@ const NavBar = () => {
         sessionStorage.removeItem('isAdmin');
         localStorage.removeItem('name');
         sessionStorage.removeItem('name');
+        sessionStorage.removeItem('cart')
         window.location.pathname = '/login';
     }
 

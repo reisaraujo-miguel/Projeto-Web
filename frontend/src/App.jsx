@@ -10,6 +10,7 @@ import Signup from './pages/Signup';
 import AdminOptions from './pages/AdminOptions';
 import UserOptions from './pages/UserOptions';
 import ProductOptions from './pages/ProductOptions';
+import PurchaseCompleted from './pages/PurchaseCompleted';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -20,7 +21,7 @@ function App() {
     return (
         <>
             <header className="App-header" role='banner'>
-                <NavBar/>
+                <NavBar />
             </header>
             <main className='App'>
                 <ToastContainer
@@ -43,11 +44,12 @@ function App() {
                             <Route path='/*' element={<ProductPage />} />
                             <Route path='/checkout' element={<Checkout />} />
                             {isAdmin && <Route path='/admin' element={<AdminPage />} />}
-                            {isAdmin && <Route path='/admin/admins' element={<AdminOptions/>}/>}
-                            {isAdmin && <Route path='/admin/users' element={<UserOptions/>}/>}
-                            {isAdmin && <Route path='/admin/products' element={<ProductOptions/>}/>}
+                            {isAdmin && <Route path='/admin/admins' element={<AdminOptions />} />}
+                            {isAdmin && <Route path='/admin/users' element={<UserOptions />} />}
+                            {isAdmin && <Route path='/admin/products' element={<ProductOptions />} />}
                             <Route path='/login' element={<Login />} />
                             <Route path='/signup' element={<Signup />} />
+                            <Route path='/finished' element={<PurchaseCompleted />} />
                         </Routes>
                     </div>
                 </BrowserRouter>
