@@ -27,9 +27,10 @@ const schema = new Schema({
         type: Number,
         required: true
     },
-    quantitySold: {
-        type: Number,
-        required: true
+    imgPath: {
+        type: String,
+        required: true,
+        trim: true
     }
 });
 

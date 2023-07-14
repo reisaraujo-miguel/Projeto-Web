@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 
+
 const Product = mongoose.model('Product');
 
 const productController = {};
@@ -16,7 +17,7 @@ productController.get = async (req, res) => {
         });
     }
 }
-productController.getByUsername = async (req, res) => {
+productController.getBySlug = async (req, res) => {
     try{
         const data = await Product.find({slug: req.params.id})
         res.status(200).send(data)
@@ -28,6 +29,13 @@ productController.getByUsername = async (req, res) => {
         });
     }
 }
+
+productController.postImg = async (req, res) => {
+    res.status(200).send({
+        message: "Imagem enviada"
+    });
+}
+
 productController.post = async (req, res) => {
     const product = new Product(req.body);
     try{
@@ -42,16 +50,17 @@ productController.post = async (req, res) => {
             data: e
         });
     }
-    }
+}
 productController.put = async (req, res) => {
     try{
         await Product.findOneAndUpdate({slug: req.params.id}, {
             $set: {
                 name: req.body.name,
+                slug: req.body.slug,
                 description: req.body.description,
                 price: req.body.price,
                 quantity: req.body.quantity,
-                quantitySold: req.body.quantitySold
+                imgPath: req.body.imgPath
             }
         });
         res.status(201).send({
