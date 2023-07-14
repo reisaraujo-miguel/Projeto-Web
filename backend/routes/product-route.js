@@ -15,6 +15,7 @@ const router = express.Router();
 
 router.get('/', controller.get);
 router.get('/:id', controller.getBySlug);
+router.get('/images/:id', controller.getImgBySlug);
 router.post('/', controller.post);
 router.post('/img', upload.single('img'), controller.postImg)
 router.put('/:id', controller.put);

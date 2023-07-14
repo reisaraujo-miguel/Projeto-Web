@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import path from 'path'
 
 
 const Product = mongoose.model('Product');
@@ -27,6 +28,15 @@ productController.getBySlug = async (req, res) => {
             message: "Falha na busca do produto",
             data: e
         });
+    }
+}
+productController.getImgByPath = async (req, res) => {
+    try{
+        const imgPath = path.join(path.resolve(), '/imgs/',  req.params.id)
+        res.status(200).sendFile(imgPath)
+    }
+    catch(e){
+        res.status(400).send()
     }
 }
 

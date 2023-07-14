@@ -22,6 +22,9 @@ const ProductOptions = () => {
     function ImgSelectAdd(e) {
         
         const img = e.target.files[0]
+        if(img === undefined)
+            return 
+        
         setImgAdd(img)
         setImgPathAdd(img.name)
 
@@ -66,6 +69,9 @@ const ProductOptions = () => {
 
      function ImgSelectUpdate(e) {
         const img = e.target.files[0]
+        if(img === undefined)
+            return
+
         setImgUpdate(img)
         setImgPathUpdate(img.name)
     }
