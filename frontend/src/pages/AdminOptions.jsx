@@ -56,6 +56,8 @@ const AdminOptions = () => {
             theme: "light",
         });
 
+        formRef.current.reset();
+
         setResult(null);
     }
 
@@ -114,6 +116,8 @@ const AdminOptions = () => {
             progress: undefined,
             theme: "light",
         });
+
+        formRef.current.reset();
 
         setResult(null);
     }
