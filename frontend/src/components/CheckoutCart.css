@@ -1,5 +1,5 @@
 .item-image {
-    width: 15%; /* Set the desired width of the square container */
+    width: 10%; /* Set the desired width of the square container */
     background-color: #DDDDDD; /* Set the grey color for the square container */
     border-radius: 7%;
     display: flex;
