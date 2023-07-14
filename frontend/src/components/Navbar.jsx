@@ -47,11 +47,12 @@ const NavBar = () => {
                 {/* Page name */}
                 <a className='navbar-brand fw-bold me-auto ms-auto ms-md-1' href='/#'> Silicon Road </a>
 
-                {/* Search Bar */}
+                {/* Search Bar 
                 <form className='d-flex ms-auto me-auto me-md-1' role='search'>
                     <input className='form-control me-2' type='search' placeholder='Search' aria-label='Search' />
                     <button className='btn btn-outline-light' type='submit'>Search</button>
                 </form>
+                */}
 
                 {/* Cart */}
                 <button className='d-none d-md-block ms-4' style={{ background: 'none', border: 'none' }} onClick={onCart}>
