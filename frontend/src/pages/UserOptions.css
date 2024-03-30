@@ -1,31 +1,31 @@
-.options-wrapper{
-    display: flex;
-    justify-content: center;
+.options-wrapper {
+	display: flex;
+	justify-content: center;
 }
-.user-wrapper{
-    background-color: #FFFF;
-    border-radius: 1.5em;
-    padding: 2em;
+.user-wrapper {
+	background-color: #ffff;
+	border-radius: 1.5em;
+	padding: 2em;
 }
-.searchbar-user{
-    display: flex;
-    justify-content: center;
-    margin: 2em;
+.searchbar-user {
+	display: flex;
+	justify-content: center;
+	margin: 2em;
 }
-.button-user{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
+.button-user {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
 }
-.inputbox-wrapper{
-    margin: 1em;
+.inputbox-wrapper {
+	margin: 1em;
 }
-.label-wrapper{
-    display: flex;
-    justify-content:center;
+.label-wrapper {
+	display: flex;
+	justify-content: center;
 }
-.text{
-    font-size: 25px;
-    font-weight: normal;
-    margin-bottom:10px;
+.text {
+	font-size: 25px;
+	font-weight: normal;
+	margin-bottom: 10px;
 }

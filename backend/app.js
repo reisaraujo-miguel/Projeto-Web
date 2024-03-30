@@ -1,15 +1,15 @@
-import express from 'express'
-import cors from 'cors'
 import bodyParser from 'body-parser'
-import mongoose from 'mongoose'
+import cors from 'cors'
 import dotenv from 'dotenv'
-import Product from './models/product-model.js'
+import express from 'express'
+import mongoose from 'mongoose'
 import User from './models/user-model.js'
-import products from './routes/product-route.js'
+//import Product from './models/product-model.js'
+//import products from './routes/product-route.js'
 import users from './routes/user-route.js'
 
-import { fileURLToPath } from 'url';
 import { dirname } from 'path'
+import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -33,7 +33,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/products', products)
+//app.use('/products', products)
 app.use('/users', users)
 
 function generateToken() {

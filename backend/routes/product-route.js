@@ -1,6 +1,6 @@
 import express from 'express'
-import controller from '../controllers/product-controller.js'
 import multer from 'multer'
+import controller from '../controllers/product-controller.js'
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {

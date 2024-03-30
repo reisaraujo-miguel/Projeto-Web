@@ -1,50 +1,50 @@
-.carousel-wrapper{
-    width : 100%; 
-    display: flex;
-    justify-content: center;
+.carousel-wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 .carousel-wrapper .card-container {
-    margin-left: 5px;
-    margin-right: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
-.right-button{
-    line-height: 0;
-    background-color: #EEEEEE;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #EEEEEE;
-    border-radius: 50%;
+.right-button {
+	line-height: 0;
+	background-color: #eeeeee;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #eeeeee;
+	border-radius: 50%;
 }
 
-.right-button:hover{
-    opacity: 0.7;
+.right-button:hover {
+	opacity: 0.7;
 }
 
-.right-button-wrapper{
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 16px;
+.right-button-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 16px;
 }
 
-.left-button{
-    line-height: 0;
-    background-color: #EEEEEE;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #EEEEEE;
-    border-radius: 50%;
+.left-button {
+	line-height: 0;
+	background-color: #eeeeee;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #eeeeee;
+	border-radius: 50%;
 }
 
-.left-button:hover{
-    opacity: 0.7;
+.left-button:hover {
+	opacity: 0.7;
 }
 
-.left-button-wrapper{
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 16px;
+.left-button-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 16px;
 }

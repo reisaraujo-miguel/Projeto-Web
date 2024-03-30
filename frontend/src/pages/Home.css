@@ -1,16 +1,16 @@
-.stub{
-  display: flex;
-  text-align: left;
-  flex-direction: column;
+.stub {
+	display: flex;
+	text-align: left;
+	flex-direction: column;
 }
 
-.innerDiv{
-  border-radius: 1.5em;
-  padding: 2.5%;
-  background-color: #FFFFFF;
+.innerDiv {
+	border-radius: 1.5em;
+	padding: 2.5%;
+	background-color: #ffffff;
 }
 
-.labelTitle{
-  margin-bottom: 3%;
-  font-size: 1.6em;
+.labelTitle {
+	margin-bottom: 3%;
+	font-size: 1.6em;
 }

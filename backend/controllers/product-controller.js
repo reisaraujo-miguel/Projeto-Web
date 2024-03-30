@@ -1,7 +1,7 @@
-import mongoose from 'mongoose'
-import path from 'path'
+import mongoose from 'mongoose';
+import path from 'path';
 
-const Product = mongoose.model('Product');
+const Product = mongoose.model('Product')
 
 const productController = {};
 

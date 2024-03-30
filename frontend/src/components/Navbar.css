@@ -1,18 +1,18 @@
 .navbar-toggler-icon {
-    background-image: url("../img/Navbar/ham-menu-icon.svg");
-    filter: invert();
+	background-image: url("../img/Navbar/ham-menu-icon.svg");
+	filter: invert();
 }
 
 .navbar-toggler {
-    border-width: 0px;
+	border-width: 0px;
 }
 
 .navbar {
-    background-color: #6200EE;
+	background-color: #6200ee;
 }
 
 .navbar-brand {
-     font-size: 180%; 
-     font-family: 'Montagu Slab';
-     text-align: left;
+	font-size: 180%;
+	font-family: "Montagu Slab";
+	text-align: left;
 }

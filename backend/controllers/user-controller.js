@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
 const User = mongoose.model('User');
 
@@ -8,7 +8,7 @@ userController.get = async (req, res) => {
     try{
         const data = await User.find({isAdmin: false})
         res.status(200).send(data)
-    } 
+    }
     catch(e){
         res.status(400).send({
             message: "Falha na busca de usuarios",
@@ -21,7 +21,7 @@ userController.getByIsAdmin = async (req, res) => {
     try{
         const data = await User.find({isAdmin: true})
         res.status(200).send(data)
-    } 
+    }
     catch(e){
         res.status(400).send({
             message: "Falha na busca de admin",
@@ -34,7 +34,7 @@ userController.getByUsername = async (req, res) => {
     try{
         const data = await User.findOne({username: req.params.id})
         res.status(200).send(data)
-    } 
+    }
     catch(e){
         res.status(400).send({
             message: "Falha na busca de usuario",
