@@ -1,7 +1,6 @@
-import mongoose from 'mongoose';
 import path from 'path';
+import Product from '../models/product-model.js';
 
-const Product = mongoose.model('Product')
 
 const productController = {};
 

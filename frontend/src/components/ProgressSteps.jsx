@@ -18,27 +18,6 @@ const StepContainer = styled.div`
 	justify-content: space-between;
 	margin-top: 8%;
 	position: relative;
-	:before {
-		content: "";
-		position: absolute;
-		background: #f3e7f3;
-		height: 8%;
-		width: 100%;
-		top: 50%;
-		transform: translateY(-50%);
-		left: 0;
-	}
-	:after {
-		content: "";
-		position: absolute;
-		background: #6200ee;
-		height: 8%;
-		width: ${({ width }) => width};
-		top: 50%;
-		transition: 0.4s ease;
-		transform: translateY(-50%);
-		left: 0;
-	}
 `;
 
 const StepWrapper = styled.div`

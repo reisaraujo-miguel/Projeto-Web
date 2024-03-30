@@ -4,8 +4,7 @@ import dotenv from 'dotenv'
 import express from 'express'
 import mongoose from 'mongoose'
 import User from './models/user-model.js'
-//import Product from './models/product-model.js'
-//import products from './routes/product-route.js'
+import products from './routes/product-route.js'
 import users from './routes/user-route.js'
 
 import { dirname } from 'path'
@@ -33,7 +32,7 @@ app.use((req, res, next) => {
     next();
 });
 
-//app.use('/products', products)
+app.use('/products', products)
 app.use('/users', users)
 
 function generateToken() {
