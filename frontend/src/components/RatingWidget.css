@@ -1,16 +1,16 @@
 .star {
-	color: gray;
+  color: gray;
 }
 
 .star.filled {
-	color: gold;
+  color: gold;
 }
 
 .star.hovered {
-	color: #fae978;
-	cursor: pointer;
+  color: #fae978;
+  cursor: pointer;
 }
 
 .rating-number {
-	font-size: medium;
+  font-size: medium;
 }

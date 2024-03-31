@@ -1,41 +1,41 @@
 .input {
-	border-radius: 10px;
-	border: 1px solid #757575;
-	color: #252525;
-	font-size: 18px;
-	padding: 6px;
+  border-radius: 10px;
+  border: 1px solid #757575;
+  color: #252525;
+  font-size: 18px;
+  padding: 6px;
 }
 
 .selector {
-	margin-bottom: 10px;
-	border-radius: 10px;
-	border: 1px solid #757575;
-	background-color: #ffffff;
-	color: #353535;
-	font-size: 18px;
-	padding: 6px;
-	width: 25%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #757575;
+  background-color: #ffffff;
+  color: #353535;
+  font-size: 18px;
+  padding: 6px;
+  width: 25%;
 }
 
 .submit {
-	border-radius: 10px;
-	border: none;
-	background-color: #ffffff;
-	font-size: 18px;
-	padding: 6px;
-	margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffffff;
+  font-size: 18px;
+  padding: 6px;
+  margin-bottom: 20px;
 }
 
 .submit:hover {
-	background-color: #eeeeee;
+  background-color: #eeeeee;
 }
 
 .submit:active {
-	background-color: #dddddd;
+  background-color: #dddddd;
 }
 
 .text {
-	font-size: 25px;
-	font-weight: lighter;
-	margin-top: 30px;
+  font-size: 25px;
+  font-weight: lighter;
+  margin-top: 30px;
 }

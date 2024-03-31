@@ -1,177 +1,294 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Mockup</title>
+    <!-- Bootstrap --->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- my css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Product Mockup</title>
-	<!-- Bootstrap --->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-	<!-- my css -->
-	<link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <div class="vstack gap-3">
+      <!-- Navbar start -->
+      <div class="mb-5">
+        <nav
+          class="navbar navbar-dark fixed-top"
+          style="background-color: #6200ee"
+        >
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasDarkNavbar"
+              aria-controls="offcanvasDarkNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon fs-5"></span>
+            </button>
+            <a
+              class="navbar-brand fw-bold"
+              style="font-size: 180%; font-family: Montagu Slab"
+              href="#"
+              >Silicon Road</a
+            >
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-light" type="submit">
+                Search
+              </button>
+            </form>
+            <div
+              class="offcanvas offcanvas-start text-bg-dark"
+              tabindex="-1"
+              id="offcanvasDarkNavbar"
+              aria-labelledby="offcanvasDarkNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                  Dark offcanvas
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <hr class="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                  <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button class="btn btn-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Navbar end -->
 
-<body>
-	<div class="vstack gap-3">
-		<!-- Navbar start -->
-		<div class="mb-5">
-			<nav class="navbar navbar-dark fixed-top" style="background-color: #6200EE;">
-				<div class="container-fluid">
-					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-						data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-						aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon fs-5"></span>
-					</button>
-					<a class="navbar-brand fw-bold" style="font-size: 180%; font-family: Montagu Slab;" href="#">Silicon
-						Road</a>
-					<form class="d-flex" role="search">
-						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-light" type="submit">Search</button>
-					</form>
-					<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-						aria-labelledby="offcanvasDarkNavbarLabel">
-						<div class="offcanvas-header">
-							<h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-							<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-								aria-label="Close"></button>
-						</div>
-						<div class="offcanvas-body">
-							<ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
-								<li class="nav-item">
-									<a class="nav-link active" aria-current="page" href="#">Home</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Link</a>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-										aria-expanded="false"> Dropdown </a>
-									<ul class="dropdown-menu dropdown-menu-dark">
-										<li><a class="dropdown-item" href="#">Action</a></li>
-										<li><a class="dropdown-item" href="#">Another action</a></li>
-										<li>
-											<hr class="dropdown-divider">
-										</li>
-										<li><a class="dropdown-item" href="#">Something else here</a></li>
-									</ul>
-								</li>
-							</ul>
-							<form class="d-flex mt-3" role="search">
-								<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-								<button class="btn btn-success" type="submit">Search</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</div>
-		<!-- Navbar end -->
+      <div class="hstack hstack-top mt-4 mx-auto">
+        <!-- image preview stack -->
+        <div class="ms-4 mt-2">
+          <div class="vstack">
+            <div class="mb-3">
+              <img
+                class="product-img"
+                src="img/img-placeholder.png"
+                alt="placeholder image"
+              />
+            </div>
+            <div class="mb-3">
+              <img
+                class="product-img"
+                src="img/img-placeholder.png"
+                alt="placeholder image"
+              />
+            </div>
+            <div class="mb-3">
+              <img
+                class="product-img"
+                src="img/img-placeholder.png"
+                alt="placeholder image"
+              />
+            </div>
+            <div class="mb-3">
+              <img
+                class="product-img"
+                src="img/img-placeholder.png"
+                alt="placeholder image"
+              />
+            </div>
+            <div class="mb-3">
+              <img
+                class="product-img"
+                src="img/img-placeholder.png"
+                alt="placeholder image"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- focused image -->
+        <div class="ms-4 mt-2">
+          <img
+            class="product-focused-img"
+            src="img/img-placeholder.png"
+            alt="placeholder image"
+          />
+        </div>
+        <!-- product info stack -->
+        <div class="vstack ms-1 limit-width">
+          <!-- first row -->
+          <h1 class="h1 fw-bold text-break ms-2 me-4">
+            abcdskaaaaaaaaaaaaaaaaaaaaaaajadkjskajdkajkdskdjaksjdaaaaaaaaaaaaaaaaaaaaaaa
+          </h1>
+          <!-- second row -->
+          <div class="hstack ms-2 me-4">
+            <!-- star section -->
+            <div class="hstack gap-1">
+              <div>
+                <img
+                  class="small-icon"
+                  src="img/full-star.svg"
+                  alt="placeholder image"
+                />
+              </div>
+              <div>
+                <img
+                  class="small-icon"
+                  src="img/full-star.svg"
+                  alt="placeholder image"
+                />
+              </div>
+              <div>
+                <img
+                  class="small-icon"
+                  src="img/full-star.svg"
+                  alt="placeholder image"
+                />
+              </div>
+              <div>
+                <img
+                  class="small-icon"
+                  src="img/empty-star.svg"
+                  alt="placeholder image"
+                />
+              </div>
+              <div>
+                <img
+                  class="small-icon"
+                  src="img/empty-star.svg"
+                  alt="placeholder image"
+                />
+              </div>
+            </div>
+            <!-- share icon -->
+            <div class="" style="margin-left: auto">
+              <img
+                class="small-icon"
+                src="img/share-icon.svg"
+                alt="placeholder image"
+              />
+            </div>
+          </div>
+          <!-- third row -->
+          <div class="hstack ms-2 me-4 mt-4">
+            <!-- price info -->
+            <div class="vstack">
+              <span class="fw-bold ms-1" style="color: green">In Stock</span>
+              <span class="fw-bold display-5">$ 666.66</span>
+              <span class="ms-1" style="color: gray"
+                >List price: <s>$6,666.66</s></span
+              >
+            </div>
+            <!-- buttons -->
+            <div style="margin-left: auto">
+              <button type="button" class="btn btn-primary btn-purple m-1">
+                <img
+                  class="small-icon"
+                  src="img/plus-icon.svg"
+                  alt="add icon"
+                />
+                <span><strong>ADD TO CART</strong></span>
+              </button>
+              <button type="button" class="btn btn-primary btn-purple m-1">
+                <span><strong>BUY NOW</strong></span>
+              </button>
+            </div>
+          </div>
+          <!-- fourth row -->
+          <div class="ms-2 me-4 mt-5">
+            <p class="fw-bold h5">About this item:</p>
+            <div class="text-break text-wrap">
+              <p>
+                Reprehenderit dolor amet voluptate quis duis occaecat et non
+                deserunt et consectetur amet. Dolor in et reprehenderit fugiat
+                duis ipsum. Aute incididunt quis culpa eiusmod consectetur ex
+                aute velit sint enim consectetur est mollit. Mollit sunt minim
+                dolor anim nulla veniam laborum laborum deserunt laboris nostrud
+                tempor et do. Deserunt id do nisi qui deserunt velit excepteur
+                Lorem culpa. Do pariatur dolore pariatur dolor ex pariatur.
+              </p>
+              <p>
+                Sunt exercitation enim veniam ea eiusmod est deserunt non mollit
+                quis culpa irure. Adipisicing magna aliquip tempor officia
+                commodo occaecat nisi non consectetur do sunt sint. Velit ipsum
+                aute voluptate dolore duis duis. Do pariatur amet ipsum eu aute
+                enim duis commodo ex eiusmod incididunt nisi. Voluptate occaecat
+                exercitation consequat velit ex Lorem adipisicing reprehenderit
+                amet deserunt id minim. Excepteur sit ad incididunt incididunt
+                ea incididunt est.
+              </p>
+              <p>
+                Fugiat quis consequat officia ut. Culpa Lorem eu deserunt quis
+                dolore laboris fugiat occaecat sit duis. Veniam non in sit
+                dolore consectetur tempor est culpa magna.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<div class="hstack hstack-top mt-4 mx-auto">
-			<!-- image preview stack -->
-			<div class="ms-4 mt-2">
-				<div class="vstack">
-					<div class="mb-3">
-						<img class="product-img" src="img/img-placeholder.png" alt="placeholder image" />
-					</div>
-					<div class="mb-3">
-						<img class="product-img" src="img/img-placeholder.png" alt="placeholder image" />
-					</div>
-					<div class="mb-3">
-						<img class="product-img" src="img/img-placeholder.png" alt="placeholder image" />
-					</div>
-					<div class="mb-3">
-						<img class="product-img" src="img/img-placeholder.png" alt="placeholder image" />
-					</div>
-					<div class="mb-3">
-						<img class="product-img" src="img/img-placeholder.png" alt="placeholder image" />
-					</div>
-				</div>
-			</div>
-			<!-- focused image -->
-			<div class="ms-4 mt-2">
-				<img class="product-focused-img" src="img/img-placeholder.png" alt="placeholder image" />
-			</div>
-			<!-- product info stack -->
-			<div class="vstack ms-1 limit-width">
-				<!-- first row -->
-				<h1 class="h1 fw-bold text-break ms-2 me-4">
-					abcdskaaaaaaaaaaaaaaaaaaaaaaajadkjskajdkajkdskdjaksjdaaaaaaaaaaaaaaaaaaaaaaa
-				</h1>
-				<!-- second row -->
-				<div class="hstack ms-2 me-4">
-					<!-- star section -->
-					<div class="hstack gap-1">
-						<div>
-							<img class="small-icon" src="img/full-star.svg" alt="placeholder image" />
-						</div>
-						<div>
-							<img class="small-icon" src="img/full-star.svg" alt="placeholder image" />
-						</div>
-						<div>
-							<img class="small-icon" src="img/full-star.svg" alt="placeholder image" />
-						</div>
-						<div>
-							<img class="small-icon" src="img/empty-star.svg" alt="placeholder image" />
-						</div>
-						<div>
-							<img class="small-icon" src="img/empty-star.svg" alt="placeholder image" />
-						</div>
-					</div>
-					<!-- share icon -->
-					<div class="" style="margin-left: auto;">
-						<img class="small-icon" src="img/share-icon.svg" alt="placeholder image" />
-					</div>
-				</div>
-				<!-- third row -->
-				<div class="hstack ms-2 me-4 mt-4">
-					<!-- price info -->
-					<div class="vstack">
-						<span class="fw-bold ms-1" style="color: green;">In Stock</span>
-						<span class="fw-bold display-5">$ 666.66</span>
-						<span class="ms-1" style="color: gray;">List price: <s>$6,666.66</s></span>
-					</div>
-					<!-- buttons -->
-					<div style="margin-left: auto;">
-						<button type="button" class="btn btn-primary btn-purple m-1">
-							<img class="small-icon" src="img/plus-icon.svg" alt="add icon" />
-							<span><strong>ADD TO CART</strong></span>
-						</button>
-						<button type="button" class="btn btn-primary btn-purple m-1">
-							<span><strong>BUY NOW</strong></span>
-						</button>
-					</div>
-				</div>
-				<!-- fourth row -->
-				<div class="ms-2 me-4 mt-5">
-					<p class="fw-bold h5">About this item:</p>
-					<div class="text-break text-wrap">
-						<p> Reprehenderit dolor amet voluptate quis duis occaecat et non deserunt et consectetur amet.
-							Dolor in et reprehenderit fugiat duis ipsum. Aute incididunt quis culpa eiusmod consectetur
-							ex aute velit sint enim consectetur est mollit. Mollit sunt minim dolor anim nulla veniam
-							laborum laborum deserunt laboris nostrud tempor et do. Deserunt id do nisi qui deserunt
-							velit excepteur Lorem culpa. Do pariatur dolore pariatur dolor ex pariatur. </p>
-						<p> Sunt exercitation enim veniam ea eiusmod est deserunt non mollit quis culpa irure.
-							Adipisicing magna aliquip tempor officia commodo occaecat nisi non consectetur do sunt sint.
-							Velit ipsum aute voluptate dolore duis duis. Do pariatur amet ipsum eu aute enim duis
-							commodo ex eiusmod incididunt nisi. Voluptate occaecat exercitation consequat velit ex Lorem
-							adipisicing reprehenderit amet deserunt id minim. Excepteur sit ad incididunt incididunt ea
-							incididunt est. </p>
-						<p> Fugiat quis consequat officia ut. Culpa Lorem eu deserunt quis dolore laboris fugiat
-							occaecat sit duis. Veniam non in sit dolore consectetur tempor est culpa magna. </p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<!-- Bootstrap --->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-		crossorigin="anonymous"></script>
-</body>
-
+    <!-- Bootstrap --->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

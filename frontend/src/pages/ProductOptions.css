@@ -1,36 +1,36 @@
 .outer-wrapper {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .options-wrapper {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .product-wrapper {
-	background-color: #ffff;
-	border-radius: 1.5em;
-	padding: 2em;
-	margin-top: 2em;
+  background-color: #ffff;
+  border-radius: 1.5em;
+  padding: 2em;
+  margin-top: 2em;
 }
 .searchbar-product {
-	display: flex;
-	justify-content: center;
-	margin: 2em;
+  display: flex;
+  justify-content: center;
+  margin: 2em;
 }
 .button-product {
-	margin-top: 30px;
-	display: flex;
-	justify-content: center;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 .inputbox-wrapper {
-	margin: 1em;
+  margin: 1em;
 }
 .label-wrapper {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .text {
-	font-size: 25px;
-	margin-bottom: 10px;
-	font-weight: normal;
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-weight: normal;
 }

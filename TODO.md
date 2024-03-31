@@ -5,7 +5,7 @@
 - Password Input (for passwords duh)
 - Date Input (for credit card expiation date)
 - Drop Down Menu
-- Check Mark Button 
+- Check Mark Button
 - Text Button
 - Image Button
 - Image+Text Button

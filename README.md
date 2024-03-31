@@ -12,7 +12,8 @@ Read [building.md](https://github.com/reisaraujo-miguel/Projeto-Web/blob/main/bu
 
 ## Requirements:
 
-The main requirements are given by the assignment's description. Our chosen additional functionality is: 
+The main requirements are given by the assignment's description. Our chosen additional functionality is:
+
 - A search bar that enables admins to find products/users/admins to perform CRUD operations.
 
 ## Project Description:
@@ -22,25 +23,24 @@ Silicon Road is an eletronics shop that sells cellphones, laptops, monitors and 
 Its functionality includes:
 
 - Users can easily set up an account by giving some basic info. They can add multiple items to the cart,
-specify the quantity of each product, select a shipping address and credit card, and then finish the order.
+  specify the quantity of each product, select a shipping address and credit card, and then finish the order.
 
 - In a particular page, admins can add/consult/modify/delete products and other admins.
 
 - Each product has an ID, name, price, photo, description, quantity in stock. On each product page,
-besides the basic information about the product, users can see a recommendation for similar products.
+  besides the basic information about the product, users can see a recommendation for similar products.
 
 -Admins can search for users/products/admins on the Admin Page and perform CRUD operations on them.
 
-
-
 Project links:
+
 - [Navigation Diagram](https://www.figma.com/file/Ej3MasBHEqIFoIAPgwUoGm/Flow-Chart?type=whiteboard&node-id=0%3A1&t=dFfiR6KRf2D6Pcug-1)
 - [Mockup 1 (6 major pages)](https://www.figma.com/file/JCoe27IjofqH4vA0QHXtYh/Mockup-Milestone-%231?type=design&node-id=4%3A0&t=vZ38sfATpHUTt7j1-1)
 - [HTML+CSS Mockups](https://github.com/reisaraujo-miguel/Projeto-Web/tree/main/mockups)
 
 ## Comments About the Code:
 
-React was our choice to build the web application. In the `src/` folder, we divided the project in different subfolders, and each element/widget created has its own JS and CSS files --- this modularization is essential not only to better understand the code and its interdependencies but also to facilitate the building process as a whole. 
+React was our choice to build the web application. In the `src/` folder, we divided the project in different subfolders, and each element/widget created has its own JS and CSS files --- this modularization is essential not only to better understand the code and its interdependencies but also to facilitate the building process as a whole.
 We used Node.js with Express and Mongodb on the backend. We have a application file 'app.js' that the main program runs and folders for models, controllers and routes.
 
 ## Test Plan:
@@ -55,12 +55,14 @@ We used Node.js with Express and Mongodb on the backend. We have a application f
 
 5- Check if images are being loaded properly on Homepage and Product page
 
-
 ## Test Results:
+
 All tests working as expected
 
 ## Build Procedures:
-First of all, clone the repository: 
+
+First of all, clone the repository:
+
 ```bash
 $ git clone https://github.com/reisaraujo-miguel/Projeto-Web.git
 ```
@@ -74,13 +76,15 @@ $ npm start
 ```
 
 Then install the dependencies and run the backend:
+
 ```bash
-$ cd Projeto-Web/backend/ 
+$ cd Projeto-Web/backend/
 $ npm install
 $ node app.js
 ```
 
 ## Problems:
+
 No major problems.
 
 ## Comments:

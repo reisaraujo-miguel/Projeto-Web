@@ -1,11 +1,11 @@
 .radio-button-wrapper {
-	display: flex;
-	align-items: center;
-	gap: 5px;
-	padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
 }
 label {
-	font-family: Arial, sans-serif;
-	font-size: 12px;
-	color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #000000;
 }

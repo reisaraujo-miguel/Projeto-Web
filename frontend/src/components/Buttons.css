@@ -1,31 +1,31 @@
 .small-button {
-	width: 20px;
-	height: 20px;
-	margin: 4px 4px 4px 4px;
+  width: 20px;
+  height: 20px;
+  margin: 4px 4px 4px 4px;
 }
 
 .purple-bg {
-	background-color: #6200ee;
-	color: white;
-	border: 0px;
+  background-color: #6200ee;
+  color: white;
+  border: 0px;
 }
 
 .no-bg {
-	background: none;
-	color: white;
-	border: 0px;
+  background: none;
+  color: white;
+  border: 0px;
 }
 
 .purple-bg:hover {
-	background-color: #6200ee;
-	filter: brightness(0.6);
-	color: white;
-	border: 0px;
+  background-color: #6200ee;
+  filter: brightness(0.6);
+  color: white;
+  border: 0px;
 }
 
 .no-bg:hover {
-	background: none;
-	filter: brightness(0.6);
-	color: white;
-	border: 0px;
+  background: none;
+  filter: brightness(0.6);
+  color: white;
+  border: 0px;
 }

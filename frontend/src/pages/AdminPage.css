@@ -1,16 +1,16 @@
 .centerOptions {
-	display: flex;
-	justify-content: center;
-	text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 .optionDiv {
-	border-radius: 1.5em;
-	padding: 2.5%;
-	background-color: #ffffff;
-	width: 22em;
-	height: 18em;
+  border-radius: 1.5em;
+  padding: 2.5%;
+  background-color: #ffffff;
+  width: 22em;
+  height: 18em;
 }
 .text {
-	font-size: 25px;
-	font-weight: normal;
+  font-size: 25px;
+  font-weight: normal;
 }
